@@ -1,0 +1,44 @@
+{
+  "S0001": {
+    "FaceImage": "mawang_total",
+    "Character": "마왕",
+    "Dialogue": "쉽지 않은 여행이겠지만 조심히 다녀오자!",
+    "Choice_1": null,
+    "Choice_1_Next_Scene": null,
+    "Choice_2": null,
+    "Choice_2_Next_Scene": null,
+    "Choice_3": null,
+    "Choice_3_Next_Scene": null,
+    "Default_Next_Scene": null,
+    "Event_Trigger": "EV06/EV07",
+    "Sfx": null
+  },
+  "S0002": {
+    "FaceImage": "mawang_total",
+    "Character": "마왕",
+    "Dialogue": "저기 멀리있는 보물 상자를 얻으면 될 것 같아!",
+    "Choice_1": null,
+    "Choice_1_Next_Scene": null,
+    "Choice_2": null,
+    "Choice_2_Next_Scene": null,
+    "Choice_3": null,
+    "Choice_3_Next_Scene": null,
+    "Default_Next_Scene": "S0003",
+    "Event_Trigger": null,
+    "Sfx": null
+  },
+  "S0003": {
+    "FaceImage": null,
+    "Character": null,
+    "Dialogue": null,
+    "Choice_1": null,
+    "Choice_1_Next_Scene": null,
+    "Choice_2": null,
+    "Choice_2_Next_Scene": null,
+    "Choice_3": null,
+    "Choice_3_Next_Scene": null,
+    "Default_Next_Scene": null,
+    "Event_Trigger": null,
+    "Sfx": null
+  }
+}
