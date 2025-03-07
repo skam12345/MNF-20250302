@@ -21,6 +21,12 @@ public class TownScene : MonoBehaviour
 
 	private WaitForSeconds fadeOutWait;
 
+
+	void Start()
+	{
+
+	}
+
 	#region Awake Start Update
 	private void Start()
 	{
