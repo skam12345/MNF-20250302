@@ -1777,7 +1777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690ea0146224b8b4694a1925dddeb352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Meta: {fileID: 3999188291372018089}
+  Meta: {fileID: 3143604703262297173}
 --- !u!114 &2656202240890232616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1790,8 +1790,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3869812175467a143ab9cd865752b4a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Avatar: {fileID: 2086841785466382174}
-  Description: {fileID: 844491920953905684}
+  Avatar: {fileID: 7644272121634416564}
+  Description: {fileID: 777555804465599730}
 --- !u!95 &7415231063320266427
 Animator:
   serializedVersion: 5
@@ -1801,7 +1801,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5668860069047837043}
   m_Enabled: 1
-  m_Avatar: {fileID: 2086841785466382174}
+  m_Avatar: {fileID: 7644272121634416564}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -2927,7 +2927,7 @@ Transform:
   - {fileID: 5512789590059357224}
   m_Father: {fileID: 644408196615035014}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &844491920953905684
+--- !u!114 &777555804465599730
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3319,7 +3319,33 @@ MonoBehaviour:
     max: {x: 0, y: 0, z: 0}
     center: {x: 0, y: 0, z: 0}
     axisLength: 0
---- !u!90 &2086841785466382174
+--- !u!114 &3143604703262297173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b589176a34b344b9ccbee2b7e7114a, type: 3}
+  m_Name: Meta
+  m_EditorClassIdentifier: 
+  ExporterVersion: saturday06_blender_vrm_exporter_experimental_2.20.23
+  Title: Buddy_01
+  Version: 1.0
+  Author: Achi_DeLo
+  ContactInformation: Buddy_01
+  Reference: Achi_DeLo
+  Thumbnail: {fileID: 0}
+  AllowedUser: 0
+  ViolentUssage: 0
+  SexualUssage: 0
+  CommercialUssage: 0
+  OtherPermissionUrl: 
+  LicenseType: 7
+  OtherLicenseUrl: 
+--- !u!90 &7644272121634416564
 Avatar:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5475,29 +5501,3 @@ Avatar:
     m_HasTranslationDoF: 0
     m_HasExtraRoot: 0
     m_SkeletonHasParents: 0
---- !u!114 &3999188291372018089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63b589176a34b344b9ccbee2b7e7114a, type: 3}
-  m_Name: Meta
-  m_EditorClassIdentifier: 
-  ExporterVersion: saturday06_blender_vrm_exporter_experimental_2.20.23
-  Title: Buddy_01
-  Version: 1.0
-  Author: Achi_DeLo
-  ContactInformation: Buddy_01
-  Reference: Achi_DeLo
-  Thumbnail: {fileID: 0}
-  AllowedUser: 0
-  ViolentUssage: 0
-  SexualUssage: 0
-  CommercialUssage: 0
-  OtherPermissionUrl: 
-  LicenseType: 7
-  OtherLicenseUrl: 
