@@ -18,6 +18,9 @@ public class UIStage : MonoBehaviour
 	[Header("Settings_Description")]
 	[SerializeField] private UIStageDescription description;
 
+	[Header("Setting Data")]
+	private List<StageObjectClass> data;
+
 	[Header("Settings_Tooltip")]
 	[SerializeField] private UIStageTooltip stageTooltip;
 	#region Awake Start Update Reset
@@ -43,13 +46,20 @@ public class UIStage : MonoBehaviour
 		stageTooltip.gameObject.SetActive(false);
 
 	}
-	#endregion
+    #endregion
+
+    #region DataSet
+	public void SetData(List<StageObjectClass> data)
+	{
+		this.data = data;
+	}
+    #endregion
 
 
-	#region [MainStage] 
+    #region [MainStage] 
 
-	#region mainStage ToolTip
-	public void OnMainStageToolTipOpen(int _stageNumber)
+    #region mainStage ToolTip
+    public void OnMainStageToolTipOpen(int _stageNumber)
 	{
 		string testString = "";
 		switch (_stageNumber)

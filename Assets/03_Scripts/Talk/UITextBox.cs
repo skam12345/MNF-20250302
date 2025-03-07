@@ -23,6 +23,7 @@ public class UITextBox : MonoBehaviour
 	public GameObject singleService;
 
 	[SerializeField]
+	private UIStage uIStage;
 	private Dictionary<string, ShopConversationData> shopDataDict = new Dictionary<string, ShopConversationData>();
 	private int index = 0;
 
