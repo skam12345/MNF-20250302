@@ -1778,7 +1778,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   Meta: {fileID: 3999188291372018089}
+=======
+  Meta: {fileID: 4898473142330280398}
+>>>>>>> Stashed changes
 =======
   Meta: {fileID: 4898473142330280398}
 >>>>>>> Stashed changes
@@ -1795,8 +1799,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   Avatar: {fileID: 2086841785466382174}
   Description: {fileID: 844491920953905684}
+=======
+  Avatar: {fileID: 1817548828038695437}
+  Description: {fileID: 4936098140002139955}
+>>>>>>> Stashed changes
 =======
   Avatar: {fileID: 1817548828038695437}
   Description: {fileID: 4936098140002139955}
@@ -1811,7 +1820,11 @@ Animator:
   m_GameObject: {fileID: 5668860069047837043}
   m_Enabled: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_Avatar: {fileID: 2086841785466382174}
+=======
+  m_Avatar: {fileID: 1817548828038695437}
+>>>>>>> Stashed changes
 =======
   m_Avatar: {fileID: 1817548828038695437}
 >>>>>>> Stashed changes
@@ -2941,6 +2954,7 @@ Transform:
   m_Father: {fileID: 644408196615035014}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!114 &844491920953905684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3334,6 +3348,9 @@ MonoBehaviour:
     center: {x: 0, y: 0, z: 0}
     axisLength: 0
 --- !u!90 &2086841785466382174
+=======
+--- !u!90 &1817548828038695437
+>>>>>>> Stashed changes
 =======
 --- !u!90 &1817548828038695437
 >>>>>>> Stashed changes
@@ -5493,7 +5510,11 @@ Avatar:
     m_HasExtraRoot: 0
     m_SkeletonHasParents: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!114 &3999188291372018089
+=======
+--- !u!114 &4898473142330280398
+>>>>>>> Stashed changes
 =======
 --- !u!114 &4898473142330280398
 >>>>>>> Stashed changes
@@ -5523,7 +5544,10 @@ MonoBehaviour:
   LicenseType: 7
   OtherLicenseUrl: 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!114 &4936098140002139955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5916,4 +5940,7 @@ MonoBehaviour:
     max: {x: 0, y: 0, z: 0}
     center: {x: 0, y: 0, z: 0}
     axisLength: 0
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
