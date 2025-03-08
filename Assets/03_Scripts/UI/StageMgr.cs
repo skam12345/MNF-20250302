@@ -1,0 +1,66 @@
+
+using Newtonsoft.Json;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class StageMgr : MonoBehaviour
+{
+    private static StageMgr instance;
+    private Dictionary<string, StageObjectClass> stageJsonDict = new Dictionary<string, StageObjectClass>();
+    public List<StageObjectClass> stageJsonList = new List<StageObjectClass>();
+    
+    public static StageMgr Instance
+    {
+        get
+        {
+            if(instance == null)
+            {
+                instance = FindObjectOfType<StageMgr>();
+
+                if (instance == null)
+                {
+                    GameObject obj = new GameObject("StageMgr");
+                    instance = obj.AddComponent<StageMgr>();
+                }
+            }
+            return instance;
+        }
+    }
+
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
+    public void Start()
+    {
+        TextAsset jsonFile = Resources.Load<TextAsset>("Jsons/StageJson");
+
+        if (jsonFile != null)
+        {
+            stageJsonDict = JsonConvert.DeserializeObject<Dictionary<string, StageObjectClass>>(jsonFile.text);
+            foreach (string key in stageJsonDict.Keys)
+            {
+                StageObjectClass data = new StageObjectClass();
+                {
+                    /*
+                     StageJson 안에 monster1 ~ monster4 속성 중에 null 값이 있어 string 값으로 받았으니
+                     Stage에서 데이터를 제 위치에 뿌릴 때 null 값은 넘어가고 string으로 된 숫자 값은 int로 
+                     파싱 시킨 후 사용하세요.
+                     */
+                    data = stageJsonDict[key];
+                    stageJsonList.Add(data);
+                }
+            }
+        }
+    }
+
+
+}
