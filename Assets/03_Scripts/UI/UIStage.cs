@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,10 +21,10 @@ public class UIStage : MonoBehaviour
 
 	[Header("Settings_Tooltip")]
 	[SerializeField] private UIStageTooltip stageTooltip;
-	#region Awake Start Update Reset
-	
-	// UI Open
-	public void OnOpen()
+
+    #region Awake Start Update Reset
+    // UI Open
+    public void OnOpen()
 	{
 		stageObject.SetActive(true);
 		mainStageObject.SetActive(true);
