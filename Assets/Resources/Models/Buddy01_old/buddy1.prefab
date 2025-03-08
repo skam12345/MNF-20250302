@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690ea0146224b8b4694a1925dddeb352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Meta: {fileID: 8793545413192908170, guid: b7e86b18e29f78b4a8c845e537876c80, type: 3}
+  Meta: {fileID: 0}
 --- !u!114 &2467593459970470469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Avatar: {fileID: 233742357120442354, guid: b7e86b18e29f78b4a8c845e537876c80, type: 3}
-  Description: {fileID: 4314170258167268825, guid: b7e86b18e29f78b4a8c845e537876c80, type: 3}
+  Description: {fileID: 0}
 --- !u!95 &545843389984179258
 Animator:
   serializedVersion: 5
@@ -113,8 +113,8 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136537064493521919}
   m_Enabled: 1
-  m_Avatar: {fileID: 233742357120442354, guid: b7e86b18e29f78b4a8c845e537876c80, type: 3}
-  m_Controller: {fileID: 9100000, guid: 6924213b9f0e597418a52cfe7c1788b0, type: 2}
+  m_Avatar: {fileID: 5240760429856648429, guid: b7e86b18e29f78b4a8c845e537876c80, type: 3}
+  m_Controller: {fileID: 9100000, guid: 88d677d81c9433f40ad53367505a4bb6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
