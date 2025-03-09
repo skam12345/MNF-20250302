@@ -13,7 +13,6 @@ public class SceneForFade : MonoBehaviour
 	[SerializeField] private float fadeOutTime;
 
 
-
 	private void Start()
 	{
 		targetImage.gameObject.SetActive(true);

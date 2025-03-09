@@ -33,9 +33,18 @@ public class LobbyScene : MonoBehaviour
 
 
 	#region Awake Start Update Reset
+	private void Awake()
+	{
+		// Manager √ ±‚»≠
+		ItemDataManager.Instance.OnInit();
+		PlayerDataManager.Instance.OnInit();
+		InventoryData.Instance.OnInit();
+		EnemyDataManager.Instance.OnInit();
+	}
+
+
 	private void Start()
 	{
-		
 		if (fadeOutWait == null) fadeOutWait = new WaitForSeconds(fadeOutTime);
 
 		stageBackBtn.onClick.RemoveAllListeners();
