@@ -16,22 +16,8 @@ public class SceneForFade : MonoBehaviour
 	private void Start()
 	{
 		targetImage.gameObject.SetActive(true);
-		//StartCoroutine(FadeIn());
 	}
 
-	//#if UNITY_EDITOR
-	//private IEnumerator FadeDebugText()
-	//{
-	//	while (true)
-	//	{
-	//		Debug.Log("FadeinWhite? : " + fadeInModeWhite +
-	//				"\nFadeOutWhite? : " + fadeOutModeWhite +
-	//				"\nfadeInTime : " + fadeInTime.ToString("F1") +
-	//				"\nfadeOutTime : " + fadeOutTime.ToString("F1"));
-	//		yield return new WaitForSeconds(1.0f);
-	//	}
-	//}
-	//#endif
 
 	private IEnumerator FadeIn()
 	{

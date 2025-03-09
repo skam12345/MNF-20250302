@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5900691422477721260}
   - component: {fileID: 7015260047064438805}
   - component: {fileID: 7120645486392864863}
-  - component: {fileID: 7719849327743353806}
   m_Layer: 5
   m_Name: SubStage3-4
   m_TagString: StageMapPoint
@@ -124,60 +123,15 @@ MonoBehaviour:
       - m_Target: {fileID: 3765133889497855861}
         m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
         m_MethodName: OnSubStageClick
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 13
           m_FloatArgument: 0
           m_StringArgument: 3-4
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7719849327743353806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 93957584701818587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipOpen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 3-4
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 3-4
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &154004908713881290
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,7 +219,6 @@ GameObject:
   - component: {fileID: 6567053341398412969}
   - component: {fileID: 4907918215266050487}
   - component: {fileID: 4797740292455001341}
-  - component: {fileID: 5119490990931252001}
   m_Layer: 5
   m_Name: SubStage4-4
   m_TagString: StageMapPoint
@@ -377,60 +330,15 @@ MonoBehaviour:
       - m_Target: {fileID: 3765133889497855861}
         m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
         m_MethodName: OnSubStageClick
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 18
           m_FloatArgument: 0
           m_StringArgument: 4-4
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5119490990931252001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 532122474748222366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipOpen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 4-4
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 4-4
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &553325225047161845
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,7 +426,6 @@ GameObject:
   - component: {fileID: 8888855617627767438}
   - component: {fileID: 3410628529729208796}
   - component: {fileID: 8094805950654631849}
-  - component: {fileID: 3946292994517968884}
   m_Layer: 5
   m_Name: SubStage3-2
   m_TagString: StageMapPoint
@@ -630,60 +537,15 @@ MonoBehaviour:
       - m_Target: {fileID: 3765133889497855861}
         m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
         m_MethodName: OnSubStageClick
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 11
           m_FloatArgument: 0
-          m_StringArgument: 3-2
+          m_StringArgument: 11
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3946292994517968884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 602069127018653245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipOpen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 3-2
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 3-2
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &974983160696178106
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,7 +558,6 @@ GameObject:
   - component: {fileID: 8854414275294989677}
   - component: {fileID: 1912848051254858129}
   - component: {fileID: 1106965245858004965}
-  - component: {fileID: 8554541384816625102}
   m_Layer: 5
   m_Name: MainStage03
   m_TagString: StageMapPoint
@@ -817,51 +678,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8554541384816625102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974983160696178106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnMainStageToolTipOpen
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 3
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnMainStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 3
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1007471273816536481
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,7 +690,6 @@ GameObject:
   - component: {fileID: 1961242882932511096}
   - component: {fileID: 3473327563953847707}
   - component: {fileID: 8105297305410436306}
-  - component: {fileID: 3611088340867660811}
   m_Layer: 5
   m_Name: SubStage3-5
   m_TagString: StageMapPoint
@@ -986,60 +801,15 @@ MonoBehaviour:
       - m_Target: {fileID: 3765133889497855861}
         m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
         m_MethodName: OnSubStageClick
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 14
           m_FloatArgument: 0
           m_StringArgument: 3-5
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3611088340867660811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1007471273816536481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipOpen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 3-5
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 3-5
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1391279688011136150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,7 +822,6 @@ GameObject:
   - component: {fileID: 8333597495257602602}
   - component: {fileID: 8555412643177308392}
   - component: {fileID: 3137987501459909392}
-  - component: {fileID: 2254855917824362467}
   m_Layer: 5
   m_Name: MainStage01
   m_TagString: StageMapPoint
@@ -1173,51 +942,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2254855917824362467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391279688011136150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnMainStageToolTipOpen
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 1
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnMainStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 1
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1459629302535988383
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,7 +954,6 @@ GameObject:
   - component: {fileID: 4934308205622863719}
   - component: {fileID: 1513129689768425905}
   - component: {fileID: 912012848844003639}
-  - component: {fileID: 8421099262754184690}
   m_Layer: 5
   m_Name: SubStage5-5
   m_TagString: StageMapPoint
@@ -1342,60 +1065,15 @@ MonoBehaviour:
       - m_Target: {fileID: 3765133889497855861}
         m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
         m_MethodName: OnSubStageClick
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 24
           m_FloatArgument: 0
           m_StringArgument: 5-5
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8421099262754184690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459629302535988383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipOpen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 5-5
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 5-5
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1530882903486783706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1529,7 +1207,6 @@ GameObject:
   - component: {fileID: 5251363202401773606}
   - component: {fileID: 4747113493963405540}
   - component: {fileID: 50154108019331277}
-  - component: {fileID: 628709536049641430}
   m_Layer: 5
   m_Name: MainStage05
   m_TagString: StageMapPoint
@@ -1650,51 +1327,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &628709536049641430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2319406235115683960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnMainStageToolTipOpen
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 5
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnMainStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 5
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &2355825745334435436
 GameObject:
   m_ObjectHideFlags: 0
@@ -1707,7 +1339,6 @@ GameObject:
   - component: {fileID: 5579332041295974577}
   - component: {fileID: 9152897015319697997}
   - component: {fileID: 8950042159062731651}
-  - component: {fileID: 5519302106518975657}
   m_Layer: 5
   m_Name: MainStage04
   m_TagString: StageMapPoint
@@ -1828,51 +1459,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5519302106518975657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2355825745334435436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnMainStageToolTipOpen
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 4
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnMainStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 4
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &2356329578377962616
 GameObject:
   m_ObjectHideFlags: 0
@@ -1927,7 +1513,6 @@ GameObject:
   - component: {fileID: 1894122937129792087}
   - component: {fileID: 7212200655019865847}
   - component: {fileID: 8891066836044785631}
-  - component: {fileID: 7485835405230620262}
   m_Layer: 5
   m_Name: SubStage1-5
   m_TagString: StageMapPoint
@@ -2039,60 +1624,15 @@ MonoBehaviour:
       - m_Target: {fileID: 3765133889497855861}
         m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
         m_MethodName: OnSubStageClick
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 4
           m_FloatArgument: 0
-          m_StringArgument: 1-5
+          m_StringArgument: 4
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7485835405230620262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3078055258456335018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipOpen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 1-5
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnMainStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 1-5
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &3598701763494459455
 GameObject:
   m_ObjectHideFlags: 0
@@ -2105,7 +1645,6 @@ GameObject:
   - component: {fileID: 7772658299515380622}
   - component: {fileID: 5478299143285305857}
   - component: {fileID: 3720345782603743342}
-  - component: {fileID: 6297210260688181065}
   m_Layer: 5
   m_Name: SubStage3-3
   m_TagString: StageMapPoint
@@ -2217,60 +1756,15 @@ MonoBehaviour:
       - m_Target: {fileID: 3765133889497855861}
         m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
         m_MethodName: OnSubStageClick
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 12
           m_FloatArgument: 0
           m_StringArgument: 3-3
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6297210260688181065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3598701763494459455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipOpen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 3-3
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 3-3
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &4074679710759975196
 GameObject:
   m_ObjectHideFlags: 0
@@ -2283,7 +1777,6 @@ GameObject:
   - component: {fileID: 7347081872857538482}
   - component: {fileID: 2142479922382681530}
   - component: {fileID: 974383837119329762}
-  - component: {fileID: 4029287402335645609}
   m_Layer: 5
   m_Name: SubStage2-3
   m_TagString: StageMapPoint
@@ -2395,60 +1888,15 @@ MonoBehaviour:
       - m_Target: {fileID: 3765133889497855861}
         m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
         m_MethodName: OnSubStageClick
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 7
           m_FloatArgument: 0
-          m_StringArgument: 2-3
+          m_StringArgument: 7
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4029287402335645609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4074679710759975196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipOpen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 2-3
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 2-3
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &4092107680060124961
 GameObject:
   m_ObjectHideFlags: 0
@@ -2461,7 +1909,6 @@ GameObject:
   - component: {fileID: 7133692871443911687}
   - component: {fileID: 8422948256437978480}
   - component: {fileID: 2244767229008030377}
-  - component: {fileID: 2184971107295696346}
   m_Layer: 5
   m_Name: SubStage5-2
   m_TagString: StageMapPoint
@@ -2573,60 +2020,15 @@ MonoBehaviour:
       - m_Target: {fileID: 3765133889497855861}
         m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
         m_MethodName: OnSubStageClick
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 21
           m_FloatArgument: 0
           m_StringArgument: 5-2
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2184971107295696346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4092107680060124961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipOpen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 5-2
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 5-2
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &4241675648915318181
 GameObject:
   m_ObjectHideFlags: 0
@@ -2639,7 +2041,6 @@ GameObject:
   - component: {fileID: 2657497665832936888}
   - component: {fileID: 8188243017080902120}
   - component: {fileID: 2396307688963579792}
-  - component: {fileID: 9163462712724113301}
   m_Layer: 5
   m_Name: SubStage1-4
   m_TagString: StageMapPoint
@@ -2751,60 +2152,15 @@ MonoBehaviour:
       - m_Target: {fileID: 3765133889497855861}
         m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
         m_MethodName: OnSubStageClick
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
-          m_StringArgument: 1-4
+          m_StringArgument: 3
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &9163462712724113301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4241675648915318181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipOpen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 1-4
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnMainStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 1-4
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &4445823937752898301
 GameObject:
   m_ObjectHideFlags: 0
@@ -2967,7 +2323,6 @@ GameObject:
   - component: {fileID: 2703445366251810128}
   - component: {fileID: 7608761647619033033}
   - component: {fileID: 6016424110112321800}
-  - component: {fileID: 6526943177534608425}
   m_Layer: 5
   m_Name: SubStage5-1
   m_TagString: StageMapPoint
@@ -3079,60 +2434,15 @@ MonoBehaviour:
       - m_Target: {fileID: 3765133889497855861}
         m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
         m_MethodName: OnSubStageClick
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 20
           m_FloatArgument: 0
           m_StringArgument: 5-1
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6526943177534608425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5045039453450832317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipOpen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 5-1
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 5-1
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &5198274308088866529
 GameObject:
   m_ObjectHideFlags: 0
@@ -3279,7 +2589,6 @@ GameObject:
   - component: {fileID: 5693430693981435260}
   - component: {fileID: 1675944832821314681}
   - component: {fileID: 8190361979341894607}
-  - component: {fileID: 7996771824064260272}
   m_Layer: 5
   m_Name: SubStage2-5
   m_TagString: StageMapPoint
@@ -3391,60 +2700,15 @@ MonoBehaviour:
       - m_Target: {fileID: 3765133889497855861}
         m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
         m_MethodName: OnSubStageClick
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 9
           m_FloatArgument: 0
-          m_StringArgument: 2-5
+          m_StringArgument: 9
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7996771824064260272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5303995828311944405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipOpen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 2-5
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 2-5
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &5394884467482449586
 GameObject:
   m_ObjectHideFlags: 0
@@ -3457,7 +2721,6 @@ GameObject:
   - component: {fileID: 4838362470580136472}
   - component: {fileID: 6906943578249012687}
   - component: {fileID: 7527232348949101708}
-  - component: {fileID: 3459478479732104779}
   m_Layer: 5
   m_Name: SubStage2-1
   m_TagString: StageMapPoint
@@ -3569,60 +2832,15 @@ MonoBehaviour:
       - m_Target: {fileID: 3765133889497855861}
         m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
         m_MethodName: OnSubStageClick
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 5
           m_FloatArgument: 0
-          m_StringArgument: 2-1
+          m_StringArgument: 5
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3459478479732104779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5394884467482449586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipOpen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 2-1
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 2-1
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &5493243202513208291
 GameObject:
   m_ObjectHideFlags: 0
@@ -3635,7 +2853,6 @@ GameObject:
   - component: {fileID: 8614278511356324771}
   - component: {fileID: 4909630177718830382}
   - component: {fileID: 8567606723376520231}
-  - component: {fileID: 3061504726606321472}
   m_Layer: 5
   m_Name: SubStage4-2
   m_TagString: StageMapPoint
@@ -3747,60 +2964,15 @@ MonoBehaviour:
       - m_Target: {fileID: 3765133889497855861}
         m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
         m_MethodName: OnSubStageClick
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 16
           m_FloatArgument: 0
           m_StringArgument: 4-2
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3061504726606321472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5493243202513208291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipOpen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 4-2
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 4-2
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &5693116902765354952
 GameObject:
   m_ObjectHideFlags: 0
@@ -3854,7 +3026,6 @@ GameObject:
   - component: {fileID: 5294818404546037850}
   - component: {fileID: 905766729135506441}
   - component: {fileID: 1536664937227888246}
-  - component: {fileID: 7576871561435166891}
   m_Layer: 5
   m_Name: SubStage4-3
   m_TagString: StageMapPoint
@@ -3966,60 +3137,15 @@ MonoBehaviour:
       - m_Target: {fileID: 3765133889497855861}
         m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
         m_MethodName: OnSubStageClick
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 17
           m_FloatArgument: 0
           m_StringArgument: 4-3
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7576871561435166891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5740242083058395188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipOpen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 4-3
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 4-3
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &5833694192630633404
 GameObject:
   m_ObjectHideFlags: 0
@@ -4364,7 +3490,6 @@ GameObject:
   - component: {fileID: 2667978231584425070}
   - component: {fileID: 3665683579855469163}
   - component: {fileID: 5031619072065677763}
-  - component: {fileID: 7054126021863666507}
   m_Layer: 5
   m_Name: SubStage4-1
   m_TagString: StageMapPoint
@@ -4476,60 +3601,15 @@ MonoBehaviour:
       - m_Target: {fileID: 3765133889497855861}
         m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
         m_MethodName: OnSubStageClick
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 15
           m_FloatArgument: 0
           m_StringArgument: 4-1
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7054126021863666507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6667942595111514391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipOpen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 4-1
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 4-1
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &7045062292292983591
 GameObject:
   m_ObjectHideFlags: 0
@@ -4542,7 +3622,6 @@ GameObject:
   - component: {fileID: 5585108449544795775}
   - component: {fileID: 7844765658899088711}
   - component: {fileID: 8346529404110619086}
-  - component: {fileID: 8230584179726429321}
   m_Layer: 5
   m_Name: SubStage5-3
   m_TagString: StageMapPoint
@@ -4654,60 +3733,15 @@ MonoBehaviour:
       - m_Target: {fileID: 3765133889497855861}
         m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
         m_MethodName: OnSubStageClick
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 22
           m_FloatArgument: 0
           m_StringArgument: 5-3
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8230584179726429321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7045062292292983591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipOpen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 5-3
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 5-3
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &7131285433313643642
 GameObject:
   m_ObjectHideFlags: 0
@@ -4841,7 +3875,6 @@ GameObject:
   - component: {fileID: 2178447049417486006}
   - component: {fileID: 7695055932742772733}
   - component: {fileID: 12158724273708966}
-  - component: {fileID: 2420542463650393995}
   m_Layer: 5
   m_Name: SubStage5-4
   m_TagString: StageMapPoint
@@ -4953,60 +3986,15 @@ MonoBehaviour:
       - m_Target: {fileID: 3765133889497855861}
         m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
         m_MethodName: OnSubStageClick
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 23
           m_FloatArgument: 0
           m_StringArgument: 5-4
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2420542463650393995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7145137698711953147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipOpen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 5-4
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 5-4
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &7380722785199023573
 GameObject:
   m_ObjectHideFlags: 0
@@ -5186,7 +4174,6 @@ GameObject:
   - component: {fileID: 1316130647980779836}
   - component: {fileID: 819526878380904547}
   - component: {fileID: 1812331747591768014}
-  - component: {fileID: 4119826108521093898}
   m_Layer: 5
   m_Name: SubStage1-3
   m_TagString: StageMapPoint
@@ -5298,60 +4285,15 @@ MonoBehaviour:
       - m_Target: {fileID: 3765133889497855861}
         m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
         m_MethodName: OnSubStageClick
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
-          m_StringArgument: 1-3
+          m_StringArgument: 2
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4119826108521093898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7807738565666389762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipOpen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 1-3
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnMainStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 1-3
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &7878450466468274661
 GameObject:
   m_ObjectHideFlags: 0
@@ -5364,7 +4306,6 @@ GameObject:
   - component: {fileID: 6890128599064572011}
   - component: {fileID: 8034420717446164986}
   - component: {fileID: 3271112394364251403}
-  - component: {fileID: 3342386370551700390}
   m_Layer: 5
   m_Name: SubStage1-1
   m_TagString: StageMapPoint
@@ -5476,60 +4417,15 @@ MonoBehaviour:
       - m_Target: {fileID: 3765133889497855861}
         m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
         m_MethodName: OnSubStageClick
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 1-1
+          m_StringArgument: 0
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3342386370551700390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7878450466468274661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipOpen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 1-1
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnMainStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 1-1
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &8210442056407830327
 GameObject:
   m_ObjectHideFlags: 0
@@ -5542,7 +4438,6 @@ GameObject:
   - component: {fileID: 7906140120965668474}
   - component: {fileID: 6900802390172745687}
   - component: {fileID: 1475540340659379300}
-  - component: {fileID: 4315761712168254917}
   m_Layer: 5
   m_Name: SubStage3-1
   m_TagString: StageMapPoint
@@ -5654,60 +4549,15 @@ MonoBehaviour:
       - m_Target: {fileID: 3765133889497855861}
         m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
         m_MethodName: OnSubStageClick
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 10
           m_FloatArgument: 0
-          m_StringArgument: 3-1
+          m_StringArgument: 10
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4315761712168254917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8210442056407830327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipOpen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 3-1
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 3-1
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &8693902789492030505
 GameObject:
   m_ObjectHideFlags: 0
@@ -5720,7 +4570,6 @@ GameObject:
   - component: {fileID: 4511178627337297025}
   - component: {fileID: 958133176838795241}
   - component: {fileID: 3271092088540197845}
-  - component: {fileID: 4599974984971093396}
   m_Layer: 5
   m_Name: MainStage02
   m_TagString: StageMapPoint
@@ -5841,51 +4690,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4599974984971093396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8693902789492030505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnMainStageToolTipOpen
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 2
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnMainStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 2
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &8768166989897592416
 GameObject:
   m_ObjectHideFlags: 0
@@ -5898,7 +4702,6 @@ GameObject:
   - component: {fileID: 2094134148854801350}
   - component: {fileID: 5625167733036474215}
   - component: {fileID: 1302527831443594494}
-  - component: {fileID: 1583791858739739762}
   m_Layer: 5
   m_Name: SubStage1-2
   m_TagString: StageMapPoint
@@ -6010,60 +4813,15 @@ MonoBehaviour:
       - m_Target: {fileID: 3765133889497855861}
         m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
         m_MethodName: OnSubStageClick
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: 1-2
+          m_StringArgument: 1
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1583791858739739762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8768166989897592416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipOpen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 1-2
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnMainStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 1-2
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &8840226109076225629
 GameObject:
   m_ObjectHideFlags: 0
@@ -6076,7 +4834,6 @@ GameObject:
   - component: {fileID: 5924252231303335369}
   - component: {fileID: 80669245133116215}
   - component: {fileID: 3407255354191054932}
-  - component: {fileID: 4661870199508588021}
   m_Layer: 5
   m_Name: SubStage2-4
   m_TagString: StageMapPoint
@@ -6188,60 +4945,15 @@ MonoBehaviour:
       - m_Target: {fileID: 3765133889497855861}
         m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
         m_MethodName: OnSubStageClick
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 8
           m_FloatArgument: 0
-          m_StringArgument: 2-4
+          m_StringArgument: 8
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4661870199508588021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8840226109076225629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipOpen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 2-4
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 2-4
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &8957537158920189926
 GameObject:
   m_ObjectHideFlags: 0
@@ -6254,7 +4966,6 @@ GameObject:
   - component: {fileID: 6155932187263483257}
   - component: {fileID: 6097006190411438701}
   - component: {fileID: 828758715434722261}
-  - component: {fileID: 1623371518799706308}
   m_Layer: 5
   m_Name: SubStage4-5
   m_TagString: StageMapPoint
@@ -6366,60 +5077,15 @@ MonoBehaviour:
       - m_Target: {fileID: 3765133889497855861}
         m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
         m_MethodName: OnSubStageClick
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 19
           m_FloatArgument: 0
           m_StringArgument: 4-5
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1623371518799706308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8957537158920189926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipOpen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 4-5
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 4-5
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &8965394393591102830
 GameObject:
   m_ObjectHideFlags: 0
@@ -6432,7 +5098,6 @@ GameObject:
   - component: {fileID: 3476092833195157159}
   - component: {fileID: 8365715763209195490}
   - component: {fileID: 1808585398206298764}
-  - component: {fileID: 7877128706665343941}
   m_Layer: 5
   m_Name: SubStage2-2
   m_TagString: StageMapPoint
@@ -6544,60 +5209,15 @@ MonoBehaviour:
       - m_Target: {fileID: 3765133889497855861}
         m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
         m_MethodName: OnSubStageClick
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 6
           m_FloatArgument: 0
-          m_StringArgument: 2-2
+          m_StringArgument: 6
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7877128706665343941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8965394393591102830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipOpen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 2-2
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3765133889497855861}
-          m_TargetAssemblyTypeName: UIStage, Assembly-CSharp
-          m_MethodName: OnSubStageToolTipClose
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 2-2
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &9085705211615171327
 GameObject:
   m_ObjectHideFlags: 0
@@ -6987,7 +5607,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3613084804701047823, guid: e1ed308cc26cd4f4cbdb2007fd808c1d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00007146146
+      value: 0.000015339776
       objectReference: {fileID: 0}
     - target: {fileID: 4250046913104637804, guid: e1ed308cc26cd4f4cbdb2007fd808c1d, type: 3}
       propertyPath: m_AnchorMax.x

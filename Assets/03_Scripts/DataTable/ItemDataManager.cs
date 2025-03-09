@@ -28,7 +28,7 @@ public class ItemDataManager : SingleTonBase<ItemDataManager>
 	private void Init()
 	{
 		if (jsonData != null) return;
-		TextAsset txtFile = Resources.Load<TextAsset>("Jsons/ItemDataJson");
+		TextAsset txtFile = Resources.Load<TextAsset>("Jsons/ItemData");
 		jsonData = JSON.Parse(txtFile.text);
 
 		InitEquipt();

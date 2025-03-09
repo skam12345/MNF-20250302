@@ -62,4 +62,26 @@ public class StageObjectClass
 		bossidx = _data.bossidx;
 		description = _data.description;
 	}
- }
+
+	System.Text.StringBuilder logText;
+	public override string ToString()
+	{
+		if (logText == null) logText = new System.Text.StringBuilder();
+
+		logText.Clear();
+
+		logText.Append(stageNum);
+		logText.Append("\n"+subNum);
+		logText.Append("\n"+dungeonName);
+		logText.Append("\n"+rewardExp);
+		logText.Append("\n"+rewardGold);
+		logText.Append("\n"+difficulty);
+		logText.Append("\n"+monster1);
+		logText.Append("\n"+monster2);
+		logText.Append("\n"+monster3);
+		logText.Append("\n"+monster4);
+		logText.Append("\n"+bossidx);
+		logText.Append("\n"+description);
+		return logText.ToString();
+	}
+}

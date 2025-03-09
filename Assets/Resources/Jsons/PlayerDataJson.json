@@ -1,0 +1,85 @@
+{
+  "Discription": {},
+  "PlayerState": {
+    "1": {
+      "name": "마왕",
+      "max_hp": 100,
+      "max_mp": 40,
+      "atk": 35,
+      "def": 0,
+      "criRate": 5,
+      "criDmg": 50,
+      "need_exp": 400
+    },
+    "2": {
+      "name": "용사",
+      "max_hp": 200,
+      "max_mp": 40,
+      "atk": 35,
+      "def": 0,
+      "criRate": 5,
+      "criDmg": 50,
+      "need_exp": 400
+    },
+    "3": {
+      "name": "버디2",
+      "max_hp": 100,
+      "max_mp": 40,
+      "atk": 35,
+      "def": 0,
+      "criRate": 5,
+      "criDmg": 50,
+      "need_exp": 400
+    },
+    "4": {
+      "name": "버디3",
+      "max_hp": 100,
+      "max_mp": 40,
+      "atk": 35,
+      "def": 0,
+      "criRate": 5,
+      "criDmg": 50,
+      "need_exp": 400
+    },
+    "5": {
+      "name": "버디4",
+      "max_hp": 100,
+      "max_mp": 40,
+      "atk": 35,
+      "def": 0,
+      "criRate": 5,
+      "criDmg": 50,
+      "need_exp": 300
+    },
+    "6": {
+      "name": "버디5",
+      "max_hp": 100,
+      "max_mp": 40,
+      "atk": 35,
+      "def": 0,
+      "criRate": 5,
+      "criDmg": 50,
+      "need_exp": 300
+    },
+    "7": {
+      "name": "버디6",
+      "max_hp": 100,
+      "max_mp": 40,
+      "atk": 35,
+      "def": 0,
+      "criRate": 5,
+      "criDmg": 50,
+      "need_exp": 300
+    },
+    "8": {
+      "name": "버디7",
+      "max_hp": 100,
+      "max_mp": 40,
+      "atk": 35,
+      "def": 0,
+      "criRate": 5,
+      "criDmg": 50,
+      "need_exp": 300
+    }
+  }
+}

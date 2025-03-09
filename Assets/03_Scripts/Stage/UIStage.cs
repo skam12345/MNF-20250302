@@ -1,6 +1,3 @@
-using Newtonsoft.Json;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -28,6 +25,21 @@ public class UIStage : MonoBehaviour
 	{
 		stageObject.SetActive(true);
 		mainStageObject.SetActive(true);
+
+		//List<bool> stageOpenCheck = StageManager.Instance.StageOpenCheck;
+
+		//bool firstCheck, secondCheck;
+		//Button targetBtn;
+
+		//for (int i = 0; i < stageOpenCheck.Count; i++)
+		//{
+		//	targetBtn = subStageBtnPos[i].GetComponent<Button>();
+		//	firstCheck = targetBtn.interactable;
+		//	secondCheck = stageOpenCheck[i];
+		//	if (firstCheck != secondCheck) targetBtn.interactable = secondCheck;
+		//	else continue;
+		//}
+
 	}
 
 	// UIClose
@@ -115,228 +127,29 @@ public class UIStage : MonoBehaviour
 
 
 	#region [SubStage]
-	// PC
-	// 1. 마우스가 들어오면 툴팁 오픈
-	// 2. 마우스가 벗어나면 툴팁 해제
-	// 3. 마우스로 클릭하면 설명에 세팅 및 오픈
-	// 4. 마우스로 배경을 클릭하면 설명 OFF
-
-	// Mob
-	// 1의 경우 구현 불가
-	// 2의 경우 구현 불가
-	// 3의 경우 서브 스테이지 이름 보여주고 설명란 세팅
-	// 4는 똑같이 구현
 
 	// Enter SubStage
-	public void OnSubStageClick(string _stageNumber)
+	public void OnSubStageClick(int _stageArray)
 	{
+		StageObjectClass stageData = null;
+
+		StageDataManager.Instance.StageArrayIndex = _stageArray;
+		OnSubStageToolTipOpen(_stageArray);
 		subStageObject.SetActive(true);
-		//if (description.gameObject.activeSelf == true) return;
+		StageDataManager.Instance.GetStageData(out stageData);
 
 		description.gameObject.SetActive(true);
-		description.SetSubStageDescription(_stageNumber);
-
-		//StageManager.Instance.SetStageValue(_stageNumber);
-
-		//switch (_stageNumber)
-		//{
-		//	case "1-1":
-			
-		//		break;
-		//	case "1-2":
-
-		//		break;
-		//	case "1-3":
-
-		//		break;
-		//	case "1-4":
-
-		//		break;
-		//	case "1-5":
-
-		//		break;
-
-		//	case "2-1":
-
-		//		break;
-		//	case "2-2":
-
-		//		break;
-		//	case "2-3":
-
-		//		break;
-		//	case "2-4":
-
-		//		break;
-		//	case "2-5":
-
-		//		break;
-
-		//	case "3-1":
-
-		//		break;
-		//	case "3-2":
-
-		//		break;
-		//	case "3-3":
-
-		//		break;
-		//	case "3-4":
-
-		//		break;
-		//	case "3-5":
-
-		//		break;
-
-		//	case "4-1":
-
-		//		break;
-		//	case "4-2":
-
-		//		break;
-		//	case "4-3":
-
-		//		break;
-		//	case "4-4":
-
-		//		break;
-		//	case "4-5":
-
-		//		break;
-
-		//	case "5-1":
-
-		//		break;
-		//	case "5-2":
-
-		//		break;
-		//	case "5-3":
-
-		//		break;
-		//	case "5-4":
-
-		//		break;
-		//	case "5-5":
-
-		//		break;
-		//	default:
-		//		break;
-		//}
+		description.SetSubStageDescription(stageData.description);
+		OnSubStageToolTipOpen(_stageArray);
+		//Debug.Log(StageManager.Instance.SelectStageText);
 	}
 
-	public void OnSubStageToolTipOpen(string _stageName)
+	public void OnSubStageToolTipOpen(int _stageArray)
 	{
-		string str = _stageName;
-		
-		description.SetSubStageDescription(_stageName);
-		switch (_stageName)
-		{
-			case "1-1":
-				stageTooltip.Open(ref str, ref subStageBtnPos[0]);
-				break;
-			case "1-2":
-				stageTooltip.Open(ref str, ref subStageBtnPos[1]);
-
-				break;
-			case "1-3":
-				stageTooltip.Open(ref str, ref subStageBtnPos[2]);
-
-				break;
-			case "1-4":
-				stageTooltip.Open(ref str, ref subStageBtnPos[3]);
-
-				break;
-			case "1-5":
-				stageTooltip.Open(ref str, ref subStageBtnPos[4]);
-
-				break;
-
-			case "2-1":
-				stageTooltip.Open(ref str, ref subStageBtnPos[5]);
-
-				break;
-			case "2-2":
-				stageTooltip.Open(ref str, ref subStageBtnPos[6]);
-
-				break;
-			case "2-3":
-				stageTooltip.Open(ref str, ref subStageBtnPos[7]);
-
-				break;
-			case "2-4":
-				stageTooltip.Open(ref str, ref subStageBtnPos[8]);
-
-				break;
-			case "2-5":
-				stageTooltip.Open(ref str, ref subStageBtnPos[9]);
-
-				break;
-
-			case "3-1":
-				stageTooltip.Open(ref str, ref subStageBtnPos[10]);
-
-				break;
-			case "3-2":
-				stageTooltip.Open(ref str, ref subStageBtnPos[11]);
-
-				break;
-			case "3-3":
-				stageTooltip.Open(ref str, ref subStageBtnPos[12]);
-
-				break;
-			case "3-4":
-				stageTooltip.Open(ref str, ref subStageBtnPos[13]);
-
-				break;
-			case "3-5":
-				stageTooltip.Open(ref str, ref subStageBtnPos[14]);
-
-				break;
-
-			case "4-1":
-				stageTooltip.Open(ref str, ref subStageBtnPos[15]);
-
-				break;
-			case "4-2":
-				stageTooltip.Open(ref str, ref subStageBtnPos[16]);
-
-				break;
-			case "4-3":
-				stageTooltip.Open(ref str, ref subStageBtnPos[17]);
-
-				break;
-			case "4-4":
-				stageTooltip.Open(ref str, ref subStageBtnPos[18]);
-
-				break;
-			case "4-5":
-				stageTooltip.Open(ref str, ref subStageBtnPos[19]);
-
-				break;
-
-			case "5-1":
-				stageTooltip.Open(ref str, ref subStageBtnPos[20]);
-
-				break;
-			case "5-2":
-				stageTooltip.Open(ref str, ref subStageBtnPos[21]);
-
-				break;
-			case "5-3":
-				stageTooltip.Open(ref str, ref subStageBtnPos[22]);
-
-				break;
-			case "5-4":
-				stageTooltip.Open(ref str, ref subStageBtnPos[23]);
-
-				break;
-			case "5-5":
-				stageTooltip.Open(ref str, ref subStageBtnPos[24]);
-
-				break;
-			default:
-				break;
-		}
+		StageObjectClass stageData = null;
+		StageDataManager.Instance.GetStageData(_stageArray, out stageData);
+		string str = stageData.dungeonName;
+		stageTooltip.Open(ref str, ref subStageBtnPos[_stageArray]);
 		stageTooltip.gameObject.SetActive(true);
 	}
 

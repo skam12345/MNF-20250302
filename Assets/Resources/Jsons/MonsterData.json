@@ -1,0 +1,170 @@
+{
+  "Discription": {},
+  "Monsters": {
+    "1": {
+      "name": "불몬스터",
+      "lv": 1,
+      "max_hp": 10,
+      "max_mp": 40,
+      "atk": 3,
+      "def": 0,
+      "criRate": 5,
+      "criDmg": 50,
+      "element": "dark"
+    },
+    "2": {
+      "name": "지박령",
+      "lv": 2,
+      "max_hp": 20,
+      "max_mp": 40,
+      "atk": 5,
+      "def": 0,
+      "criRate": 5,
+      "criDmg": 50,
+      "element": "holy"
+    },
+    "3": {
+      "name": "골렘",
+      "lv": 4,
+      "max_hp": 30,
+      "max_mp": 40,
+      "atk": 7,
+      "def": 0,
+      "criRate": 5,
+      "criDmg": 50,
+      "element": "fire"
+    },
+    "4": {
+      "name": "미믹",
+      "lv": 5,
+      "max_hp": 50,
+      "max_mp": 40,
+      "atk": 10,
+      "def": 0,
+      "criRate": 5,
+      "criDmg": 50,
+      "element": "ice"
+    },
+    "5": {
+      "name": "가고일",
+      "lv": 7,
+      "max_hp": 80,
+      "max_mp": 40,
+      "atk": 13,
+      "def": 0,
+      "criRate": 5,
+      "criDmg": 50,
+      "element": "earth"
+    },
+    "6": {
+      "name": "발록",
+      "lv": 9,
+      "max_hp": 85,
+      "max_mp": 40,
+      "atk": 15,
+      "def": 0,
+      "criRate": 5,
+      "criDmg": 50,
+      "element": "nature"
+    },
+    "7": {
+      "name": "와이번",
+      "lv": 11,
+      "max_hp": 89,
+      "max_mp": 40,
+      "atk": 17,
+      "def": 0,
+      "criRate": 5,
+      "criDmg": 50,
+      "element": "holy"
+    },
+    "8": {
+      "name": "물",
+      "lv": 12,
+      "max_hp": 106,
+      "max_mp": 40,
+      "atk": 20,
+      "def": 0,
+      "criRate": 5,
+      "criDmg": 50,
+      "element": "dark"
+    },
+    "9": {
+      "name": "불",
+      "lv": 14,
+      "max_hp": 123,
+      "max_mp": 40,
+      "atk": 25,
+      "def": 0,
+      "criRate": 5,
+      "criDmg": 50,
+      "element": "dark"
+    },
+    "10": {
+      "name": "풀",
+      "lv": 15,
+      "max_hp": 140,
+      "max_mp": 40,
+      "atk": 30,
+      "def": 0,
+      "criRate": 5,
+      "criDmg": 50,
+      "element": "holy"
+    },
+    "11": {
+      "name": "돌",
+      "lv": 18,
+      "max_hp": 157,
+      "max_mp": 40,
+      "atk": 35,
+      "def": 0,
+      "criRate": 5,
+      "criDmg": 50,
+      "element": "fire"
+    },
+    "12": {
+      "name": "풀때기",
+      "lv": 19,
+      "max_hp": 160,
+      "max_mp": 40,
+      "atk": 50,
+      "def": 0,
+      "criRate": 5,
+      "criDmg": 50,
+      "element": "ice"
+    },
+    "13": {
+      "name": "잡초",
+      "lv": 20,
+      "max_hp": 174,
+      "max_mp": 40,
+      "atk": 66,
+      "def": 0,
+      "criRate": 5,
+      "criDmg": 50,
+      "element": "earth"
+    },
+    "14": {
+      "name": "뷰리쁠라워",
+      "lv": 22,
+      "max_hp": 191,
+      "max_mp": 40,
+      "atk": 77,
+      "def": 0,
+      "criRate": 5,
+      "criDmg": 50,
+      "element": "nature"
+    },
+    "15": {
+      "name": "곰",
+      "lv": 25,
+      "max_hp": 208,
+      "max_mp": 40,
+      "atk": 100,
+      "def": 0,
+      "criRate": 5,
+      "criDmg": 50,
+      "element": "holy"
+    }
+  }
+}

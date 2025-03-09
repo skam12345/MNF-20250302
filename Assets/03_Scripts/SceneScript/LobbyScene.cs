@@ -40,6 +40,7 @@ public class LobbyScene : MonoBehaviour
 		PlayerDataManager.Instance.OnInit();
 		InventoryData.Instance.OnInit();
 		EnemyDataManager.Instance.OnInit();
+		StageDataManager.Instance.OnInit();
 	}
 
 
@@ -113,9 +114,9 @@ public class LobbyScene : MonoBehaviour
 		buddyWindow.SetActive(true);
 	}
 
-	public void OnSelectBuddy(int _index)
+	public void OnBuddySelect(string _name)
 	{
-		//StageManager.Instance.Select(_index);
+		StageDataManager.Instance.BuddyName = _name;
 	}
 
 	public void OnCloseBuddyWindow()

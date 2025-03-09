@@ -11,9 +11,9 @@ public class PlayerModel : MonoBehaviour
 	[Header("Debug")]
 	[SerializeField]private GameObject target;
 	[SerializeField]private PlayerModelAniCtrl targetAni;
-//	[SerializeField]private PlayerEnum.MODEL_NUMBER_NAME targetPartnerEnum = PlayerEnum.MODEL_NUMBER_NAME.NONE;
+	//	[SerializeField]private PlayerEnum.MODEL_NUMBER_NAME targetPartnerEnum = PlayerEnum.MODEL_NUMBER_NAME.NONE;
 
-
+	
 
 	private void Start()
 	{
