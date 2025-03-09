@@ -41,7 +41,7 @@ public class StageMgr : MonoBehaviour
 
     public void Start()
     {
-        TextAsset jsonFile = Resources.Load<TextAsset>("Jsons/StageJson");
+        TextAsset jsonFile = Resources.Load<TextAsset>("Jsons/StageData");
 
         if (jsonFile != null)
         {
