@@ -1,4 +1,3 @@
-
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,26 +5,10 @@ using UnityEngine;
 public class StageMgr : MonoBehaviour
 {
     private static StageMgr instance;
+
     private Dictionary<string, StageObjectClass> stageJsonDict = new Dictionary<string, StageObjectClass>();
     public List<StageObjectClass> stageJsonList = new List<StageObjectClass>();
     
-    public static StageMgr Instance
-    {
-        get
-        {
-            if(instance == null)
-            {
-                instance = FindObjectOfType<StageMgr>();
-
-                if (instance == null)
-                {
-                    GameObject obj = new GameObject("StageMgr");
-                    instance = obj.AddComponent<StageMgr>();
-                }
-            }
-            return instance;
-        }
-    }
 
     private void Awake()
     {
