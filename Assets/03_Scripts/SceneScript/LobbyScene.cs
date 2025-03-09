@@ -33,9 +33,19 @@ public class LobbyScene : MonoBehaviour
 
 
 	#region Awake Start Update Reset
+	private void Awake()
+	{
+		// Manager √ ±‚»≠
+		ItemDataManager.Instance.OnInit();
+		PlayerDataManager.Instance.OnInit();
+		InventoryData.Instance.OnInit();
+		EnemyDataManager.Instance.OnInit();
+		StageDataManager.Instance.OnInit();
+	}
+
+
 	private void Start()
 	{
-		
 		if (fadeOutWait == null) fadeOutWait = new WaitForSeconds(fadeOutTime);
 
 		stageBackBtn.onClick.RemoveAllListeners();
@@ -104,9 +114,9 @@ public class LobbyScene : MonoBehaviour
 		buddyWindow.SetActive(true);
 	}
 
-	public void OnSelectBuddy(int _index)
+	public void OnBuddySelect(string _name)
 	{
-		//StageManager.Instance.Select(_index);
+		StageDataManager.Instance.BuddyName = _name;
 	}
 
 	public void OnCloseBuddyWindow()

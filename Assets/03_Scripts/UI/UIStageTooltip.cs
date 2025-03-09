@@ -1,7 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 스테이지에 마우스 또는 커서가 들어왔을 때 보여지는 이미지
+/// </summary>
 public class UIStageTooltip : MonoBehaviour
 {
 	[Header("settings")]

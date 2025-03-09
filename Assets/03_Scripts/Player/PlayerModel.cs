@@ -11,13 +11,13 @@ public class PlayerModel : MonoBehaviour
 	[Header("Debug")]
 	[SerializeField]private GameObject target;
 	[SerializeField]private PlayerModelAniCtrl targetAni;
-//	[SerializeField]private PlayerEnum.MODEL_NUMBER_NAME targetPartnerEnum = PlayerEnum.MODEL_NUMBER_NAME.NONE;
+	//	[SerializeField]private PlayerEnum.MODEL_NUMBER_NAME targetPartnerEnum = PlayerEnum.MODEL_NUMBER_NAME.NONE;
 
-
+	
 
 	private void Start()
 	{
-		ChangeModel(PlayerEnum.MODEL_NUMBER_NAME.MAWANG);
+		ChangeModel(PlayerEnum.MODEL_NUMBER_NAME.Mawang);
 	}
 
 	/// <summary>
@@ -46,7 +46,7 @@ public class PlayerModel : MonoBehaviour
 
 		switch (_targetEnum)
 		{
-			case PlayerEnum.MODEL_NUMBER_NAME.MAWANG:
+			case PlayerEnum.MODEL_NUMBER_NAME.Mawang:
 				target = Instantiate(modelPrefabs[0],Vector3.zero,Quaternion.identity);
 				target.transform.parent = this.transform;
 				target.transform.localPosition = Vector3.zero;

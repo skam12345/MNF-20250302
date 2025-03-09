@@ -14,8 +14,8 @@ public class InputSystem : MonoBehaviour
 
 	[Header("Settings")]
 	[SerializeField]private PlayerControll playerctrl;  // 
-
-
+	public PlayerControll PlayerCtrl { set { playerctrl = value; } }
+	
 	private void OnMove(InputValue _valuie)
 	{
 
