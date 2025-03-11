@@ -17,9 +17,9 @@ public class InventoryData : SingleTonBase<InventoryData>
 	[SerializeField] private List<ItemBaseResource> ItemResourceList;
 
 	
-	public int EquiptSize { get { if (itemEquiptList != null) return -1; else return itemEquiptList.Count; } }
-	public int UseableSize { get { if (itemUseableList != null) return -1; return itemUseableList.Count; } }
-	public int ResourceSize { get { if (ItemResourceList != null) return -1; return ItemResourceList.Count; } }
+	public int EquiptSize { get { if (itemEquiptList == null) return -1; return itemEquiptList.Count; } }
+	public int UseableSize { get { if (itemUseableList == null) return -1; return itemUseableList.Count; } }
+	public int ResourceSize { get { if (ItemResourceList == null) return -1; return ItemResourceList.Count; } }
 
 	public void OnInit()
 	{
