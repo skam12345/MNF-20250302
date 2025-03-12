@@ -47,10 +47,12 @@ public class TestEnemyCollider : MonoBehaviour
         initialEnemyPositionX = testEnemy.transform.position.x;
         gruntAnimator = testEnemy.transform.Find("GruntHP").GetComponent<Animator>();
 
+
         if (gruntAnimator != null)
         {
             gruntOverrideController = new AnimatorOverrideController(gruntAnimator.runtimeAnimatorController);
             animationClips = gruntOverrideController.animationClips;
+            gruntAnimator.SetTrigger("Walk");
         }
         if(!access)
         {
@@ -67,8 +69,17 @@ public class TestEnemyCollider : MonoBehaviour
         if(access)
         {
             Vector3 direction = (target.transform.position - testEnemy.transform.position).normalized;
-
-            direction.y = 0;
+            float distance = Vector3.Distance(testEnemy.transform.position, target.transform.position);
+            if(distance < 1.0f)
+            {
+                chaseSpeed = 4f;
+                gruntAnimator.SetTrigger("Attack");
+            }else
+            {
+                chaseSpeed = 6f;
+                gruntAnimator.SetTrigger("Walk");
+            }
+                direction.y = 0;
             if(direction.x > 0)
             {
                 testEnemy.transform.rotation = Quaternion.Slerp(testEnemy.transform.rotation, left, rotationSpeed * Time.deltaTime);
@@ -104,7 +115,6 @@ public class TestEnemyCollider : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             access = true;
-            gruntAnimator.SetTrigger("Run");
         }
     }
 
@@ -113,7 +123,6 @@ public class TestEnemyCollider : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             access = false;
-            gruntAnimator.SetTrigger("Walk");
         }
     }
     IEnumerator AutoRotateEnemy()
