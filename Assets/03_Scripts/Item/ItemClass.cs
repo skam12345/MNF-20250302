@@ -1,5 +1,8 @@
+using System;
 using System.Text;
+using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.Localization.Plugins.XLIFF.V12;
 
 public class ItemBaseClass
 {
@@ -207,6 +210,26 @@ public class ItemBaseClass
 		public string description { get; set; }// 아이템의 효과 설명
 		public int count { get; set; }              // 현재 보유량
 		public int stack { get; set; }             // 최대 스택량
+		StringBuilder itemText;
+
+		public override string ToString()
+		{
+			if (itemText == null) itemText = new StringBuilder();
+
+			itemText.Clear();
+
+			itemText.Append(index);
+			itemText.Append("\n" + mainName);
+			itemText.Append("\n" + typeText);
+			itemText.Append("\n" + buyGold);
+			itemText.Append("\n" + sellGold);
+			itemText.Append("\n" + buyGold);
+			itemText.Append("\n" + sellGold);
+			itemText.Append("\n" + description);
+			itemText.Append("\n" + count);
+			itemText.Append("\n" + stack);
+			return itemText.ToString();
+		}
 
 		public void Init(int _index, string _mainName, string _typeText, int _buyGold, int _sellGold, string _description,int _itemCount, int _stack)
 		{
@@ -298,6 +321,7 @@ public class ItemBaseClass
 		public string Type;	// "장비" / "소모품" / "재료"
 		public int Index;	// 아이템 번호
 		public int Count;	// 장비 안쓰임, 소모품 & 재료 : 드랍 개수
+		StringBuilder itemText;
 		public ItemData()
 		{
 			Type = "";
@@ -312,14 +336,17 @@ public class ItemBaseClass
 			Count = _data.Count;
 		}
 
+
 		public override string ToString()
 		{
-			string log = "";
-			log += Type.ToString();
-			log += "\n" + Index;
-			log += "\n" + Count;
+			if (itemText == null) itemText = new StringBuilder();
 
-			return log;
+			itemText.Clear();
+
+			itemText.Append(Type);
+			itemText.Append("\n" + Index);
+			itemText.Append("\n" + Count);
+			return itemText.ToString();
 		}
 	}
 
