@@ -13,8 +13,6 @@ public class PlayerModel : MonoBehaviour
 	[SerializeField]private PlayerModelAniCtrl targetAni;
 	//	[SerializeField]private PlayerEnum.MODEL_NUMBER_NAME targetPartnerEnum = PlayerEnum.MODEL_NUMBER_NAME.NONE;
 
-	
-
 	private void Start()
 	{
 		ChangeModel(PlayerEnum.MODEL_NUMBER_NAME.Mawang);
@@ -50,7 +48,6 @@ public class PlayerModel : MonoBehaviour
 				target = Instantiate(modelPrefabs[0],Vector3.zero,Quaternion.identity);
 				target.transform.parent = this.transform;
 				target.transform.localPosition = Vector3.zero;
-				target.transform.rotation = Quaternion.Euler(new Vector3(0,90,0));
 				targetAni = target.GetComponent<PlayerModelAniCtrl>();
 				break;
 			default:
@@ -67,7 +64,6 @@ public class PlayerModel : MonoBehaviour
 		if (targetAni == null) return;
 		targetAni.PlayAni(ref _aniEnum);
 	}
-
 
 
 	public void SetFlip(bool _isLeft)

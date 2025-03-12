@@ -12,6 +12,7 @@ public class ContentsResource : MonoBehaviour
 	private void Awake()
 	{
 		iconList = new List<IconResource>();
+		prefabIcon = Resources.Load<GameObject>(ResourcesDirectory.UIIconResource);
 	}
 	private void OnEnable()
 	{

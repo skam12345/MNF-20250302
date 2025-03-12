@@ -1060,7 +1060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 781d519513f7409418576bc935bbea1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabIcon: {fileID: 6882516463834265356, guid: 31afc311e71502e4fa4d50831dc59c22, type: 3}
+  prefabIcon: {fileID: 0}
   iconList: []
 --- !u!1 &4636902222211477715
 GameObject:

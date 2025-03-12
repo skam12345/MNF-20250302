@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerControll : MonoBehaviour
+public class PlayerControllInBattleField : MonoBehaviour
 {
 	// speed
 	private float currSpeed = 0.0f;

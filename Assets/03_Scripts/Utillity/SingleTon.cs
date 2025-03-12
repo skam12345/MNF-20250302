@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// 해당 SingleTon은 Hierachy창에 어떤 오브젝트인지간에 AddComponent로 넣어져 있어야 제대로 작동합니다.
+/// </summary>
 public class SingleTonToUnityObject<T> : MonoBehaviour where T : MonoBehaviour
 {
 	private static T instance;
@@ -20,7 +23,7 @@ public class SingleTonToUnityObject<T> : MonoBehaviour where T : MonoBehaviour
 		}
 	}
 
-	public virtual void Awake()
+	protected virtual void Awake()
 	{
 		RemoveDuplicates();
 	}
@@ -53,8 +56,9 @@ public class SingleTonToUnityObject<T> : MonoBehaviour where T : MonoBehaviour
 }
 
 /// <summary>
-/// 해당 싱글톤은 코드상에서 존재하는 싱글톤입니다.
-/// 유니티상에서는 보여질 수 없습니다.
+/// 해당 싱글톤은 메모리상에 존재하는 싱글톤입니다.
+/// 사용하려면 최초 1회 Instance를 입력해야합니다.
+/// TestManager.Instance;
 /// 
 /// </summary>
 /// <typeparam name="T"></typeparam>

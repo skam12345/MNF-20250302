@@ -5,8 +5,8 @@ using UnityEngine.Events;
 
 public class IconResource : MonoBehaviour
 {
-	[SerializeField] private Image iconImage;
-	[SerializeField] private TextMeshProUGUI count;
+	private Image iconImage;
+	private TextMeshProUGUI count;
 
 	UnityAction click;
 	public UnityAction ClickAction { set { click = value; } } 

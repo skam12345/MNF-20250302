@@ -66,7 +66,6 @@ public class UIInventory : MonoBehaviour
 			data.Type = "¼Ò¸ðÇ°";
 			data.Count = UnityEngine.Random.Range(1, 999);
 			InventoryData.Instance.ItemInInventoryToItemData(ref data);
-			Debug.Log(InventoryData.Instance.UseableSize);
 			bottom.RefreshUseable();
 		}
 	}

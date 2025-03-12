@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,13 +6,13 @@ using UnityEngine.InputSystem;
 /// Unity 내부 기능인 InputSystem 을 활용하여 입력을 받습니다
 /// 
 /// </summary>
-public class InputSystem : MonoBehaviour
+public class InputSystemInBattleField : MonoBehaviour
 {
 	private Vector2 moveDir;	// 저장할 움직임 값
 
 	[Header("Settings")]
-	[SerializeField]private PlayerControll playerctrl;  // 
-	public PlayerControll PlayerCtrl { set { playerctrl = value; } }
+	[SerializeField]private PlayerControllInBattleField playerctrl;  // 
+	public PlayerControllInBattleField PlayerCtrl { set { playerctrl = value; } }
 	
 	private void OnMove(InputValue _valuie)
 	{
