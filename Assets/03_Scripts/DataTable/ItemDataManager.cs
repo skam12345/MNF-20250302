@@ -38,30 +38,30 @@ public class ItemDataManager : SingleTonBase<ItemDataManager>
 
 	private void InitEquipt()
 	{
-		if(equiptList == null)
-		equiptList = new List<ItemBaseClass.ItemBaseEquipment>();
+		if (equiptList == null)
+			equiptList = new List<ItemBaseClass.ItemBaseEquipment>();
 
 		JSONNode target = jsonData["장비"];
 		int max = target.Count;
-	
-		for (int i =0; i < max; i++)
+
+		for (int i = 0; i < max; i++)
 		{
 			ItemBaseClass.ItemBaseEquipment data = new ItemBaseClass.ItemBaseEquipment();
 			data.Init(target[i]["name"].ToString(),
-				target[i]["type_name"].ToString(), 
-				target[i]["grade"].AsInt, 
-				target[i]["need_lv"].AsInt, 
+				target[i]["type_name"].ToString(),
+				target[i]["grade"].AsInt,
+				target[i]["need_lv"].AsInt,
 				0,
-				target[i]["buy_gold"].AsInt, 
-				target[i]["sell_gold"].AsInt, 
-				target[i]["item_hp"].AsFloat, 
+				target[i]["buy_gold"].AsInt,
+				target[i]["sell_gold"].AsInt,
+				target[i]["item_hp"].AsFloat,
 				target[i]["item_mp"].AsFloat,
-				target[i]["item_atk"].AsFloat, 
-				target[i]["item_def"].AsFloat, 
-				target[i]["criRate"].AsFloat, 
-				target[i]["criDmg"].AsFloat, 
-				target[i]["enchantRate"].AsInt, 
-				target[i]["description"].ToString(), 
+				target[i]["item_atk"].AsFloat,
+				target[i]["item_def"].AsFloat,
+				target[i]["criRate"].AsFloat,
+				target[i]["criDmg"].AsFloat,
+				target[i]["enchantRate"].AsInt,
+				target[i]["description"].ToString(),
 				target[i]["skill_event"].AsInt);
 
 			equiptList.Add(data);
@@ -79,7 +79,8 @@ public class ItemDataManager : SingleTonBase<ItemDataManager>
 		for (int i = 0; i < max; i++)
 		{
 			ItemBaseClass.ItemBaseUseable data = new ItemBaseClass.ItemBaseUseable();
-			data.Init(target[i]["main_name"].ToString(),
+			data.Init(i,
+				target[i]["main_name"].ToString(),
 				target[i]["type_name"].ToString(),
 				target[i]["buy_gold"].AsInt,
 				target[i]["sell_gold"].AsInt,
@@ -96,7 +97,7 @@ public class ItemDataManager : SingleTonBase<ItemDataManager>
 	private void InitResource()
 	{
 		if (resourceList == null)
-		resourceList = new List<ItemBaseClass.ItemBaseResource>();
+			resourceList = new List<ItemBaseClass.ItemBaseResource>();
 
 		JSONNode target = jsonData["재료"];
 		int max = target.Count;
@@ -104,7 +105,8 @@ public class ItemDataManager : SingleTonBase<ItemDataManager>
 		for (int i = 0; i < max; i++)
 		{
 			ItemBaseClass.ItemBaseResource data = new ItemBaseClass.ItemBaseResource();
-			data.Init(target[i]["main_name"].ToString(),
+			data.Init(i,
+				target[i]["main_name"].ToString(),
 				target[i]["type_name"].ToString(),
 				target[i]["buy_gold"].AsInt,
 				target[i]["sell_gold"].AsInt,
@@ -121,7 +123,7 @@ public class ItemDataManager : SingleTonBase<ItemDataManager>
 	{
 		_itemData = null;
 		if (_itemNumber < 0 || _itemNumber >= equiptList.Count) return false;
-		if( _itemData == null) _itemData = new ItemBaseEquipment();
+		if (_itemData == null) _itemData = new ItemBaseEquipment();
 
 		_itemData.Init(equiptList[_itemNumber]);
 		return true;

@@ -22,6 +22,7 @@ public class ItemCube : MonoBehaviour
 
 		boxCollider = this.GetComponent<Collider>();
 		rigidbody = this.GetComponent<Rigidbody>();
+		
 		//meshRenderer = cube.GetComponent<Material>();
 		//minimapRenderer = minimapRenderer.GetComponent<Material>();
 		jumpVector = Vector3.up * jumpPower;
@@ -39,6 +40,12 @@ public class ItemCube : MonoBehaviour
 
 	private void JumpItem()
 	{
+		// 위치 보정값
+		transform.position = transform.position + (Vector3.up * 0.5f);
+
+		// 이미지 체인지
+
+		// 잠핑
 		rigidbody.AddForce(jumpVector, ForceMode.Impulse);
 	}
 
@@ -52,7 +59,7 @@ public class ItemCube : MonoBehaviour
 	{
 		ItemData itemFieldData = null;
 		ItemBaseClass.CreateItem(ref _dropTable, out itemFieldData);
-		InventoryData.Instance.SetFieldItem(ref itemFieldData);
+		InventoryData.Instance.ItemInInventoryToItemData(ref itemFieldData);
 	}
 
 	

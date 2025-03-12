@@ -1,63 +1,45 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class IconEquipt : MonoBehaviour
 {
-	int slotNumber;
+	 private Image iconImage;
+	 private TextMeshProUGUI upgateText;
 
-	[SerializeField] private Image iconImage;
-	[SerializeField] private GameObject[] star;
-	[SerializeField] private Image iconNew;
-	[SerializeField] private Image iconLock;
-	//[SerializeField] private Image iconChar;
-	[SerializeField] private Image iconFavorit;
-	[SerializeField] private GameObject CheckObject;
-	[SerializeField] private TextMeshProUGUI levelText;
+	UnityAction click;
+	public UnityAction ClickAction { set { click = value; } }
 
-	private UnityAction selectAction;
-
-	//UIItemInfo uiInfo;
-	public void Init(int _selectNumber)//, ref UIItemInfo uiInfo)
+	private void Awake()
 	{
-		slotNumber = _selectNumber;
+		upgateText = transform.Find("UpgradeText_TMP").GetComponent<TextMeshProUGUI>();
+		iconImage = transform.Find("Image").GetComponent<Image>();
+		upgateText.text = "";
 	}
 
 	public void OnClick()
 	{
-		//if( info.gameObject.activeSelf == false)
-		//{
-		//	info.gameObject.SetActive(true);
-		//	info.OpenWeapon(ref select);
-		//}
-		//else
-		//{
-		//	info.gameObject.SetActive(false);
-		//}
+		if (click == null) return;
+		click.Invoke();
 	}
+
 
 	public void Refresh(ref ItemBaseClass.ItemBaseEquipment _item)
 	{
-		//iconImage.sprite = item.ItemSprite;
-		//iconNew.gameObject.SetActive(item.New);
-		//iconLock.gameObject.SetActive(item.Lock);
-		
-		//iconFavorit.gameObject.SetActive(item.Favorit);
-		//levelText.text = item.Level.ToString();
+		if( upgateText.text == "")
+		{
+			upgateText.text = _item.grade.ToString();
+		}
+		else if (_item.grade != int.Parse(upgateText.text))
+		{
+			upgateText.text = _item.grade.ToString();
+		}
 
-		//for (int i = 0; i < star.Length; i++)
-		//{
-		//	if (i <item.Star )
-		//	{
-		//		star[i].gameObject.SetActive(true);
-		//	}
-		//	else
-		//	{
-		//		star[i].gameObject.SetActive(false);
-		//	}
-		//}
-
-		//select = item;
+		Sprite targetSpr = SpriteManager.Instance.GetSpriteUseable(_item.index);
+		if (iconImage.sprite != targetSpr)
+		{
+			iconImage.sprite = targetSpr;
+		}
 	}
 }
