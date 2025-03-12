@@ -1,62 +1,45 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class IconResource : MonoBehaviour
 {
-	int slotNumber;
-
 	[SerializeField] private Image iconImage;
-	[SerializeField] private GameObject[] star;
-	[SerializeField] private Image iconNew;
-	[SerializeField] private Image iconLock;
-	[SerializeField] private Image iconFavorit;
-	[SerializeField] private GameObject CheckObject;
-	[SerializeField] private TextMeshProUGUI levelText;
+	[SerializeField] private TextMeshProUGUI count;
 
-	private UnityAction selectAction;
+	UnityAction click;
+	public UnityAction ClickAction { set { click = value; } } 
 
-	//UIItemInfo uiInfo;
-	public void Init(int _selectNumber)//, ref UIItemInfo uiInfo)
+	private void Awake()
 	{
-		slotNumber = _selectNumber;
+		count = transform.Find("countText_TMP").GetComponent<TextMeshProUGUI>();
+		iconImage = transform.Find("Image").GetComponent<Image>();
+		count.text = "";
 	}
+
 
 	public void OnClick()
 	{
-		//if( info.gameObject.activeSelf == false)
-		//{
-		//	info.gameObject.SetActive(true);
-		//	info.OpenWeapon(ref select);
-		//}
-		//else
-		//{
-		//	info.gameObject.SetActive(false);
-		//}
+		if (click == null) return;
+		click.Invoke();
 	}
 
 	public void Refresh(ref ItemBaseClass.ItemBaseResource _item)
 	{
-		//iconImage.sprite = item.ItemSprite;
-		//iconNew.gameObject.SetActive(item.New);
-		//iconLock.gameObject.SetActive(item.Lock);
+		if (count.text == "")
+		{
+			count.text = _item.count.ToString();
+		}
+		else if (_item.count != int.Parse(count.text))
+		{
+			count.text = _item.count.ToString();
+		}
 
-		//iconFavorit.gameObject.SetActive(item.Favorit);
-		//levelText.text = item.Level.ToString();
-
-		//for (int i = 0; i < star.Length; i++)
-		//{
-		//	if (i <item.Star )
-		//	{
-		//		star[i].gameObject.SetActive(true);
-		//	}
-		//	else
-		//	{
-		//		star[i].gameObject.SetActive(false);
-		//	}
-		//}
-
-		//select = item;
+		Sprite targetSpr = SpriteManager.Instance.GetSpriteResource(_item.index);
+		if (iconImage.sprite != targetSpr)
+		{
+			iconImage.sprite = targetSpr;
+		}
 	}
 }

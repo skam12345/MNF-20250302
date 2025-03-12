@@ -14,5 +14,7 @@ public static class ResourcesDirectory
 	public static string Json{ get { string str = "Jsons/"; return str; } }
 	public static string StageMap{ get { string str = "Prefebs/StageMap/"; return str; } }
 
-
+	public static string IconEquiptSprite { get { string str = "Sprites/Icon/Equipt/"; return str; } }
+	public static string IconUseableSprite { get { string str = "Sprites/Icon/Useable/"; return str; } }
+	public static string IconResourceSprite { get { string str = "Sprites/Icon/Resource/"; return str; } }
 }

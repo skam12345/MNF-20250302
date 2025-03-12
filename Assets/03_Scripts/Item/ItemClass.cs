@@ -1,4 +1,6 @@
+using System;
 using System.Text;
+using static Autodesk.Fbx.FbxAnimCurveDef;
 using static UnityEditor.Progress;
 
 public class ItemBaseClass
@@ -6,6 +8,7 @@ public class ItemBaseClass
 	// 기초 장비 아이템의 모든 것
 	public class ItemBaseEquipment
 	{
+		public int index { get; set; }
 		public string name { get; set; }	// 이름
 		public string typeText { get; set; }	// 종류
 		public int grade { get; set; }		// 등급 or 스타
@@ -89,6 +92,7 @@ public class ItemBaseClass
 	// 기초 소모품 아이템의 모든 것
 	public class ItemBaseUseable
 	{
+		public int index { get; set; }
 		public string mainName { get; set; }		// 맨 위에 사용될 핵심 이름
 		public string typeText { get; set; }		// 바로 아래 적을 타입
 		public int buyGold { get; set; }			// 구매 골드 장비와 똑같이 -1 판매불가 0보다 크거나 같을 때 판매가능
@@ -114,8 +118,9 @@ public class ItemBaseClass
 			stack = 1;
 		}
 
-		public void Init(string _mainName, string _typeText, int _buyGold, int _sellGold, string _mainDescription, string _subDescriton, string _typeFunc, int _value, int _itemCount,int _stack)
+		public void Init(int _index,string _mainName, string _typeText, int _buyGold, int _sellGold, string _mainDescription, string _subDescriton, string _typeFunc, int _value, int _itemCount,int _stack)
 		{
+			index = _index;
 			mainName = _mainName;
 			typeText = _typeText;
 			buyGold = _buyGold;
@@ -130,6 +135,7 @@ public class ItemBaseClass
 
 		public void Init(ItemBaseUseable _data)
 		{
+			index = _data.index;
 			mainName = _data.mainName;
 			typeText = _data.typeText;
 			buyGold = _data.buyGold;
@@ -145,15 +151,30 @@ public class ItemBaseClass
 		public int AddCount(int _count)
 		{
 			// 999 < 1000
-			if (stack < count + _count)
+			if (IsAddCount(_count) == true)
 			{
 				count = stack;
-				int temp = (count + _count) - stack;
-
-				return temp;
+				return (count + _count) - stack;
 			}
 
 			count += _count;
+			return 0;
+		}
+		public bool IsAddCount(int _count)
+		{
+			return (stack > count + _count);
+		}
+		
+		public int SubstactCount(int _count)
+		{
+			if (count - _count < 0)
+			{
+				int remain = _count - count;    // 나머지 값
+				count = 0;
+				return remain;
+			}
+			else
+				count -= _count;
 			return 0;
 		}
 	}
@@ -161,6 +182,7 @@ public class ItemBaseClass
 	// 기초 재료 아이템의 모든 것
 	public class ItemBaseResource
 	{
+		public int index { get; set; }
 		public string mainName { get; set; }       // 맨 위에 사용될 핵심 이름
 		public string typeText { get; set; }       // 바로 아래 적을 타입
 		public int buyGold { get; set; }           // 구매 골드 장비와 똑같이 -1 판매불가 0보다 크거나 같을 때 판매가능
@@ -169,8 +191,9 @@ public class ItemBaseClass
 		public int count { get; set; }              // 현재 보유량
 		public int stack { get; set; }             // 최대 스택량
 
-		public void Init(string _mainName, string _typeText, int _buyGold, int _sellGold, string _description,int _itemCount, int _stack)
+		public void Init(int _index, string _mainName, string _typeText, int _buyGold, int _sellGold, string _description,int _itemCount, int _stack)
 		{
+			index = _index;
 			mainName = _mainName;
 			typeText = _typeText;
 			buyGold = _buyGold;
@@ -182,6 +205,7 @@ public class ItemBaseClass
 
 		public void Init(ItemBaseResource _data)
 		{
+			index = _data.index;
 			mainName = _data.mainName;
 			typeText = _data.typeText;
 			buyGold = _data.buyGold;
@@ -193,15 +217,30 @@ public class ItemBaseClass
 		public int AddCount(int _count)
 		{
 			// 999 < 1000
-			if (stack < count + _count)
+			if (IsAddCount(_count) == true)
 			{
 				count = stack;
-				int temp = (count + _count) - stack;
-
-				return temp;
+				return (count + _count) - stack;
 			}
 
 			count += _count;
+			return 0;
+		}
+		public bool IsAddCount(int _count)
+		{
+			return (stack > count + _count);
+		}
+
+		public int SubstactCount(int _count)
+		{
+			if (count - _count < 0)
+			{
+				int remain = _count - count;    // 나머지 값
+				count = 0;
+				return remain;
+			}
+			else
+				count -= _count;
 			return 0;
 		}
 	}
@@ -254,6 +293,16 @@ public class ItemBaseClass
 			Type = _data.Type;
 			Index = _data.Index;
 			Count = _data.Count;
+		}
+
+		public override string ToString()
+		{
+			string log = "";
+			log += Type.ToString();
+			log += "\n" + Index;
+			log += "\n" + Count;
+
+			return log;
 		}
 	}
 
