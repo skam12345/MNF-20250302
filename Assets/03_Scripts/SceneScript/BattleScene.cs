@@ -1,6 +1,4 @@
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class BattleScene : MonoBehaviour
 {
@@ -10,9 +8,8 @@ public class BattleScene : MonoBehaviour
 	[SerializeField] private UIMain uiMain;
 
 
-
 	[Header("Setting_Point")]
-	[SerializeField] private InputSystem inputSystem;
+	[SerializeField] private InputSystemInBattleField inputSystem;
 	[SerializeField] private GameObject startPoint;
 	[SerializeField] private GameObject endPoint;
 	[SerializeField] private GameObject enemyNormalPoint;
@@ -43,17 +40,15 @@ public class BattleScene : MonoBehaviour
 
 		endPoint = GameObject.Find("EndPos");
 
-		GameObject player = Resources.Load<GameObject>(ResourcesDirectory.PlayerController );
+		GameObject player = Resources.Load<GameObject>(ResourcesDirectory.PlayerControllerToBattle);
 		GameObject target = Instantiate(player, startPoint.transform.position + Vector3.up, Quaternion.Euler(new Vector3(0,90,0)));
-		inputSystem.PlayerCtrl = target.GetComponent<PlayerControll>();
+		inputSystem.PlayerCtrl = target.GetComponent<PlayerControllInBattleField>();
 
 		damageCreator = GameObject.Find("DamageCreator").GetComponent<DamageCreator>();
 	}
 
 	void Start()
 	{
-		
-
 		clearConversation.SetActive(false);
 		clearImg.SetActive(false);
 		textBox.OnInit("Stage01_Start");

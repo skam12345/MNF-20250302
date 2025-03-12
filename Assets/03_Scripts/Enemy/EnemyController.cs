@@ -47,7 +47,7 @@ public class EnemyController : MonoBehaviour
 	private void CreateEnemyDropData()
 	{
 		System.Text.StringBuilder strDirectory = new System.Text.StringBuilder();
-		strDirectory.Append(ResourcesDirectory.MonsterDropTable);
+		strDirectory.Append(ResourcesDirectory.EnemyDropTable);
 
 		if (myData.Index < 10)
 		{

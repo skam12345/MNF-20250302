@@ -7,7 +7,7 @@ public class TestEnemyCollider : MonoBehaviour
 {
     [SerializeField] private GameObject testEnemy;
     [SerializeField] private Animator gruntAnimator;
-    [SerializeField] private InputSystem inputSystem;
+    [SerializeField] private InputSystemInBattleField inputSystem;
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
     private AnimationClip[] animationClips;
     private AnimatorOverrideController gruntOverrideController;
@@ -35,9 +35,9 @@ public class TestEnemyCollider : MonoBehaviour
 
     void Awake()
     {
-        playerObject = Resources.Load<GameObject>(ResourcesDirectory.PlayerController);
-        target = Instantiate(playerObject, new Vector3(10, 0, 0), Quaternion.Euler(new Vector3(0, 90, 0)));
-        inputSystem.PlayerCtrl = target.GetComponent<PlayerControll>();
+        playerObject = Resources.Load<GameObject>(ResourcesDirectory.PlayerControllerToBattle);
+        target = Instantiate(playerObject, new Vector3(10, 0, 0), Quaternion.Euler(new Vector3(0, -90, 0)));
+        inputSystem.PlayerCtrl = target.GetComponent<PlayerControllInBattleField>();
         virtualCamera.Follow = target.transform;
         virtualCamera.LookAt = target.transform;
     }

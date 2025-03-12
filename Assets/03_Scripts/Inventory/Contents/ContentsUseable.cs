@@ -12,6 +12,7 @@ public class ContentsUseable : MonoBehaviour
 	private void Awake()
 	{
 		iconList = new List<IconUseable>();
+		prefabIcon = Resources.Load<GameObject>(ResourcesDirectory.UIIconUseable);
 	}
 	private void OnEnable()
 	{
@@ -31,10 +32,12 @@ public class ContentsUseable : MonoBehaviour
 		if (iconList.Count < 0) return;
 		int slotCount = iconList.Count;
 
+		Debug.Log(slotCount + "\t" + (iconList == null));
 		ItemBaseUseable data = null;
 		for (int i = 0; i < slotCount; i++)
 		{
 			InventoryData.Instance.GetInventorySlotUseable(i, out data);
+			Debug.Log(data.ToString());
 			iconList[i].Refresh(ref data);
 		}
 	}

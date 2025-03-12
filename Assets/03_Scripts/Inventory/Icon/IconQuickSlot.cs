@@ -2,7 +2,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
-using UnityEditor.Localization.Plugins.XLIFF.V12;
 
 public class IconQuickSlot : MonoBehaviour
 {
@@ -10,8 +9,8 @@ public class IconQuickSlot : MonoBehaviour
 
 	private ItemBaseClass.ItemData data;
 	
-	[SerializeField] private Image iconImage;
-	[SerializeField] private TextMeshProUGUI itemCount;
+	private Image iconImage;
+	private TextMeshProUGUI itemCount;
 
 	UnityAction click;
 	public UnityAction ClickAction { set { click = value; } }

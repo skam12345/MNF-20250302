@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8945119977962566639}
-  - component: {fileID: 4057451222193189666}
   - component: {fileID: 826225411777767026}
   - component: {fileID: 3754273553624067181}
+  - component: {fileID: 6383914230117170614}
   m_Layer: 0
   m_Name: PlayerControl
   m_TagString: Player
@@ -35,23 +35,6 @@ Transform:
   - {fileID: 3923549813922531649}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4057451222193189666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4728928192599523531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5fdd57bffe56f34e8c418bdd6952fe3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  reachMoveSpeed: 10
-  jumpPower: 7
-  model: {fileID: 9049410525355962674}
-  modelPlayer: {fileID: 6319419410192237311}
-  modelPartner: {fileID: 5928934574864912498}
 --- !u!54 &826225411777767026
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -100,6 +83,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25, y: 1, z: 0.25}
   m_Center: {x: 0, y: 0.51, z: 0}
+--- !u!114 &6383914230117170614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4728928192599523531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebdd4eac3fa87e14aa51e703d56c9fbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reachMoveSpeed: 10
+  jumpPower: 7
+  model: {fileID: 9049410525355962674}
+  modelPlayer: {fileID: 6319419410192237311}
+  modelPartner: {fileID: 5928934574864912498}
 --- !u!1 &9049410525355962674
 GameObject:
   m_ObjectHideFlags: 0

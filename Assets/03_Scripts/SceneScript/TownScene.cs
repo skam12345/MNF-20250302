@@ -20,9 +20,17 @@ public class TownScene : MonoBehaviour
 
 	private WaitForSeconds fadeOutWait;
 
+	[SerializeField]private GameObject enchantUI;
+	[SerializeField]private GameObject smithyUI;
+	[SerializeField]private GameObject beautyShopUI;
+	[SerializeField]private GameObject guildUI;
 
+	private bool isUIOpen;
+	public bool IsUIOpen { get { return isUIOpen; } set { isUIOpen = value; } }
 
 	#region Awake Start Update
+
+
 	private void Start()
 	{
 		foreach (var btn in uiBtn)
@@ -43,7 +51,10 @@ public class TownScene : MonoBehaviour
 	#endregion
 
 
+
 	#region button Func
+
+	
 
 	#region BeautyShop
 	public void OnOffBeautyShopBtn(bool _isFlag)
@@ -53,11 +64,15 @@ public class TownScene : MonoBehaviour
 
 	public void OnBeautyShop()
 	{
+		isUIOpen = false;   // 임시로 넣은 코드임
+		//isUIOpen = true;	// 나중에 이걸로 구현
+	}
+	public void OffBeautyShop()
+	{
+		isUIOpen = false;
 
 	}
-
 	#endregion
-
 
 
 	#region EnchantShop
@@ -68,8 +83,10 @@ public class TownScene : MonoBehaviour
 
 	public void OnEnchantShop()
 	{
-
+		isUIOpen = false;	// 임시로 넣은 코드임
+		//isUIOpen = true;	// 나중에 이걸로 구현
 	}
+
 	#endregion
 
 
@@ -81,6 +98,13 @@ public class TownScene : MonoBehaviour
 
 	public void OnGuild()
 	{
+		isUIOpen = false;   // 임시로 넣은 코드임
+		//isUIOpen = true;	// 나중에 이걸로 구현
+	}
+
+	public void OffGuild()
+	{
+		isUIOpen = false;
 
 	}
 	#endregion
@@ -94,7 +118,12 @@ public class TownScene : MonoBehaviour
 
 	public void OnSmithy()
 	{
-
+		isUIOpen = false;   // 임시로 넣은 코드임
+		//isUIOpen = true;	// 나중에 이걸로 구현
+	}
+	public void OffSmithy()
+	{
+		isUIOpen = false;
 	}
 
 	#endregion
@@ -108,13 +137,16 @@ public class TownScene : MonoBehaviour
 
 	public void OnStageOpenBtn()
 	{
+		isUIOpen = true;
 		uiStage.OnOpen();
 	}
 
 	public void OnStageCloseBtn()
 	{
+		isUIOpen = false;
 		uiStage.OnReset();
 	}
+
 
 	#endregion
 
@@ -128,7 +160,9 @@ public class TownScene : MonoBehaviour
 	public void OnGoLobby()
 	{
 		uiBtn[5].interactable = false;  // 버튼 비활성화
+		isUIOpen = true;
 		StartCoroutine(FadeOutActionCoroutine());
+
 	}
 	#endregion
 
