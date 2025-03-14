@@ -72,7 +72,7 @@ public class TestEnemyCollider : MonoBehaviour
             float distance = Vector3.Distance(testEnemy.transform.position, target.transform.position);
             if(distance < 1.0f)
             {
-                chaseSpeed = 4f;
+                chaseSpeed = 0f;
                 gruntAnimator.SetTrigger("Attack");
             }else
             {
