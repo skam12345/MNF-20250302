@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class TestEnemyCollider : MonoBehaviour
 {
-    [SerializeField] private GameObject testEnemy;
+    [SerializeField] private Transform testEnemy;
     [SerializeField] private Animator gruntAnimator;
     [SerializeField] private InputSystemInBattleField inputSystem;
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
+    [SerializeField] private float attackDistance;
     private AnimationClip[] animationClips;
     private AnimatorOverrideController gruntOverrideController;
     private GameObject target;
@@ -29,7 +30,8 @@ public class TestEnemyCollider : MonoBehaviour
     // 적이 처음에 어느 방향으로 회전할 지 결정하는 인덱스 값.
     private int rotateIdx = 0;
     // 적이 이동할 거리를 난수로 지정함.
-    private int moveDistance = 0;
+    private int moveDistance = 5;
+
 
     private float initialEnemyPositionX = 0;
 
@@ -43,9 +45,10 @@ public class TestEnemyCollider : MonoBehaviour
     }
     void Start()
     {
-        testEnemy = GameObject.Find("TestEnemy");
+
+        testEnemy = gameObject.transform.parent;
         initialEnemyPositionX = testEnemy.transform.position.x;
-        gruntAnimator = testEnemy.transform.Find("GruntHP").GetComponent<Animator>();
+        gruntAnimator = testEnemy.transform.GetChild(0).GetComponent<Animator>();
 
 
         if (gruntAnimator != null)
@@ -70,10 +73,10 @@ public class TestEnemyCollider : MonoBehaviour
         {
             Vector3 direction = (target.transform.position - testEnemy.transform.position).normalized;
             float distance = Vector3.Distance(testEnemy.transform.position, target.transform.position);
-            if(distance < 1.0f)
+            if(distance < attackDistance)
             {
                 chaseSpeed = 0f;
-                gruntAnimator.SetTrigger("Attack");
+                gruntAnimator.SetTrigger("Attack02");
             }else
             {
                 chaseSpeed = 6f;
@@ -148,11 +151,6 @@ public class TestEnemyCollider : MonoBehaviour
 
     IEnumerator RandomDistanceEnemy()
     {
-        if(moveDistance == 0)
-        {
-            moveDistance = UnityEngine.Random.Range(5, 8);
-
-        }
         while (randomMove)
         {
             if(rotateIdx == 0)
