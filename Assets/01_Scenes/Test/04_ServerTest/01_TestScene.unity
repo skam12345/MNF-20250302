@@ -228,7 +228,6 @@ GameObject:
   - component: {fileID: 85451040}
   - component: {fileID: 85451039}
   - component: {fileID: 85451038}
-  - component: {fileID: 85451042}
   m_Layer: 0
   m_Name: TestEnemy
   m_TagString: Untagged
@@ -324,20 +323,6 @@ Transform:
   - {fileID: 1524646628}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &85451042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 85451037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 724697571d7f0c14b87192ac7b6e4e2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gruntAnimator: {fileID: 0}
-  virtualCamera: {fileID: 0}
 --- !u!1 &242922140
 GameObject:
   m_ObjectHideFlags: 3
@@ -385,7 +370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: -5, y: 1, z: 0}
+  m_FollowOffset: {x: 8, y: 1.5, z: 0}
   m_XDamping: 0
   m_YDamping: 0
   m_ZDamping: 0
@@ -659,7 +644,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60.000004
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -686,7 +671,7 @@ Transform:
   m_GameObject: {fileID: 1211679732}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 1, z: 0}
+  m_LocalPosition: {x: 1, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -765,7 +750,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 60.000004
+    FieldOfView: 60
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -792,7 +777,7 @@ Transform:
   m_GameObject: {fileID: 1288995764}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 1, z: 0}
+  m_LocalPosition: {x: 1, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1021,7 +1006,7 @@ Transform:
   m_GameObject: {fileID: 1524646624}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.6472, y: 0.2675, z: -0.06135395}
+  m_LocalPosition: {x: 0.08, y: 0.2675, z: -0.06135395}
   m_LocalScale: {x: 15.240355, y: 1.1263595, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1039,10 +1024,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d96c7ee9b132ab4f917b74deddb6f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testEnemy: {fileID: 85451037}
+  testEnemy: {fileID: 0}
   gruntAnimator: {fileID: 0}
   inputSystem: {fileID: 1854683326}
   virtualCamera: {fileID: 1288995765}
+  attackDistance: 1.5
 --- !u!1 &1854683324
 GameObject:
   m_ObjectHideFlags: 0
