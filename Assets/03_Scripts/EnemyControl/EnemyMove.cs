@@ -53,12 +53,18 @@ public class EnemyMove : MonoBehaviour
     }
     void Start()
     {
+<<<<<<< HEAD
         testEnemy = GameObject.Find("TestEnemy");
         initialEnemyPositionX = testEnemy.transform.position.x;
         gruntAnimator = gameObject.transform.GetChild(0).GetComponent<Animator>();
         EnemyCollider = gameObject.transform.GetChild(1).GetComponent<Collider>();
         
         if(!attacking)
+=======
+        gruntAnimator = gameObject.transform.GetChild(1).();
+
+        if (gruntAnimator != null)
+>>>>>>> 5c66b4397412bdd1784bdf39387e8fa598f6cc9a
         {
             StartCoroutine(AutoRotateEnemy());
             StartCoroutine(RandomDistanceEnemy());
