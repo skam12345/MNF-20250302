@@ -32,9 +32,6 @@ public class TestEnemyCollider : MonoBehaviour
     private int moveDistance = 0;
 
     private float initialEnemyPositionX = 0;
-    // 코루틴이 한번 만 돌아가께끔 체크하는 flag 변수
-    private bool corutineFlag = false;
-    private int randAttack = 0;
 
     void Awake()
     {
@@ -75,8 +72,8 @@ public class TestEnemyCollider : MonoBehaviour
             float distance = Vector3.Distance(testEnemy.transform.position, target.transform.position);
             if(distance < 1.0f)
             {
-                gruntAnimator.SetTrigger("Attack01");
                 chaseSpeed = 0f;
+                gruntAnimator.SetTrigger("Attack");
             }else
             {
                 chaseSpeed = 6f;
@@ -90,6 +87,7 @@ public class TestEnemyCollider : MonoBehaviour
             {
                 testEnemy.transform.rotation = Quaternion.Slerp(testEnemy.transform.rotation, right, rotationSpeed * Time.deltaTime);
             }
+
             testEnemy.transform.position += direction * chaseSpeed * Time.deltaTime;
         }else
         {
@@ -110,7 +108,6 @@ public class TestEnemyCollider : MonoBehaviour
 
         }
     }
-
 
     private void OnTriggerEnter(Collider other)
     {
