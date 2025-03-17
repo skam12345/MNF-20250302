@@ -146,6 +146,7 @@ public class UIInventory : MonoBehaviour
         bottom.RefreshEquipt();
 	}
 
+	//소모품 넣는 테스트버튼
 	public void UITestBtnAddUseable()
 	{
 		ItemBaseClass.ItemData data = new ItemBaseClass.ItemData();
@@ -161,7 +162,7 @@ public class UIInventory : MonoBehaviour
 		ItemBaseClass.ItemData data = new ItemBaseClass.ItemData();
 		data.Index = UnityEngine.Random.Range(0, 3);   // 엑셀에 장비 아이템이 3개밖에 없음
 		data.Type = "소모품";
-		data.Count = 15; 
+		data.Count = 1; 
 		InventoryData.Instance.ItemOutInventoryToItemData(ref data);
         bottom.RefreshUseable();
 	}

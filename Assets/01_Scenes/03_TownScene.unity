@@ -434,7 +434,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2833065751301849927, guid: 49b9e90121bfbe84ab406f849790ea2e, type: 3}
       propertyPath: m_Name
-      value: masd
+      value: Buddy
       objectReference: {fileID: 0}
     - target: {fileID: 4728928192599523531, guid: 49b9e90121bfbe84ab406f849790ea2e, type: 3}
       propertyPath: m_Name
@@ -1173,7 +1173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 315873646}
   m_Layer: 0
-  m_Name: StageMgr
+  m_Name: StageManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
