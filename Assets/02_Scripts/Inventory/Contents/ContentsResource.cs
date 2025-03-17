@@ -35,8 +35,16 @@ public class ContentsResource : MonoBehaviour
 		ItemBaseResource data = null;
 		for (int i = 0; i < slotCount; i++)
 		{
-			InventoryData.Instance.GetInventorySlotResource(i, out data);
-			iconList[i].Refresh(ref data);
+			if (i < InventoryData.Instance.ResourceSize)
+			{
+				InventoryData.Instance.GetInventorySlotResource(i, out data);
+				iconList[i].Refresh(ref data);
+			}
+			else
+			{
+				Destroy(iconList[i].gameObject);
+				iconList.RemoveAt(i);
+			}
 		}
 	}
 
