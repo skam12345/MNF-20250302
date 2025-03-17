@@ -27,7 +27,6 @@ public class IconUseable : MonoBehaviour
 
 	public void Refresh(ref ItemBaseClass.ItemBaseUseable _item)
 	{
-		Debug.Log(_item.ToString());
 
 		if (count.text == "")
 		{

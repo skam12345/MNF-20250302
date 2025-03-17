@@ -35,11 +35,16 @@ public class ContentsUseable : MonoBehaviour
 		ItemBaseUseable data = null;
 		for (int i = 0; i < slotCount; i++)
 		{
-			InventoryData.Instance.GetInventorySlotUseable(i, out data);
-			iconList[i].Refresh(ref data);
-
-			Debug.Log(data.ToString()+"이거임이거임ㅇ지금작업");
-
+			if (i < InventoryData.Instance.UseableSize)
+			{
+				InventoryData.Instance.GetInventorySlotUseable(i, out data);
+				iconList[i].Refresh(ref data);
+			}
+			else
+			{
+				Destroy(iconList[i].gameObject);
+				iconList.RemoveAt(i);
+			}
 		}
 	}
 
