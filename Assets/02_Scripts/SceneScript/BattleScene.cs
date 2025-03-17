@@ -40,9 +40,9 @@ public class BattleScene : MonoBehaviour
 
 		endPoint = GameObject.Find("EndPos");
 
-		GameObject player = Resources.Load<GameObject>(ResourcesDirectory.PlayerControllerToBattle);
-		GameObject target = Instantiate(player, startPoint.transform.position + Vector3.up, Quaternion.Euler(new Vector3(0,90,0)));
-		inputSystem.PlayerCtrl = target.GetComponent<PlayerControllInBattleField>();
+		//GameObject player = Resources.Load<GameObject>(ResourcesDirectory.PlayerControllerToBattle);
+		//GameObject target = Instantiate(player, startPoint.transform.position + Vector3.up, Quaternion.Euler(new Vector3(0,90,0)));
+		//inputSystem.PlayerCtrl = target.GetComponent<PlayerControllInBattleField>();
 
 		damageCreator = GameObject.Find("DamageCreator").GetComponent<DamageCreator>();
 	}
