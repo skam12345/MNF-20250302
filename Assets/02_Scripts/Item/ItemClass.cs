@@ -188,6 +188,7 @@ public class ItemBaseClass
 
 		public int SubstactCount(int _count)
 		{
+			//		1	2
 			if (count - _count < 0)
 			{
 				int remain = _count - count;    // 나머지 값
@@ -195,7 +196,10 @@ public class ItemBaseClass
 				return remain;
 			}
 			else
+			{
 				count -= _count;
+				return count;
+			}
 			return 0;
 		}
 	}
@@ -281,7 +285,10 @@ public class ItemBaseClass
 				return remain;
 			}
 			else
+			{
 				count -= _count;
+				return count;
+			}
 			return 0;
 		}
 	}

@@ -1,7 +1,6 @@
 using UnityEngine;
 using static ItemBaseClass;
 using System.Collections.Generic;
-using UnityEditor.UIElements;
 
 public class InventoryData : SingleTonBase<InventoryData>
 {
@@ -49,11 +48,24 @@ public class InventoryData : SingleTonBase<InventoryData>
 		return false;
 	}
 
-	
+	public bool ItemOutInventoryToItemData(ref ItemData _data)
+	{
+		//Debug.Log(_data.ToString());
+		//Debug.Log(EquiptSize);
+		switch (_data.Type)
+		{
+			case "장비": return SearchToRemoveByEquipt(ref _data);
+			case "소모품": return SearchToRemoveByConsume(ref _data);
+			case "재료": return SearchToRemoveByResource(ref _data);
+		}
+		Debug.Log(EquiptSize);
+		return false;
+	}
 
 
 	#region equipt [장비관련]
 
+	// 내부 코드
 	private bool ItemInInventoryToEquipt(ref ItemData _data)
 	{
 		// 1. 슬롯 체크
@@ -97,7 +109,36 @@ public class InventoryData : SingleTonBase<InventoryData>
 		return true;
 	}
 
-
+	/// <summary>
+	/// 장비를 찾습니다.
+	/// 반환값 : 인벤토리 번호
+	/// 넣을 값 : ItemData 규격
+	/// </summary>
+	/// <param name="_data"></param>
+	/// <returns></returns>
+	private int SearchEquipt(ref ItemData _data)
+	{
+		for (int i = 0; i < itemEquiptList.Count; i++)
+		{
+			if (itemEquiptList[i].index == _data.Index)
+			{
+				return i;
+			}
+		}
+		return -1;
+	}
+	private int SearchEquipt(int _index)
+	{
+		for (int i = 0; i < itemEquiptList.Count; i++)
+		{
+			if (itemEquiptList[i].index == _index)
+			{
+				return i;
+			}
+		}
+		return -1;
+	}
+	// 외부 코드
 	public bool GetInventorySlotEquip(int _index, out ItemBaseEquipment _data)
 	{
 		_data = null;
@@ -107,6 +148,30 @@ public class InventoryData : SingleTonBase<InventoryData>
 
 		return true;
 	}
+	
+	public bool SearchToRemoveByEquipt(int _equiptIndex)
+	{
+		int searchArrayNumber = SearchEquipt(_equiptIndex);
+
+		if(searchArrayNumber != -1)
+		{
+			itemEquiptList.RemoveAt(searchArrayNumber);
+			return true;
+		}
+		return false;
+	}
+
+	public bool SearchToRemoveByEquipt(ref ItemData _data)
+	{
+		int searchArrayNumber = SearchEquipt(ref _data);
+
+		if(searchArrayNumber != -1)
+		{
+			itemEquiptList.RemoveAt(searchArrayNumber);
+			return true;
+		}
+		return false;
+	}
 
 
 	#endregion
@@ -114,6 +179,37 @@ public class InventoryData : SingleTonBase<InventoryData>
 
 	#region useable [소모품관련 함수]
 
+	public int SearchConsume(ref ItemData _data)
+	{
+		for (int i = 0; i < itemUseableList.Count; i++)
+		{
+			if (itemUseableList[i].index == _data.Index)
+			{
+				if (itemUseableList[i].count >= _data.Count)
+				{
+					return i;
+				}
+				return -1;
+			}
+		}
+		return -1;
+	}
+
+	public int SearchConsume(int _index, int _count)
+	{
+		for (int i = 0; i < itemUseableList.Count; i++)
+		{
+			if (itemUseableList[i].index == _index)
+			{
+				if (itemUseableList[i].count >= _count)
+				{
+					return i;
+				}
+				return -1;
+			}
+		}
+		return -1;
+	}
 
 	private bool ItemInInventoryToUseable(ref ItemData _data)
 	{
@@ -192,50 +288,94 @@ public class InventoryData : SingleTonBase<InventoryData>
 		return true;
 	}
 
-	public bool ItemRemoveCount(int _item, int _count)
+
+	// 1. for로 배열을 돌아서
+	// 2. 아이템 태그가 맞는지
+	// 3. 맞다면 개수가 0 < 면 차감 후 list 제거
+	// 4. 잔여값이 있다면 다시 탐색
+
+	//인자값 : _itemIndex = 아이템 번호
+	//인자값 : _count = 개수
+	//실패 이유 : 아이템 개수가 적음
+	//			 아이템이 존재하지 않음
+	private bool SearchToRemoveByConsume(ref ItemData _data)
 	{
-		Debug.Log("리무스카운트 함수 켜짐"+ IsConsumeExist(_item, _count));
-		if (IsConsumeExist(_item,_count))
+		if (itemUseableList == null) return false;
+		if (itemUseableList.Count == 0) return false;
+
+		foreach (var item in itemUseableList)
 		{
-			foreach (var item in itemUseableList)
+			Debug.Log("== ItemConsume ==");
+			Debug.Log(" item Index : " +item.index + "\nDataIndex"+ _data.Index);
+
+			if (item.index== _data.Index)
 			{
-				if(item.index == _item)
+#if UNITY_EDITOR
+				Debug.Log("== ItemConsume ==");
+				ItemBaseUseable data = null;
+				ItemDataManager.Instance.GetItemDataToUseable(_data.Index,out data);
+				Debug.Log(data.ToString());
+				Debug.Log(item.ToString());
+				Debug.Log(_data.ToString());
+#endif
+				Debug.Log(item.count + "\t" + _data.Count + "\t"+ (item.count >= _data.Count));
+				if (item.count >= _data.Count)
 				{
-					item.SubstactCount(_count);
-                    Debug.Log("아이템이 제거됨"+item.ToString());
-                    return true;
-                }
-            }
+					if (item.SubstactCount(_data.Count) == 0)
+					{
+						itemUseableList.Remove(item);
+						return true;
+					}
+				}
+				else
+				{
+#if UNITY_EDITOR
+					Debug.Log("갖고있는 아이템 값이 적음 " + "\n item :" + item.count + "\t inputCount : " + _data.Count);
+#endif
+					return false;
+				}
+			}
+		}
+		return false;
+	}
+	private bool SearchToRemoveByConsume(int _itemindex, int _count)
+    {
+		if (itemUseableList == null) return false;
+		if (itemUseableList.Count == 0) return false;
+
+		foreach (var item in itemUseableList)
+		{
+			if(item.index == _itemindex)
+			{
+#if UNITY_EDITOR
+				Debug.Log("인벤토리 소모품 슬롯에 아이템 검색이 됐음");
+#endif
+				if ( item.count >= _count)
+				{
+					if (item.SubstactCount(_count) == 0)
+					{
+						itemUseableList.Remove(item);
+						return true;
+					}
+				}
+				else
+				{
+#if UNITY_EDITOR
+					Debug.Log("갖고있는 아이템 값이 적음 " + "\n item :" + item.count + "\t inputCount : " + _count);
+#endif
+					return false;
+				}
+			}
 		}
 		return false;
 	}
 
+	#endregion
 
-	//있는지 검증합니다.
-    public bool IsConsumeExist(int _itemindex, int _count)
-    {
-        //아이템 있나 검증하는 함수
-        foreach (var item in itemUseableList)
-        {
-            if (item.index == _itemindex)
-            {
-                if (item.count >= _count)
-                {
-                    //아이템이 존재하긴함
-                    return true;
 
-                }
-            }
+	#region equipt [재료관련 함수]
 
-        }
-
-        return false;
-    }
-
-    #endregion
-    #region equipt [재료관련 함수]
-
-    private bool ItemInInventoryToResource(ref ItemData _data)
+	private bool ItemInInventoryToResource(ref ItemData _data)
 	{
 		// 1. 슬롯 체크
 		if (ItemResourceList.Count >= itemResourceMax) return false;
@@ -304,27 +444,47 @@ public class InventoryData : SingleTonBase<InventoryData>
 
 		return true;
 	}
-	
-	public bool IsResourceExist(int _itemindex,int _count)
+
+	// 1. for로 배열을 돌아서
+	// 2. 아이템 태그가 맞는지
+	// 3. 맞다면 개수가 0 < 면 차감 후 list 제거
+	// 4. 잔여값이 있다면 다시 탐색
+
+	//인자값 : _itemIndex = 아이템 번호
+	//인자값 : _count = 개수
+	//실패 이유 : 아이템 개수가 적음
+	//			 아이템이 존재하지 않음
+	private bool SearchToRemoveByResource(ref ItemData _data)
 	{
-		//아이템 있나 검증하는 함수
+		if (ItemResourceList == null) return false;
+		if (ItemResourceList.Count == 0) return false;
+
 		foreach (var item in ItemResourceList)
 		{
-			if(item.index == _itemindex)
+			if (item.index == _data.Index)
 			{
-				if(item.count >= _count)
+#if UNITY_EDITOR
+				Debug.Log("인벤토리 소모품 슬롯에 아이템 검색이 됐음");
+#endif
+				if (item.count >= _data.Count)
 				{
-					//아이템이 존재하긴함
-					return true;
-					
+					if (item.SubstactCount(_data.Count) == 0)
+					{
+						ItemResourceList.Remove(item);
+						return true;
+					}
+				}
+				else
+				{
+#if UNITY_EDITOR
+					Debug.Log("갖고있는 아이템 값이 적음 " + "\n item :" + item.count + "\t inputCount : " + _data.Count);
+#endif
+					return false;
 				}
 			}
-
 		}
-
 		return false;
 	}
-
 	#endregion
 
 

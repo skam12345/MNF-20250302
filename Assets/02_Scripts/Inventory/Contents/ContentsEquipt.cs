@@ -36,9 +36,20 @@ public class ContentsEquipt : MonoBehaviour
 		ItemBaseEquipment data =null;
 		for (int i = 0; i < slotCount; i++)
 		{
-			InventoryData.Instance.GetInventorySlotEquip(i, out data);
-			iconList[i].Refresh(ref data);
+			//Debug.Log(i + "\t" + slotCount + "\t "+InventoryData.Instance.EquiptSize);
+			if( i < InventoryData.Instance.EquiptSize)
+			{
+				InventoryData.Instance.GetInventorySlotEquip(i, out data);
+				iconList[i].Refresh(ref data);
+			}
+			else
+			{
+				Destroy(iconList[i].gameObject);
+				iconList.RemoveAt(i);
+			}
 		}
+
+
 	}
 
 	// 아이콘 생성함수
