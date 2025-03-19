@@ -75,7 +75,7 @@ public class TownScene : MonoBehaviour
 	#endregion
 
 
-	#region EnchantShop
+	#region EnchantShop=>church
 	public void OnOffEnchantShopBtn(bool _isFlag)
 	{
 		uiBtn[1].gameObject.SetActive(_isFlag);
@@ -110,7 +110,7 @@ public class TownScene : MonoBehaviour
 	#endregion
 
 
-	#region Smithy
+	#region Smithy(¥Î¿Â∞£)
 	public void OnOffSmithyBtn(bool _isFlag)
 	{
 		uiBtn[3].gameObject.SetActive(_isFlag);
@@ -138,8 +138,9 @@ public class TownScene : MonoBehaviour
 	public void OnStageOpenBtn()
 	{
 		isUIOpen = true;
-		uiStage.OnOpen();
-	}
+		FadeOutGoStageCoroutine();
+
+    }
 
 	public void OnStageCloseBtn()
 	{
@@ -164,13 +165,23 @@ public class TownScene : MonoBehaviour
 		StartCoroutine(FadeOutActionCoroutine());
 
 	}
-	#endregion
+    #endregion
 
 
-	#endregion
+    #endregion
 
+    private IEnumerator FadeOutGoStageCoroutine()
+    {
+        while (true)
+        {
+            sceneFade.StartFadeOut(fadeOutTime);
+            yield return fadeOutWait;
+            SceneManager.LoadScene("04_FieldScene");
 
-	private IEnumerator FadeOutActionCoroutine()
+            yield break;
+        }
+    }
+    private IEnumerator FadeOutActionCoroutine()
 	{
 		while (true)
 		{

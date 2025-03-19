@@ -13,6 +13,8 @@ TagManager:
   - SkyCubePass
   - SkyPlane
   - ItemCube
+  - Animal
+  - WorldCollision
   layers:
   - Default
   - TransparentFX

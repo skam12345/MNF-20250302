@@ -4,6 +4,36 @@ using UnityEngine;
 
 public class StageDataManager : SingleTonBase<StageDataManager>
 {
+	public int stageDungeonType = 1;
+	public int stageMainNum;
+	public int stageSubNum;
+	public int monster1;
+	public int monster2;
+	public int monster3;
+	public int monster4;
+	public int bossIdx;
+
+    public string DungeonType()
+	{
+		switch (stageDungeonType)
+		{
+			case 1: return "Stage";
+			case 2:	return "Event";
+			case 3: return "Raid";
+                break;
+		}
+		//if default
+        return "Stage";
+    }
+
+
+
+
+
+
+
+	//뒤에 이해 안가서 새로 만듬
+
 	private Dictionary<string, StageClass> stageJsonDict = new Dictionary<string, StageClass>();
 	public List<StageClass> stageJsonList = new List<StageClass>();
 	private int stageArrayIndex;

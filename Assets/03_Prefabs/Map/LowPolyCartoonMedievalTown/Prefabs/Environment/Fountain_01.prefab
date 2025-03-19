@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1737947968390310693}
-  - component: {fileID: 6792679281614560340}
   m_Layer: 0
   m_Name: Fountain_01
   m_TagString: Untagged
@@ -24,9 +23,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393229479709798815}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8856745492815549937}
   - {fileID: 7019879198227176338}
@@ -35,56 +36,7 @@ Transform:
   - {fileID: 1737947968110034850}
   - {fileID: 4153313241519715841}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!205 &6792679281614560340
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1393229479709798815}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 0, y: 1.9292123, z: 0.89056635}
-  m_Size: 8.700899
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.25
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 1751051338565017289}
-    - renderer: {fileID: 600459400172307661}
-    - renderer: {fileID: 600459399854665270}
-    - renderer: {fileID: 0}
-    - renderer: {fileID: 0}
-    - renderer: {fileID: 0}
-    - renderer: {fileID: 0}
-    - renderer: {fileID: 0}
-  - screenRelativeHeight: 0.125
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 4446396353697483695}
-    - renderer: {fileID: 600459400172307661}
-    - renderer: {fileID: 600459399854665270}
-    - renderer: {fileID: 0}
-    - renderer: {fileID: 0}
-    - renderer: {fileID: 0}
-    - renderer: {fileID: 0}
-    - renderer: {fileID: 0}
-  - screenRelativeHeight: 0.07944959
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 8644197059636476598}
-    - renderer: {fileID: 600459400172307661}
-    - renderer: {fileID: 600459399854665270}
-    - renderer: {fileID: 0}
-    - renderer: {fileID: 0}
-    - renderer: {fileID: 0}
-    - renderer: {fileID: 0}
-    - renderer: {fileID: 0}
-  m_Enabled: 1
 --- !u!1 &3182754575243430247
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,12 +62,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3182754575243430247}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1737947968390310693}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1153234439215805419
 MeshFilter:
@@ -136,6 +89,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -191,12 +145,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3432200361146393672}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1737947968390310693}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1769199099154926880
 MeshFilter:
@@ -217,6 +172,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -273,12 +229,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5833203894379694867}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1737947968390310693}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7943366514601748495
 MeshFilter:
@@ -299,6 +256,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -337,9 +295,17 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5833203894379694867}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 470198745822197383, guid: 469775a19c883db458953293328a72e8, type: 3}
@@ -348,6 +314,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1737947968390310693}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: d09e23cb627146a468d473d4471a898f, type: 3}
@@ -403,15 +370,13 @@ PrefabInstance:
       value: FountainWater_02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d09e23cb627146a468d473d4471a898f, type: 3}
 --- !u!4 &1737947968465425753 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d09e23cb627146a468d473d4471a898f, type: 3}
-  m_PrefabInstance: {fileID: 2275680129760047794}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &600459399854665270 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d09e23cb627146a468d473d4471a898f, type: 3}
   m_PrefabInstance: {fileID: 2275680129760047794}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2275680129839556904
@@ -419,6 +384,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1737947968390310693}
     m_Modifications:
     - target: {fileID: 237589483555932282, guid: addf4df4d59a5514fb0eb6abd1550c50, type: 3}
@@ -470,6 +436,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: addf4df4d59a5514fb0eb6abd1550c50, type: 3}
 --- !u!4 &4153313241519715841 stripped
 Transform:
@@ -481,6 +450,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1737947968390310693}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c38e3cbd04988a241b8e9d2d2fd41860, type: 3}
@@ -536,14 +506,12 @@ PrefabInstance:
       value: FountainWater_01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c38e3cbd04988a241b8e9d2d2fd41860, type: 3}
 --- !u!4 &1737947968110034850 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c38e3cbd04988a241b8e9d2d2fd41860, type: 3}
-  m_PrefabInstance: {fileID: 2275680130148997193}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &600459400172307661 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: c38e3cbd04988a241b8e9d2d2fd41860, type: 3}
   m_PrefabInstance: {fileID: 2275680130148997193}
   m_PrefabAsset: {fileID: 0}

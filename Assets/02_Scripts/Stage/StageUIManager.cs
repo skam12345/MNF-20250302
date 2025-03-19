@@ -96,92 +96,92 @@ public class StageUIManager : MonoBehaviour
 
 	//메인스테이지 버튼 누르면 작용
 	#region mainStage ToolTip
-	public void OnMainStageToolTipOpen(int _stageNumber)
-	{
-		string testString = "";
-		switch (_stageNumber)
-		{
-			case 1:
-				testString = "1_stage";
-				stageTooltip.Open(ref testString, ref mainStageBtnPos[0]);
-				break;
-			case 2:
-				testString = "2_stage";
-				stageTooltip.Open(ref testString, ref mainStageBtnPos[1]);
-				break;
-			case 3:
-				testString = "3_stage";
-				stageTooltip.Open(ref testString, ref mainStageBtnPos[2]);
-				break;
-			case 4:
-				testString = "4_stage";
-				stageTooltip.Open(ref testString, ref mainStageBtnPos[3]);
-				break;
-			case 5:
-				testString = "5_stage";
-				stageTooltip.Open(ref testString, ref mainStageBtnPos[4]);
-				break;
-			default:
-				Debug.Log("세팅된 값이 없습니다.");
-				break;
-		}
-		stageTooltip.gameObject.SetActive(true);
-	}
+	//public void OnMainStageToolTipOpen(int _stageNumber)
+	//{
+	//	string testString = "";
+	//	switch (_stageNumber)
+	//	{
+	//		case 1:
+	//			testString = "1_stage";
+	//			stageTooltip.Open(ref testString, ref mainStageBtnPos[0]);
+	//			break;
+	//		case 2:
+	//			testString = "2_stage";
+	//			stageTooltip.Open(ref testString, ref mainStageBtnPos[1]);
+	//			break;
+	//		case 3:
+	//			testString = "3_stage";
+	//			stageTooltip.Open(ref testString, ref mainStageBtnPos[2]);
+	//			break;
+	//		case 4:
+	//			testString = "4_stage";
+	//			stageTooltip.Open(ref testString, ref mainStageBtnPos[3]);
+	//			break;
+	//		case 5:
+	//			testString = "5_stage";
+	//			stageTooltip.Open(ref testString, ref mainStageBtnPos[4]);
+	//			break;
+	//		default:
+	//			Debug.Log("세팅된 값이 없습니다.");
+	//			break;
+	//	}
+	//	stageTooltip.gameObject.SetActive(true);
+	//}
 
-	public void OnMainStageToolTipClose()
-	{
-		stageTooltip.Close();
-	}
-	#endregion
+	//public void OnMainStageToolTipClose()
+	//{
+	//	stageTooltip.Close();
+	//}
+	//#endregion
 
-	//메인스테이지 클릭->1탄 (1-0) 서브 스테이지가 켜집니다.
-	public void OnMainStageBtnClick(int _stageNumber)
-	{
-        StageClass stageClass = new StageClass();
-		stageClass.setStageNum(_stageNumber);
-
-
-        foreach (var item in subStage)
-		{
-			if(item.activeSelf == true)
-				item.gameObject.SetActive(false);
-		}
-		switch (_stageNumber)
-		{
-			case 1: subStage[0].SetActive(true); break;
-			case 2: subStage[1].SetActive(true); break;
-			case 3: subStage[2].SetActive(true); break;
-			case 4: subStage[3].SetActive(true); break;
-			case 5: subStage[4].SetActive(true); break;
-			default:
-				Debug.Log("세팅된 값이 없습니다.");
-				break;
-		}
-		subStageObject.SetActive(true);
-	}
-	#endregion
+	////메인스테이지 클릭->1탄 (1-0) 서브 스테이지가 켜집니다.
+	//public void OnMainStageBtnClick(int _stageNumber)
+	//{
+ //       StageClass stageClass = new StageClass();
+	//	stageClass.setStageNum(_stageNumber);
 
 
-	#region [SubStage]
+ //       foreach (var item in subStage)
+	//	{
+	//		if(item.activeSelf == true)
+	//			item.gameObject.SetActive(false);
+	//	}
+	//	switch (_stageNumber)
+	//	{
+	//		case 1: subStage[0].SetActive(true); break;
+	//		case 2: subStage[1].SetActive(true); break;
+	//		case 3: subStage[2].SetActive(true); break;
+	//		case 4: subStage[3].SetActive(true); break;
+	//		case 5: subStage[4].SetActive(true); break;
+	//		default:
+	//			Debug.Log("세팅된 값이 없습니다.");
+	//			break;
+	//	}
+	//	subStageObject.SetActive(true);
+	//}
+	//#endregion
 
- 	public void OnSubStageClick(int _stageArray)
-	{
-        StageClass stageClass = new StageClass();
-		stageClass.setSubNum(_stageArray);
+
+	//#region [SubStage]
+
+ //	public void OnSubStageClick(int _stageArray)
+	//{
+ //       StageClass stageClass = new StageClass();
+	//	stageClass.setSubNum(_stageArray);
 
 
-        Debug.Log(stageClass.stageNum);
-		Debug.Log(stageClass.subNum);
-        StageDataManager.Instance.StageArrayIndex = _stageArray;
-		OnSubStageToolTipOpen(_stageArray);
-		subStageObject.SetActive(true);
-		StageDataManager.Instance.GetStageData(out stageClass);
+ //       Debug.Log(stageClass.stageNum);
+	//	Debug.Log(stageClass.subNum);
+ //       StageDataManager.Instance.StageArrayIndex = _stageArray;
+	//	OnSubStageToolTipOpen(_stageArray);
+	//	subStageObject.SetActive(true);
+	//	StageDataManager.Instance.GetStageData(out stageClass);
 
-		description.gameObject.SetActive(true);
-		//description.SetSubStageDescription(stageData.description);
-		OnSubStageToolTipOpen(_stageArray);
-		//Debug.Log(StageManager.Instance.SelectStageText);
-	}
+	//	description.gameObject.SetActive(true);
+	//	//description.SetSubStageDescription(stageData.description);
+	//	OnSubStageToolTipOpen(_stageArray);
+	//	//Debug.Log(StageManager.Instance.SelectStageText);
+	//}
 
 
 	public void OnSubStageToolTipOpen(int _stageArray)
@@ -201,7 +201,7 @@ public class StageUIManager : MonoBehaviour
 	}
 
 
-	#endregion
+    #endregion
 
 
 
@@ -209,8 +209,8 @@ public class StageUIManager : MonoBehaviour
 
 
 
-
-	public void OnBackMainStage()
+    #endregion
+    public void OnBackMainStage()
 	{
 		subStageObject.SetActive(false);
 		description.gameObject.SetActive(false);
