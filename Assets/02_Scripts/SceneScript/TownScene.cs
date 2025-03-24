@@ -28,10 +28,23 @@ public class TownScene : MonoBehaviour
 	private bool isUIOpen;
 	public bool IsUIOpen { get { return isUIOpen; } set { isUIOpen = value; } }
 
-	#region Awake Start Update
+	private PlayerModel playerModel;
+	private GameObject player;
+
+    private void Awake()
+    {
+		//player = GameObject.Find("Player");
+  //      playerModel = player.GetComponent<PlayerModel>();
+		//Instantiate(playerModel.modelPrefabs[0],player.transform);
+    }
 
 
-	private void Start()
+
+    #region Awake Start Update
+
+
+
+    private void Start()
 	{
 		foreach (var btn in uiBtn)
 		{
@@ -45,7 +58,7 @@ public class TownScene : MonoBehaviour
 		uiStage.OnReset();
 		sceneFade.StartFadeIn(fadeInTime);
 		stageBackBtn.onClick.RemoveAllListeners();
-		stageBackBtn.onClick.AddListener(OnStageCloseBtn);
+
 	}
 
 	#endregion
@@ -137,16 +150,12 @@ public class TownScene : MonoBehaviour
 
 	public void OnStageOpenBtn()
 	{
+		Debug.Log("½ºÅ×ÀÌÁö¿ÀÇÂ ´­·¶À½");
 		isUIOpen = true;
-		FadeOutGoStageCoroutine();
-
+		StartCoroutine(FadeOutGoStageCoroutine());
     }
 
-	public void OnStageCloseBtn()
-	{
-		isUIOpen = false;
-		uiStage.OnReset();
-	}
+
 
 
 	#endregion
@@ -176,7 +185,7 @@ public class TownScene : MonoBehaviour
         {
             sceneFade.StartFadeOut(fadeOutTime);
             yield return fadeOutWait;
-            SceneManager.LoadScene("04_FieldScene");
+            SceneManager.LoadScene("04_WorldScene");
 
             yield break;
         }

@@ -6,9 +6,6 @@ public class UIInventory : MonoBehaviour
     private UIInventoryTop top;
 	private UIInventoryBottom bottom;
 
-	public TMPro.TextMeshProUGUI itemIndex;
-	public TMPro.TextMeshProUGUI itemCount;
-	public TMPro.TextMeshProUGUI itemType;
 
 	private void Awake()
 	{
@@ -32,21 +29,38 @@ public class UIInventory : MonoBehaviour
 
 	}
 
-	#endregion
+    #endregion
 
-	#region 하단부 장비,소모품,재료 테이블(Content~) 함수(미완)
+    #region 하단부 장비,소모품,재료 테이블(Content~) 함수(미완)
+    
+
+	// 상점쪽에서 아이템을 구매하는 함수
+	public void UIRefreshTabEquipt()
+    {
+        bottom.RefreshEquipt();
+    }
+
+    public void UIRefreshTabComsume()
+    {
+        bottom.RefreshUseable();
+    }
+
+    public void UIRefreshTabResource()
+    {
+        bottom.RefreshResource();
+    }
 
 
-	#endregion
+    #endregion
 
 
 
 
 
-	#region 매개변수를 받아서 아이템을 추가하는 함수. 아이템넘버,개수
+    #region 매개변수를 받아서 아이템을 추가하는 함수. 아이템넘버,개수
 
-	//장비추가 / 소모품추가 / 재료 추가
-	public void AddEquiptoInventory(int itemNum,int itemcount)
+    //장비추가 / 소모품추가 / 재료 추가
+    public void AddEquiptoInventory(int itemNum,int itemcount)
 	{
 		ItemBaseClass.ItemData data = new ItemBaseClass.ItemData();
 		data.Index = itemNum;
@@ -124,7 +138,9 @@ public class UIInventory : MonoBehaviour
 	#endregion
 
 
-	#region 25.03.17 TestFunction (추가 제거)
+	#region 25.03.17 Test 아이템 추가 제거)
+
+	//TODO: 장비 넣기
 	public void UITestBtnAddEquipt()
 	{
 		ItemBaseClass.ItemData data = new ItemBaseClass.ItemData();
@@ -135,6 +151,7 @@ public class UIInventory : MonoBehaviour
 		Debug.Log(InventoryData.Instance.EquiptSize);
         bottom.RefreshEquipt();
 	}
+	//TODO: 장비 빼기
 	public void UITestBtnRemoveEquipt()
 	{
 		ItemBaseClass.ItemData data = new ItemBaseClass.ItemData();
@@ -167,7 +184,7 @@ public class UIInventory : MonoBehaviour
         bottom.RefreshUseable();
 	}
 
-
+	//재료 추가
 	public void UITestBtnAddResource()
 	{
 		ItemBaseClass.ItemData data = new ItemBaseClass.ItemData();
@@ -177,6 +194,7 @@ public class UIInventory : MonoBehaviour
 		InventoryData.Instance.ItemInInventoryToItemData(ref data);
         bottom.RefreshResource();
 	}
+	//재료 제거
 	public void UITestBtnRemoveResource()
 	{
 		ItemBaseClass.ItemData data = new ItemBaseClass.ItemData();
@@ -188,22 +206,7 @@ public class UIInventory : MonoBehaviour
 	}
 
 
-	public void OnTestBtnAddAndRemove(bool _isAdd)
-	{
-		ItemBaseClass.ItemData data = null;
 
-		if( UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "08_InventoryAndItem")
-		{
-			data = new ItemBaseClass.ItemData();
-			data.Type = itemType.text;
-			Debug.Log(itemIndex.text + "\n" + itemCount.text);
-			data.Index = int.Parse(itemIndex.text);
-			data.Count = int.Parse(itemCount.text);
-			InventoryData.Instance.ItemInInventoryToItemData(ref data);
-			bottom.RefreshAll();
-			
-		}
-	}
 
 	#endregion
 }

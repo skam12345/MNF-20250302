@@ -123,6 +123,7 @@ public class WorldUIManager : MonoBehaviour
         
 
         subNum = _stageBtn;
+        StageDataManager.Instance.stageSubNum = subNum;
 
         Debug.Log($"현재 던전은 {mainNum}-{subNum} 스테이지입니다.");
         Debug.Log($"그래서 씬이 넘어가면 Stage{(mainNum)}-{(subNum)}을 불러오도록 하겠습니다.");
@@ -137,6 +138,17 @@ public class WorldUIManager : MonoBehaviour
         Debug.Log($"몬스터 4번은 {StageDataManager.Instance.monster4} 번 몬스터입니다.");
 
 
+    }
+
+    public void StageStartBtn()
+    {
+
+        int subNum = StageDataManager.Instance.stageSubNum;
+        Debug.Log($"현재 클릭된 스테이지는{subNum}입니다. ");
+        if (subNum != 0)
+        {
+            SceneManager.LoadScene("05_BattleField");
+        }
     }
 
 

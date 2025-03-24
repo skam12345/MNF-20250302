@@ -184,21 +184,21 @@ public class StageUIManager : MonoBehaviour
 	//}
 
 
-	public void OnSubStageToolTipOpen(int _stageArray)
-	{
-		StageClass stageData = null;
-		StageDataManager.Instance.GetStageData(_stageArray, out stageData);
-		string str = stageData.dungeonName;
-		stageTooltip.Open(ref str, ref subStageBtnPos[_stageArray]);
-		stageTooltip.gameObject.SetActive(true);
-	}
+	//public void OnSubStageToolTipOpen(int _stageArray)
+	//{
+	//	StageClass stageData = null;
+	//	StageDataManager.Instance.GetStageData(_stageArray, out stageData);
+	//	string str = stageData.dungeonName;
+	//	stageTooltip.Open(ref str, ref subStageBtnPos[_stageArray]);
+	//	stageTooltip.gameObject.SetActive(true);
+	//}
 
 
-	public void OnSubStageToolTipClose()
-	{
-		//description.gameObject.SetActive(false);
-		stageTooltip.gameObject.SetActive(false);
-	}
+	//public void OnSubStageToolTipClose()
+	//{
+	//	//description.gameObject.SetActive(false);
+	//	stageTooltip.gameObject.SetActive(false);
+	//}
 
 
     #endregion

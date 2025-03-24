@@ -9,7 +9,8 @@ using UnityEngine;
 public class StateManager : MonoBehaviour
 {
     //여기는 현재플레이어 스탯이다. 이걸 부착된 자식 객체의 클래스에서 가져온다.
-
+    //스왑 시 Class에서 변환한다. , 예외상황은 캐릭터가 죽으면 스왑안되게.
+    //하나가 죽으면 다른애가 자동으로 나오게
 
 
     // 플레이어의 스텟!!!!
@@ -23,18 +24,23 @@ public class StateManager : MonoBehaviour
     [Range(0, 100)]
     public int criChance = 50; //in percentage
     public float criDamage = 1.5f;
-    
+
+
+
+    PlayerDataClass playerdata;
+
+
 
 
     [HideInInspector]
-    //public HUDManager hudManager;
+    public HUDManager hudManager;
     //public AttackController atkctrl;
 
 
     private void Start()
     {
         //atkctrl = GetComponentInChildren<AttackController>();
-        //hudManager = gameObject.GetComponent<HUDManager>();
+        hudManager = gameObject.GetComponent<HUDManager>();
     }
 
 
@@ -75,7 +81,7 @@ public class StateManager : MonoBehaviour
         // hit - (hit*def/100)
 
         DamagePopUpGenerator.current.CreatePopup(transform.position + randomness, hit.ToString(), popupColor);
-        //hudManager.ChangeUserHUD();
+        hudManager.ChangeUserHUD();
 
     }
 }

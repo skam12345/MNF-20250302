@@ -15,6 +15,7 @@ TagManager:
   - ItemCube
   - Animal
   - WorldCollision
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -9,9 +9,11 @@ public class TreasureCube : MonoBehaviour
     [SerializeField] private UITextBox textBox;
 
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
+
     {
-        if(collision.collider.CompareTag("Player"))
+        Debug.Log("¥Í¿Ω");
+        if(other.CompareTag("Player"))
         {
             StartCoroutine(ClearEvent());
             clearImg.SetActive(true);
