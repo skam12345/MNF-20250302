@@ -12,9 +12,11 @@ public class EnemyCollider : MonoBehaviour
     private GameObject target;
 
     //적이 쫓아 오는 속도
-    private float chaseSpeed = 6f;
+    [SerializeField] private float chaseSpeed = 4f;
     //적이 평소에 움직이는 속도
-    private float moveSpeed = 4f;
+    [SerializeField] private float moveSpeed = 4f;
+
+    public int monsterType;
     // 적이 회전하는 속도
     private float rotationSpeed = 5f;
     // 접근 트리거
@@ -31,14 +33,10 @@ public class EnemyCollider : MonoBehaviour
 
     private float initialEnemyPositionX = 0;
 
-    void Awake()
-    {
-        //playerObject = Resources.Load<GameObject>(ResourcesDirectory.PlayerControllerToBattle);
 
-    }
     void Start()
     {
-
+        target = GameObject.FindWithTag("Player");
         testEnemy = gameObject.transform.parent;
         initialEnemyPositionX = testEnemy.transform.position.x;
         gruntAnimator = testEnemy.transform.GetChild(0).GetComponent<Animator>();
@@ -72,7 +70,16 @@ public class EnemyCollider : MonoBehaviour
                 gruntAnimator.SetTrigger("Attack02");
             }else
             {
-                chaseSpeed = 6f;
+                if(monsterType == 1)
+                {
+                    chaseSpeed = 3f;
+                }
+                if(monsterType == 2)
+                {
+                    chaseSpeed = 0f;
+                    gruntAnimator.SetTrigger("Attack02");
+                }
+
                 gruntAnimator.SetTrigger("Walk");
             }
                 direction.y = 0;

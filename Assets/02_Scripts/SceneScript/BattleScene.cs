@@ -9,11 +9,11 @@ public class BattleScene : MonoBehaviour
 
 
 	[Header("Setting_Point")]
-	[SerializeField] private InputSystemInBattleField inputSystem;
 	[SerializeField] private GameObject startPoint;
 	[SerializeField] private GameObject endPoint;
 	[SerializeField] private GameObject enemyNormalPoint;
-	int stageArrayNumber;
+	int stageMainNum;
+	int stageSubNum;
 	[SerializeField] private GameObject[] SkyPlane;
 
 	[Header("Setting_Fade")]
@@ -25,26 +25,35 @@ public class BattleScene : MonoBehaviour
 
 	private void Awake()
 	{
+
+
+
 		fade = this.GetComponent<SceneForFade>();
-		stageArrayNumber = StageDataManager.Instance.StageArrayIndex;
-		string str = "Stage";
-		if(stageArrayNumber < 10)
-		{
-			str += (0).ToString() + (stageArrayNumber + 1);
-		}
 
-		GameObject map = Resources.Load<GameObject>(ResourcesDirectory.StageMap + str);
+		//스테이지 정보를 확인하고 프리팹 불러오기
+        string dungeonType = StageDataManager.Instance.DungeonType();
+        stageMainNum = StageDataManager.Instance.stageMainNum;
+        stageSubNum = StageDataManager.Instance.stageSubNum;
+
+			//TODO://테스트용
+			//stageMainNum++;
+			//stageSubNum++;
+
+
+        dungeonType += ($"{(stageMainNum).ToString()}-{(stageSubNum).ToString()}");
+		Debug.Log(dungeonType);
+
+
+
+		GameObject map = Resources.Load<GameObject>(ResourcesDirectory.StageMap + dungeonType);
 		Instantiate(map,Vector3.zero,Quaternion.identity);
-
 		startPoint = GameObject.Find("StartPos");
-
 		endPoint = GameObject.Find("EndPos");
+		//GameObject player = Resources.Load<GameObject>(ResourcesDirectory.PlayerControllerToBattle);
+		//GameObject target = Instantiate(player, startPoint.transform.position + Vector3.up, Quaternion.Euler(new Vector3(0,90,0)));
+		//inputSystem.PlayerCtrl = target.GetComponent<PlayerControllInBattleField>();
 
-		GameObject player = Resources.Load<GameObject>(ResourcesDirectory.PlayerControllerToBattle);
-		GameObject target = Instantiate(player, startPoint.transform.position + Vector3.up, Quaternion.Euler(new Vector3(0,90,0)));
-		inputSystem.PlayerCtrl = target.GetComponent<PlayerControllInBattleField>();
-
-		damageCreator = GameObject.Find("DamageCreator").GetComponent<DamageCreator>();
+		//damageCreator = GameObject.Find("DamageCreator").GetComponent<DamageCreator>();
 	}
 
 	void Start()

@@ -15,6 +15,10 @@ EditorBuildSettings:
     path: Assets/01_Scenes/03_TownScene.unity
     guid: a806ed5712dee174baaa0ee3dfda8794
   - enabled: 1
-    path: Assets/01_Scenes/04_BattleField.unity
+    path: Assets/01_Scenes/04_WorldScene.unity
+    guid: 7bd1a801fed4db44295b5ff26ebd1508
+  - enabled: 1
+    path: Assets/01_Scenes/05_BattleField.unity
     guid: bbd3dc592429779478a88099ade65483
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 25c57f6d239897940a7c15f0df03314c, type: 2}

@@ -1571,6 +1571,7 @@ GameObject:
   - component: {fileID: 4803562290928825965}
   - component: {fileID: 6849553504827145749}
   - component: {fileID: 5338211175653347510}
+  - component: {fileID: 4035831943062374205}
   m_Layer: 0
   m_Name: 01_mawang
   m_TagString: Untagged
@@ -1634,7 +1635,7 @@ Animator:
   m_GameObject: {fileID: 6654043772274982855}
   m_Enabled: 1
   m_Avatar: {fileID: 717643771685427201, guid: 41684f0eaee826143938b8a344746b79, type: 3}
-  m_Controller: {fileID: 9100000, guid: fcac7eeff22f94e4984c4ff0362bb607, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3dc7b01a1bdee3f4b8e8f6723dc41ffc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1854,6 +1855,29 @@ MonoBehaviour:
       m_RotationOrder: 4
     CurveXRangeDegree: 90
     CurveYRangeDegree: 10
+--- !u!114 &4035831943062374205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6654043772274982855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a36c52630e022c4ca02d13df3054810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wepon: {fileID: 0}
+  cameraTransform: {fileID: 0}
+  fireTransform: {fileID: 0}
+  memo: "5-\uB354\uBBF8 / 6-\uC190\uAC70\uB9AC/ 7-\uC790\uC2E0\uC704\uCE58/ 8-\uAD81\uADF9\uAE30"
+  autoObject:
+  - {fileID: 0}
+  - {fileID: 0}
+  skillObject:
+  - {fileID: 0}
+  - {fileID: 0}
+  arrowpower: 25
 --- !u!1 &6749653643015540190
 GameObject:
   m_ObjectHideFlags: 0
