@@ -52,16 +52,16 @@ public class PlayerTownMove : MonoBehaviour
 				switch (collisionobject.name)
 				{
 					case "BeautySalon":
-						townScene.OnOffBeautyShopBtn(true);
-						break;
-					case "EnchantShop":
-						townScene.OnOffEnchantShopBtn(true);
-						break;
-					case "Guild":
-						townScene.OnOffGuildBtn(true);
+						townScene.OnOffBeautySalonBtn(true);
 						break;
 					case "Smithy":
 						townScene.OnOffSmithyBtn(true);
+						break;
+					case "Church":
+						townScene.OnOffChurchBtn(true);
+						break;
+					case "Shop":
+						townScene.OnOffShopBtn(true);
 						break;
 					case "GoLobby":
 						townScene.OnOffLobbyBtn(true);
@@ -93,16 +93,16 @@ public class PlayerTownMove : MonoBehaviour
 				switch (collisionobject.name)
 				{
 					case "BeautySalon":
-						townScene.OnOffBeautyShopBtn(false);
-						break;
-					case "EnchantShop":
-						townScene.OnOffEnchantShopBtn(false);
-						break;
-					case "Guild":
-						townScene.OnOffGuildBtn(false);
+						townScene.OnOffBeautySalonBtn(false);
 						break;
 					case "Smithy":
 						townScene.OnOffSmithyBtn(false);
+						break;
+					case "Church":
+						townScene.OnOffChurchBtn(false);
+						break;
+					case "Shop":
+						townScene.OnOffShopBtn(false);
 						break;
 					case "GoLobby":
 						townScene.OnOffLobbyBtn(false);

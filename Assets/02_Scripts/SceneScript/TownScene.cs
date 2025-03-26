@@ -21,9 +21,9 @@ public class TownScene : MonoBehaviour
 	private WaitForSeconds fadeOutWait;
 
 	[SerializeField]private GameObject enchantUI;
-	[SerializeField]private GameObject smithyUI;
+	[SerializeField]private GameObject churchUI;
 	[SerializeField]private GameObject beautyShopUI;
-	[SerializeField]private GameObject guildUI;
+	[SerializeField]private GameObject shopUI;
 
 	private bool isUIOpen;
 	public bool IsUIOpen { get { return isUIOpen; } set { isUIOpen = value; } }
@@ -69,8 +69,8 @@ public class TownScene : MonoBehaviour
 
 	
 
-	#region BeautyShop
-	public void OnOffBeautyShopBtn(bool _isFlag)
+	#region BeautySalon
+	public void OnOffBeautySalonBtn(bool _isFlag)
 	{
 		uiBtn[0].gameObject.SetActive(_isFlag);
 	}
@@ -88,8 +88,8 @@ public class TownScene : MonoBehaviour
 	#endregion
 
 
-	#region EnchantShop=>church
-	public void OnOffEnchantShopBtn(bool _isFlag)
+	#region Smithy
+	public void OnOffSmithyBtn(bool _isFlag)
 	{
 		uiBtn[1].gameObject.SetActive(_isFlag);
 	}
@@ -103,19 +103,19 @@ public class TownScene : MonoBehaviour
 	#endregion
 
 
-	#region Guild
-	public void OnOffGuildBtn(bool _isFlag)
+	#region Shop
+	public void OnOffShopBtn(bool _isFlag)
 	{
 		uiBtn[2].gameObject.SetActive(_isFlag);
 	}
 
-	public void OnGuild()
+	public void OnShop()
 	{
 		isUIOpen = false;   // 임시로 넣은 코드임
 		//isUIOpen = true;	// 나중에 이걸로 구현
 	}
 
-	public void OffGuild()
+	public void OffShop()
 	{
 		isUIOpen = false;
 
@@ -123,18 +123,18 @@ public class TownScene : MonoBehaviour
 	#endregion
 
 
-	#region Smithy(대장간)
-	public void OnOffSmithyBtn(bool _isFlag)
+	#region Church(교회)
+	public void OnOffChurchBtn(bool _isFlag)
 	{
 		uiBtn[3].gameObject.SetActive(_isFlag);
 	}
 
-	public void OnSmithy()
+	public void OnChurch()
 	{
 		isUIOpen = false;   // 임시로 넣은 코드임
 		//isUIOpen = true;	// 나중에 이걸로 구현
 	}
-	public void OffSmithy()
+	public void OffChurch()
 	{
 		isUIOpen = false;
 	}
