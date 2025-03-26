@@ -25,22 +25,51 @@ public class TownScene : MonoBehaviour
 	[SerializeField]private GameObject beautyShopUI;
 	[SerializeField]private GameObject shopUI;
 
+	[Header("Inventory UI")]
+	[SerializeField] private GameObject InventoryUI;
+
+	[Header("ShopUI")]
+	[SerializeField] private ShopUIManager shopUIManager;
 	private bool isUIOpen;
+
+	private bool isInven;
 	public bool IsUIOpen { get { return isUIOpen; } set { isUIOpen = value; } }
+	public bool IsInven { get { return isInven; } set { isInven = value; } }
 
 	private PlayerModel playerModel;
 	private GameObject player;
 
-    private void Awake()
-    {
-		//player = GameObject.Find("Player");
-  //      playerModel = player.GetComponent<PlayerModel>();
-		//Instantiate(playerModel.modelPrefabs[0],player.transform);
-    }
-
 
 
     #region Awake Start Update
+    private void Awake()
+    {
+        //player = GameObject.Find("Player");
+        //      playerModel = player.GetComponent<PlayerModel>();
+        //Instantiate(playerModel.modelPrefabs[0],player.transform);
+        InventoryData.Instance.OnInit();
+        PlayerDataManager.Instance.OnInit();
+        InventoryUI.SetActive(false);
+    }
+
+	// 인벤토리 키보드로 켜기
+
+    private void Update()
+    {
+		if (Input.GetKeyDown(KeyCode.I))
+		{
+			if (!isInven)
+			{
+                InventoryUI.SetActive(true);
+				isInven = true;	
+			}
+			else
+			{
+                InventoryUI.SetActive(false);
+				isInven = false;
+			}
+		}
+    }
 
 
 
@@ -111,8 +140,9 @@ public class TownScene : MonoBehaviour
 
 	public void OnShop()
 	{
-		isUIOpen = false;   // 임시로 넣은 코드임
-		//isUIOpen = true;	// 나중에 이걸로 구현
+		IsUIOpen = true;
+		shopUIManager.OpenShop(true);
+
 	}
 
 	public void OffShop()

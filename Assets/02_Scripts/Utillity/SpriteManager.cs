@@ -9,7 +9,7 @@ public class SpriteManager : SingleTonToUnityObject<SpriteManager>
 
 	private void Awake()
 	{
-		int forSize = 10;
+		int forSize = 11;
 		//equiptSize = ItemDataManager.Instance.EquiptSize;
 
 	
@@ -38,13 +38,13 @@ public class SpriteManager : SingleTonToUnityObject<SpriteManager>
 				useableList.Add(Resources.Load<Sprite>(ResourcesDirectory.IconUseableSprite + +i));
 		}
 
-		//resourceSize = ItemDataManager.Instance.ResourceSize;
+		//int resourceSize = ItemDataManager.Instance.ResourceSize;
 		for (int i = 0; i < forSize; i++)
 		{
 			if (i < 10)
-				resoureList.Add(Resources.Load<Sprite>(ResourcesDirectory.IconUseableSprite + "0" + i));
+				resoureList.Add(Resources.Load<Sprite>(ResourcesDirectory.IconResourceSprite + "0" + i));
 			else
-				resoureList.Add(Resources.Load<Sprite>(ResourcesDirectory.IconUseableSprite + +i)); 
+				resoureList.Add(Resources.Load<Sprite>(ResourcesDirectory.IconResourceSprite + +i)); 
 		}
 	}
 

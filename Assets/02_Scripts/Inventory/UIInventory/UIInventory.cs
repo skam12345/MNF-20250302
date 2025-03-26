@@ -190,9 +190,9 @@ public class UIInventory : MonoBehaviour
 	public void UITestBtnAddResource()
 	{
 		ItemBaseClass.ItemData data = new ItemBaseClass.ItemData();
-		data.Index = UnityEngine.Random.Range(0, 3);   //
+		data.Index = 10;   //
 		data.Type = "재료";
-		data.Count = 10;
+		data.Count = 15;
 		InventoryData.Instance.ItemInInventoryToItemData(ref data);
         bottom.RefreshResource();
 	}
@@ -200,9 +200,9 @@ public class UIInventory : MonoBehaviour
 	public void UITestBtnRemoveResource()
 	{
 		ItemBaseClass.ItemData data = new ItemBaseClass.ItemData();
-		data.Index = UnityEngine.Random.Range(0, 3);   //
+		data.Index = 10;  //
 		data.Type = "재료";
-		data.Count = 10;
+		data.Count = 15;
 		InventoryData.Instance.ItemOutInventoryToItemData(ref data);
         bottom.RefreshResource();
 	}

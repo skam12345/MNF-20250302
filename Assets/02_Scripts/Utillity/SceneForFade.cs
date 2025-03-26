@@ -23,8 +23,8 @@ public class SceneForFade : MonoBehaviour
 	{
 		float nowtime = 0.0f;
 		float percentage = 0.0f;
-
-		while (nowtime <= fadeInTime)
+        targetImage.gameObject.SetActive(true);
+        while (nowtime <= fadeInTime)
 		{
 			nowtime += Time.deltaTime;
 			percentage = nowtime / fadeInTime;
@@ -63,7 +63,7 @@ public class SceneForFade : MonoBehaviour
 	{
 		fadeInModeWhite = _isWhite;
 		fadeInTime = _time;
-		StartCoroutine(FadeIn());
+        StartCoroutine(FadeIn());
 	}
 
 	public void StartFadeOut(float _time, bool _isWhite = false)
