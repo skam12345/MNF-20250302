@@ -84,4 +84,14 @@ public class StateManager : MonoBehaviour
         hudManager.ChangeUserHUD();
 
     }
+
+
+    //public void EnemyDeath()
+    //{
+    //    if(gameObject.tag == "Enemy")
+    //    if(hp <= maxhp)
+    //    {
+
+    //    }
+    //}
 }
