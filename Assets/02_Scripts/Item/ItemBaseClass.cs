@@ -387,7 +387,6 @@ public class ItemBaseClass
 				isCreateItem = false;
 				do
 				{
-					// DEBUG: 무한루프 발생 주의 enemyItemScriptable Percentage 값이 0이면 무한루프에 빠짐
 					foreach (var item in _dataTable.useable)
 					{
 						random = 0; UnityEngine.Random.Range(0, 100);   // 개별 아이템 드롭 확률
