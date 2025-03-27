@@ -1,8 +1,4 @@
-using System;
 using System.Text;
-using TMPro;
-using Unity.VisualScripting;
-using UnityEditor.Localization.Plugins.XLIFF.V12;
 
 public class ItemBaseClass
 {
@@ -13,7 +9,7 @@ public class ItemBaseClass
 		public string name { get; set; }	// 이름
 		public string typeText { get; set; }	// 종류
 		public int grade { get; set; }		// 등급 or 스타
-		public int enforce{ get; set; }		// 강화
+		public int upgrade{ get; set; }		// 강화
 		public int needLv { get; set; }		// 아이템 최소 레벨
 		public int buyGold { get; set; }	// -1 구매불가 0이상 판매 가능
 		public int sellGold { get; set; }	// -1 판매불가 0이상 판매 가능
@@ -23,7 +19,7 @@ public class ItemBaseClass
 		public float itemBaseDef { get; set; }	// 아이템 장착시 올라가는 Def
 		public float criRate { get; set; }	// 아이템 장착시 올라가는 크리확률
 		public float criDmg { get; set; }	// 아이템 장착시 올라가는 크리데미지
-		public int enchantRate { get; set; }	// 아이템 장착시 재료합성 컨텐츠에서 올라가는 행운 량
+		public int enchantLuck { get; set; }	// 아이템 장착시 재료합성 컨텐츠에서 올라가는 행운 량
 		public string description { get; set; }	// 설명
 		public int skillEvent { get; set; } // 아이템 장착 시 스킬을 사용할 수 있는 번호
 
@@ -35,38 +31,38 @@ public class ItemBaseClass
 
 			itemText.Clear();
 
-			itemText.Append(name);
-			itemText.Append("\n"+typeText);
-			itemText.Append("\n"+grade);
-			itemText.Append("\n"+needLv);
-			itemText.Append("\n"+enforce);
-			itemText.Append("\n"+buyGold);
-			itemText.Append("\n"+sellGold);
-			itemText.Append("\n"+itemBaseHP);
-			itemText.Append("\n"+itemBaseMP);
-			itemText.Append("\n"+itemBaseAtk);
-			itemText.Append("\n"+itemBaseDef);
-			itemText.Append("\n"+criRate);
-			itemText.Append("\n"+criDmg);
-			itemText.Append("\n"+enchantRate);
-			itemText.Append("\n"+description);
-			itemText.Append("");
+			itemText.Append(index);
+			itemText.Append("\nname: "+name);
+			itemText.Append("\ntype: "+typeText);
+			itemText.Append("\ngrade: "+grade);
+			itemText.Append("\nneedLV: "+needLv);
+			itemText.Append("\nupgrade: "+upgrade);
+			itemText.Append("\nbuyGold: "+buyGold);
+			itemText.Append("\nsellGold: "+sellGold);
+			itemText.Append("\nbaseHP: "+itemBaseHP);
+			itemText.Append("\nbaseMP: "+itemBaseMP);
+			itemText.Append("\nbaseATK: "+itemBaseAtk);
+			itemText.Append("\nbaseDef: "+itemBaseDef);
+			itemText.Append("\ncriRate: "+criRate);
+			itemText.Append("\ncriDmg: "+criDmg);
+			itemText.Append("\nencLuck"+ enchantLuck);
+			itemText.Append("\ndesc"+description);
 			return itemText.ToString();
 		}
 
-		public void Init(string _name, string _typeText, int _grade, int _needLv, int _enforce,
+		public void Init(string _name, string _typeText, int _grade, int _needLv, int _upgrade,
 			int _buygold, int _sellgold, 
 			float _itemHp, float _itemMp, 
 			float _itemAtk, float _itemDef,
 			float _criRate, float _criDmg,
-			int _enchant, string _desc, int _skillEvent)
+			int _enchantLuck, string _desc, int _skillEvent)
 		{
-			name = _name; typeText = _typeText; grade = _grade; needLv = _needLv; enforce = _enforce;
+			name = _name; typeText = _typeText; grade = _grade; needLv = _needLv; upgrade = _upgrade;
 			buyGold = _buygold; sellGold = _sellgold;
 			itemBaseHP = _itemHp; itemBaseMP = _itemMp;
 			itemBaseAtk = _itemAtk; itemBaseDef = _itemDef;
 			criRate = _criRate; criDmg = _criDmg;
-			enchantRate = _enchant; description = _desc; skillEvent = _skillEvent;
+			enchantLuck = _enchantLuck; description = _desc; skillEvent = _skillEvent;
 		}
 
 		public void Init(ItemBaseEquipment _data)
@@ -75,7 +71,7 @@ public class ItemBaseClass
 			typeText = _data.typeText;
 			grade = _data.grade;
 			needLv = _data.needLv;
-			enforce = _data.enforce;
+			upgrade = _data.upgrade;
 			buyGold = _data.buyGold;
 			sellGold = _data.sellGold;
 			itemBaseHP = _data.itemBaseHP;
@@ -84,7 +80,7 @@ public class ItemBaseClass
 			itemBaseDef = _data.itemBaseDef;
 			criRate = _data.criRate;
 			criDmg = _data.criDmg;
-			enchantRate = _data.enchantRate;
+			enchantLuck = _data.enchantLuck;
 			description = _data.description;
 			skillEvent = _data.skillEvent;
 		}
@@ -101,7 +97,7 @@ public class ItemBaseClass
 		public string mainDescription { get; set; }// 아이템의 효과 설명
 		public string subDescriton { get; set; }	// 아이템의 서사 설명
 		public string typeFunc { get; set; }		// 소모품 사용시 어떻게 작동될지의 기능을 담음
-		public int value { get; set; }				// 소모품 사용시 적용될 값 물약은 +- 증가값, 효과 기능들은 번호로 쓰일 예정
+		public int funcValue { get; set; }				// 소모품 사용시 적용될 값 물약은 +- 증가값, 효과 기능들은 번호로 쓰일 예정
 		public int count { get; set; }              // 현재 보유량
 		public int stack { get; set; }              // 최대 스택량
 
@@ -114,7 +110,7 @@ public class ItemBaseClass
 			mainDescription = "";
 			subDescriton = "";
 			typeFunc = "";
-			value = 0;
+			funcValue = 0;
 			count = 0;
 			stack = 1;
 		}
@@ -126,16 +122,17 @@ public class ItemBaseClass
 
 			itemText.Clear();
 
-			itemText.Append(mainName);
-			itemText.Append("\n"+typeText);
-			itemText.Append("\n"+buyGold);
-			itemText.Append("\n"+sellGold);
-			itemText.Append("\n"+mainDescription);
-			itemText.Append("\n"+subDescriton);
-			itemText.Append("\n"+typeFunc);
-			itemText.Append("\n"+value);
-			itemText.Append("\n"+count);
-			itemText.Append("\n"+stack);
+			itemText.Append(index);
+			itemText.Append("\nname: "+ mainName);
+			itemText.Append("\ntype: "+typeText);
+			itemText.Append("\nbuyGold: "+buyGold);
+			itemText.Append("\nsellGold: "+sellGold);
+			itemText.Append("\nmainDesc: "+mainDescription);
+			itemText.Append("\nsubDesc: "+subDescriton);
+			itemText.Append("\ntypeFunc"+typeFunc);
+			itemText.Append("\nFuncValue: "+ funcValue);
+			itemText.Append("\ncount: "+count);
+			itemText.Append("\nstack: "+stack);
 			return itemText.ToString();
 		}
 		public void Init(int _index,string _mainName, string _typeText, int _buyGold, int _sellGold, string _mainDescription, string _subDescriton, string _typeFunc, int _value, int _itemCount,int _stack)
@@ -148,7 +145,7 @@ public class ItemBaseClass
 			mainDescription = _mainDescription;
 			subDescriton = _subDescriton;
 			typeFunc = _typeFunc;
-			value = _value;
+			funcValue = _value;
 			count = _itemCount;
 			stack = _stack;
 		}
@@ -163,7 +160,7 @@ public class ItemBaseClass
 			mainDescription = _data.mainDescription;
 			subDescriton = _data.subDescriton;
 			typeFunc = _data.typeFunc;
-			value = _data.value;
+			funcValue = _data.funcValue;
 			count = _data.count;
 			stack = _data.stack;
 		}
@@ -224,15 +221,13 @@ public class ItemBaseClass
 			itemText.Clear();
 
 			itemText.Append(index);
-			itemText.Append("\n" + mainName);
-			itemText.Append("\n" + typeText);
-			itemText.Append("\n" + buyGold);
-			itemText.Append("\n" + sellGold);
-			itemText.Append("\n" + buyGold);
-			itemText.Append("\n" + sellGold);
-			itemText.Append("\n" + description);
-			itemText.Append("\n" + count);
-			itemText.Append("\n" + stack);
+			itemText.Append("\nname: " + mainName);
+			itemText.Append("\ntype: " + typeText);
+			itemText.Append("\nbuyGold: " + buyGold);
+			itemText.Append("\nsellGold: " + sellGold);
+			itemText.Append("\ndesc: " + description);
+			itemText.Append("\ncount: " + count);
+			itemText.Append("\nstack: " + stack);
 			return itemText.ToString();
 		}
 
@@ -300,35 +295,39 @@ public class ItemBaseClass
 	[System.Serializable]
 	public class ItemEquiptScriptObject
 	{
-		public int itemIndex;		// 아이템 고유 번호
-		public int itemPercent;		// 아이템을 n%확률로 드랍할 퍼센티지
+		// using UnityEngine;을 스크립트 상에서 맨 위에 사용하면 좋지만 
+		// tooltip 기능을 여기서밖에 안쓰기 때문에 
+		// using UnityEngine은 쓰지 않았습니다.
+		// 그리고 이 스크립트도 MonoBehaviour를 상속하지 않기 때문에 더더욱 안적었습니다.
+		[UnityEngine.Tooltip("아이템 번호")]public int itemIndex;        // 아이템 고유 번호
+		[UnityEngine.Tooltip("해당 아이템을 %확률로 드랍할 것인가?")] public int itemPercent;		// 아이템을 n%확률로 드랍할 퍼센티지
 	}
 
 	[System.Serializable]
 	public class ItemUseableScriptObject
 	{
-		public int itemIndex;       // 아이템 고유 번호
-		public int itemPercent;     // 아이템을 n%확률로 드랍할 퍼센티지
-		public int itemMinCount;	// 아이템 최소 드롭값
-		public int itemMaxCount;	// 아이템 최대 드롭값 최소와 최대가 같으면 Min값으로 아이템 넣어짐
+		[UnityEngine.Tooltip("아이템 번호")] public int itemIndex;
+		[UnityEngine.Tooltip("해당 아이템을 %확률로 드랍할 것인가?")] public int itemPercent;
+		[UnityEngine.Tooltip("아이템 최소 드롭 개수")] public int itemMinCount;   
+		[UnityEngine.Tooltip("아이템 최대 드롭 개수")] public int itemMaxCount;	// 아이템 최대 드롭값 최소와 최대가 같으면 Min값으로 아이템 넣어짐
 	}
 
 	[System.Serializable]
 	public class ItemResourceScriptObject
 	{
-		public int itemIndex;       // 아이템 고유 번호
-		public int itemPercent;     // 아이템을 n%확률로 드랍할 퍼센티지
-		public int itemMinCount;    // 아이템 최소 드롭값
-		public int itemMaxCount;    // 아이템 최대 드롭값 최소와 최대가 같으면 Min값으로 아이템 넣어짐
+		[UnityEngine.Tooltip("아이템 번호")] public int itemIndex;
+		[UnityEngine.Tooltip("해당 아이템을 %확률로 드랍할 것인가?")] public int itemPercent;
+		[UnityEngine.Tooltip("아이템 최소 드롭 개수")] public int itemMinCount;
+		[UnityEngine.Tooltip("아이템 최대 드롭 개수")] public int itemMaxCount;	// 아이템 최대 드롭값 최소와 최대가 같으면 Min값으로 아이템 넣어짐
 	}
 	#endregion
 
 	[System.Serializable]
 	public class ItemData
 	{
-		public string Type;	// "장비" / "소모품" / "재료"
-		public int Index;	// 아이템 번호
-		public int Count;	// 장비 안쓰임, 소모품 & 재료 : 드랍 개수
+		[UnityEngine.Tooltip("Type [String To 한글]주석 참고")] public string Type;   // "장비" / "소모품" / "재료"
+		[UnityEngine.Tooltip("Type의 번호")] public int Index; // 아이템 번호
+		[UnityEngine.Tooltip("장비1로, 소모품, 재료 = 획득 개수")] public int Count;	// 장비 안쓰임, 소모품 & 재료 : 드랍 개수
 		StringBuilder itemText;
 		public ItemData()
 		{
@@ -352,8 +351,8 @@ public class ItemBaseClass
 			itemText.Clear();
 
 			itemText.Append(Type);
-			itemText.Append("\n" + Index);
-			itemText.Append("\n" + Count);
+			itemText.Append("\nidx : " + Index);
+			itemText.Append("\ncount : " + Count);
 			return itemText.ToString();
 		}
 	}
@@ -368,70 +367,88 @@ public class ItemBaseClass
 	public static void CreateItem(ref EnemyDropTableToScriptableObject _dataTable, out ItemData _itemData )
 	{
 		_itemData = new ItemData();
-		int random = UnityEngine.Random.Range(0, 100);
-			
-		// equpt값이 있다면
-		if( _dataTable.equipt != null)
+		int random = 0;
+		bool isCreateItem = false;
+
+
+		random = UnityEngine.Random.Range(0, 100);
+		if (random <= _dataTable.equiptPercent)
 		{
-			if (random < _dataTable.equiptPercent)	// 장비를 드랍할 수 있나요?
+			if(_dataTable.equipt == null)
 			{
-				foreach (var item in _dataTable.equipt)
+				UnityEngine.Debug.LogError("Enemy ScriptableObject에서 장비 리스트가 없습니다.");
+				//return;
+				// 골드로 생성하기 위해 return을 하지 않음
+			}
+
+			isCreateItem = false;
+			do
+			{
+				foreach (var item in _dataTable.useable)
 				{
-					random = UnityEngine.Random.Range(0, 100);	// 개별 아이템 체크
-					if (random < item.itemPercent)
+					random = 0; UnityEngine.Random.Range(0, 100);	// 개별 아이템 드롭 확률
+					if (random <= item.itemPercent)
 					{
+						_itemData.Index = item.itemIndex;
 						_itemData.Type = "장비";
-						_itemData.Index = item.itemIndex;
-						_itemData.Count = 1;	// 의미없음
-						return;
+						_itemData.Count = 1;
+						isCreateItem = true;
+						break;
 					}
 				}
 			}
+			while (isCreateItem == false);
 		}
-		else if( _dataTable.useable != null)
+		else if(random > _dataTable.equiptPercent && random <= _dataTable.equiptPercent + _dataTable.useablePercent)
 		{
-			random = UnityEngine.Random.Range(0, 100);
-			if (random < _dataTable.useablePercent)
+			if (_dataTable.useable == null)
+			{
+				UnityEngine.Debug.LogError("Enemy ScriptableObject에서 소모품 리스트가 없습니다.");
+			}
+
+			isCreateItem = false;
+			do
 			{
 				foreach (var item in _dataTable.useable)
 				{
-					random = UnityEngine.Random.Range(0, 100);
-					if (random < item.itemPercent)
+					random = 0; UnityEngine.Random.Range(0, 100);
+					if (random <= item.itemPercent)
 					{
+						_itemData.Index = item.itemIndex;
 						_itemData.Type = "소모품";
-						_itemData.Index = item.itemIndex;
-
-						if (item.itemMaxCount == item.itemMinCount)
-							_itemData.Count = item.itemMinCount;
-						else
-							_itemData.Count = UnityEngine.Random.Range(item.itemMinCount, item.itemMaxCount);
-						return;
+						_itemData.Count = UnityEngine.Random.Range(item.itemMinCount,item.itemMaxCount);
+						isCreateItem = true;
+						break;
 					}
 				}
 			}
+			while (isCreateItem == false);
 		}
-		else if( _dataTable.resource != null)
+		else if(random > _dataTable.equiptPercent + _dataTable.useablePercent && random <= _dataTable.equiptPercent + _dataTable.useablePercent + _dataTable.resourcePercent)
 		{
-			random = UnityEngine.Random.Range(0, 100);
-			if (random < _dataTable.useablePercent)
+			if (_dataTable.resource == null)
 			{
-				foreach (var item in _dataTable.useable)
+				UnityEngine.Debug.LogError("Enemy ScriptableObject에서 재료 리스트가 없습니다.");
+			}
+			isCreateItem = false;
+			do
+			{
+				foreach (var item in _dataTable.resource)
 				{
-					random = UnityEngine.Random.Range(0, 100);
-					if (random < item.itemPercent)
+					random = 0; UnityEngine.Random.Range(0, 100);
+					if (random <= item.itemPercent)
 					{
-						_itemData.Type = "재료";
 						_itemData.Index = item.itemIndex;
-
-						if (item.itemMaxCount == item.itemMinCount)
-							_itemData.Count = item.itemMinCount;
-						else
-							_itemData.Count = UnityEngine.Random.Range(item.itemMinCount, item.itemMaxCount);
-						return;
+						_itemData.Type = "재료";
+						_itemData.Count = UnityEngine.Random.Range(item.itemMinCount, item.itemMaxCount);
+						isCreateItem = true;
+						break;
 					}
 				}
 			}
+			while (isCreateItem == false);
 		}
+		if (isCreateItem == true) return;
 
 		_itemData.Type = "골드";
 		_itemData.Index = 0;
