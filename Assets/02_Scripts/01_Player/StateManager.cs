@@ -29,6 +29,11 @@ public class StateManager : MonoBehaviour
 
     PlayerDataClass playerdata;
 
+    // 플레이어 BaseData갱신
+    public void PlayerDataRefresh()
+    {
+
+    }
 
 
 
@@ -36,8 +41,20 @@ public class StateManager : MonoBehaviour
     public HUDManager hudManager;
     //public AttackController atkctrl;
 
+    // 플레이어의 정보를 담을 클래스
+    public PlayerDataClass playerData;
+	#region 플레이어 정보 갱신 (25.03.24)
 
-    private void Start()
+	// 버디 번호를 받으면 플레이어 데이터가 엑셀 차트의 번호대로 정보가 갱신됩니다.
+	// TextAsset txtFile = Resources.Load<TextAsset>("Jsons/PlayerDataJson");
+	public void PlayerDataRefresh(int _buddyNumber)
+    {
+        PlayerDataManager.Instance.GetData(_buddyNumber, out playerData);
+
+	}
+
+	#endregion
+	private void Start()
     {
         //atkctrl = GetComponentInChildren<AttackController>();
         hudManager = gameObject.GetComponent<HUDManager>();
