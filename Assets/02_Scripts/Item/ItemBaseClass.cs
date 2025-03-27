@@ -387,7 +387,7 @@ public class ItemBaseClass
 				isCreateItem = false;
 				do
 				{
-					foreach (var item in _dataTable.useable)
+					foreach (var item in _dataTable.equipt)
 					{
 						random = 0; UnityEngine.Random.Range(0, 100);   // 개별 아이템 드롭 확률
 						if (random < item.itemPercent)
