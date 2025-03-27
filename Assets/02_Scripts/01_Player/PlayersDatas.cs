@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class PlayersDatas : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public int lv;
+    public int curExp;
+
+    public float maxhp;
+    public float hp;
+    public int atk;
+
+    public int criChance = 50; 
+    public float criDamage = 1.5f;
+
+
+
+
+
 }

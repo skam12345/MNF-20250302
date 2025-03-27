@@ -28,7 +28,9 @@ public class PlayerControllInBattleField : MonoBehaviour
     public bool isHold;
     public bool onMove;
 
-    
+    StateManager stateManager;
+    public CharacterStats stats;
+
     //½ºÅÝ °»½Å¿ë
     public void StateRefresh()
     {
@@ -39,6 +41,7 @@ public class PlayerControllInBattleField : MonoBehaviour
 
     private void Start()
     {
+        stateManager = gameObject.GetComponent<StateManager>();
         controller = GetComponent<CharacterController>();
         playermodel = GetComponent<PlayerModel>();
 

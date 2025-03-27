@@ -1463,6 +1463,7 @@ GameObject:
   - component: {fileID: 1265031339524957306}
   - component: {fileID: 2018703359682033219}
   - component: {fileID: -4835777381973755028}
+  - component: {fileID: 5831994651190817482}
   m_Layer: 0
   m_Name: 02_kaelan
   m_TagString: Untagged
@@ -1792,6 +1793,28 @@ MonoBehaviour:
   - {fileID: 919132149155446097, guid: fa1767b38c81a63488e215c82f664645, type: 3}
   - {fileID: 919132149155446097, guid: fa1767b38c81a63488e215c82f664645, type: 3}
   arrowpower: 25
+--- !u!114 &5831994651190817482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4436334492730957147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ed514afe9abc7549b2325b367dcbc94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 11400000, guid: a52e69fe96a51a840bd0e5848ab8b1ec, type: 2}
+  lv: 0
+  curExp: 0
+  maxExp: 0
+  maxhp: 0
+  hp: 0
+  maxmp: 0
+  atk: 0
+  criChance: 0
+  criDamage: 0
 --- !u!1 &4608742948618428245
 GameObject:
   m_ObjectHideFlags: 0

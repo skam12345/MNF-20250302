@@ -51,7 +51,7 @@ public class HUDManager : MonoBehaviour
 
         if (stateManager.hp <= 0)
         {
-            Debug.Log("여기서 캐릭터 죽고 다음캐릭터로 강제로 넘겨야 함!!!");
+            Debug.Log("캐릭터는 죽었습니다!");
         }
     }
 
