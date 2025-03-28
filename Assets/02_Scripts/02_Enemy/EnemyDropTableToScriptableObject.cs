@@ -10,7 +10,8 @@ public class EnemyDropTableToScriptableObject : ScriptableObject
 	public int minInGameGold;
 	public int maxInGameGold;
 
-	public int equiptPercent ;
-	public int useablePercent ;
-	public int resourcePercent ;
+	[Header("반드시 이 3개의 확률의 합이 100%가 되어야함")]
+	[Tooltip("장비를 얻을 확률 이 확률에 걸리면 장비리스트에서 무조건 드롭되게 설정")] public int equiptPercent ;
+	[Tooltip("소모품을 얻을 확률 이 확률에 걸리면 소모품리스트에서 무조건 드롭되게 설정")] public int useablePercent ;
+	[Tooltip("재료를 얻을 확률 이 확률에 걸리면 재료리스트에서 무조건 드롭되게 설정")] public int resourcePercent ;
 }
