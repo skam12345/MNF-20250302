@@ -39,7 +39,6 @@ public class LobbyScene : MonoBehaviour
 		ItemDataManager.Instance.OnInit();
 		PlayerDataManager.Instance.OnInit();
 		InventoryData.Instance.OnInit();
-		EnemyDataManager.Instance.OnInit();
 		//StageDataManager.Instance.OnInit();
 	}
 

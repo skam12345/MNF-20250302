@@ -5,7 +5,7 @@ using static ItemBaseClass;
 public class ItemCube : MonoBehaviour
 {
 	//[SerializeField] private Material meshRenderer;
-	//[SerializeField] private Material minimapRenderer;
+	[SerializeField] private SpriteRenderer minimapRenderer;
 
 	Rigidbody rigidbody;
 	Collider boxCollider;
@@ -14,6 +14,9 @@ public class ItemCube : MonoBehaviour
 	[SerializeField] private float jumpPower;
 	private Vector3 jumpVector;
 
+	ItemData itemFieldData;
+
+	bool isDropped = false;
 
 	private void Awake()
 	{
@@ -24,7 +27,7 @@ public class ItemCube : MonoBehaviour
 		rigidbody = this.GetComponent<Rigidbody>();
 		
 		//meshRenderer = cube.GetComponent<Material>();
-		//minimapRenderer = minimapRenderer.GetComponent<Material>();
+		minimapRenderer = transform.GetComponent<SpriteRenderer>();
 		jumpVector = Vector3.up * jumpPower;
 
 		rigidbody.useGravity = true;
@@ -57,9 +60,27 @@ public class ItemCube : MonoBehaviour
 	/// <param name="_dropTable"></param>
 	public void CreateItemData(ref EnemyDropTableToScriptableObject _dropTable)
 	{
-		ItemData itemFieldData = null;
+		itemFieldData = null;
 		ItemBaseClass.CreateItem(ref _dropTable, out itemFieldData);
-		InventoryData.Instance.ItemInInventoryToItemData(ref itemFieldData);
+		JumpItem();
+		switch (itemFieldData.Type)
+		{
+			case "장비":
+				if (SpriteManager.Instance == null) return;
+				minimapRenderer.sprite = SpriteManager.Instance.GetSpriteEquipt(itemFieldData.Index);
+				break;
+			case "소모품":
+				if (SpriteManager.Instance == null) return;
+				minimapRenderer.sprite = SpriteManager.Instance.GetSpriteUseable(itemFieldData.Index);
+				break;
+			case "재료":
+				if (SpriteManager.Instance == null) return;
+				minimapRenderer.sprite = SpriteManager.Instance.GetSpriteResource(itemFieldData.Index);
+				break;
+
+			default:
+				break;
+		}
 	}
 
 	
@@ -90,4 +111,17 @@ public class ItemCube : MonoBehaviour
 		}
 	}
 
+	public void ItemDrop()
+	{
+		if (isDropped == true) return;
+		if (isDropped == false)
+		{
+			isDropped = true;
+		}
+
+		InventoryData.Instance.ItemInInventoryToItemData(ref itemFieldData);
+
+		Debug.Log("ItemCube - ItemDrop() : \n" + itemFieldData.ToString());
+		Destroy(this.gameObject);
+	}
 }

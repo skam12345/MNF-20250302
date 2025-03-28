@@ -72,14 +72,14 @@ public class EnemyDataManager : SingleTonBase<EnemyDataManager>
 
 	public bool GetData(int _index, out EnemyBaseData _searchData)
 	{
-		bool dofindsearchData = false;
 		_searchData = null;
 
-		if (dataList.Count <= _index) { return dofindsearchData; }
-		else if (_index < 0) { return dofindsearchData; }
+		if (dataList.Count <= _index) { return false; }
+		else if (_index < 0) { return false; }
 
 		_searchData = dataList[_index];
-		return dofindsearchData;
+		
+		return true;
 	}
 
 

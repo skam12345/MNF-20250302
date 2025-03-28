@@ -33,8 +33,18 @@ public class EnemyCollider : MonoBehaviour
 
     private float initialEnemyPositionX = 0;
 
+    [Header("Settings")]
+    [SerializeField] private StateManager stateManager;
+	private EnemyDropTableToScriptableObject enemyDropTable;
+    private EnemyBaseData myData;
+    private GameObject prefabItemCube;
 
-    void Start()
+	private void Awake()
+	{
+        prefabItemCube = Resources.Load<GameObject>(ResourcesDirectory.ItemCube);
+	}
+
+	void Start()
     {
         target = GameObject.FindWithTag("Player");
         testEnemy = gameObject.transform.parent;
@@ -53,10 +63,36 @@ public class EnemyCollider : MonoBehaviour
             StartCoroutine(AutoRotateEnemy());
             StartCoroutine(RandomDistanceEnemy());
         }
-    }
+	}
 
     void Update()
     {
+        // TODO:  1. 작업필요 <애니메이션 죽음 처리
+        // 2. 적이 갖고있는 드롭 테이블을 활용해서 ItemData 변환
+        if ( stateManager.IsDead() == true)
+        {
+            // 1. 애니메이션 처리
+
+            // 2. 해당 작업은 아이템 큐브가 처리함
+            //ItemBaseClass.ItemData itemData = null;
+            //ItemBaseClass.CreateItem(ref enemyDropTable, out itemData);
+
+            // Debug.Log
+            // 3.createFieldItemObject.GetComponenet<ItemCube>().SetItemData(ref itemData);
+            // 아이템 큐브에서 이 아이템 정보를 기억하게 만듦 
+            GameObject createItemCube = Instantiate(prefabItemCube, transform.position, Quaternion.identity);
+            createItemCube.GetComponent<ItemCube>().CreateItemData(ref enemyDropTable);
+
+			// 4. createFieldItemObject.ImageRefreshAndStartMove():
+			// 아이템 큐브에게 이미지 갱신 및 움직임 시작 ItemCube.CreateItemData 참고
+
+			// 테스트 시 업데이트가 무한으로 돌기 때문에 에러 방지용으로 오브젝트 제거
+			Destroy(this.gameObject.transform.parent.gameObject);
+
+			return;
+        }
+
+
         Quaternion left = Quaternion.Euler(0, 90, 0);
         Quaternion right = Quaternion.Euler(0, -90, 0);
         Quaternion[] rotations = { left, right };
@@ -112,7 +148,43 @@ public class EnemyCollider : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+	#region 스크립터블오브젝트 초기화
+	public void Init(int _monsterNumber)
+	{
+        if(myData == null) { myData = new EnemyBaseData(); }
+        //Debug.Log(_monsterNumber);
+		EnemyBaseData getData = null;
+		EnemyDataManager.Instance.GetData(_monsterNumber, out getData);
+        //Debug.Log(getData.ToString());
+		myData.Init(ref getData);
+
+		CreateEnemyDropData();
+	}
+	private void CreateEnemyDropData()
+	{
+		System.Text.StringBuilder strDirectory = new System.Text.StringBuilder();
+		strDirectory.Append(ResourcesDirectory.EnemyDropTable);
+
+		if (myData.Index < 10)
+		{
+			strDirectory.Append("00" + (myData.Index + 1));
+		}
+		else if (myData.Index < 100)
+		{
+			strDirectory.Append("0" + (myData.Index + 1));
+		}
+		else
+		{
+			strDirectory.Append((myData.Index + 1));
+		}
+		strDirectory.Append("_" + myData.Name);
+
+		//Debug.Log(strDirectory);
+		enemyDropTable = Resources.Load<EnemyDropTableToScriptableObject>(strDirectory.ToString());
+	}
+	#endregion
+
+	private void OnTriggerEnter(Collider other)
     {
 
         if (other.CompareTag("Player"))

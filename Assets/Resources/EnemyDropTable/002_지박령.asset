@@ -10,17 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e788d19da4b96d4b8f22046ba359578, type: 3}
-  m_Name: "001_\uBD88\uBAAC\uC2A4\uD130"
+  m_Name: "002_\uC9C0\uBC15\uB839"
   m_EditorClassIdentifier: 
-  equipt:
+  equipt: []
+  useable:
   - itemIndex: 0
-    itemPercent: 30
+    itemPercent: 50
+    itemMinCount: 1
+    itemMaxCount: 1
   - itemIndex: 1
     itemPercent: 50
-  useable: []
+    itemMinCount: 1
+    itemMaxCount: 1
   resource: []
   minInGameGold: 111
   maxInGameGold: 222
-  equiptPercent: 90
-  useablePercent: 0
+  equiptPercent: 0
+  useablePercent: 90
   resourcePercent: 0
