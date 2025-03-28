@@ -126,6 +126,7 @@ MonoBehaviour:
   chaseSpeed: 1
   moveSpeed: 0.5
   monsterType: 1
+  stateManager: {fileID: -4534046683139684648}
 --- !u!1 &3766625033296119037
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,6 +385,8 @@ MonoBehaviour:
   criChance: 50
   criDamage: 120
   hudManager: {fileID: 0}
+  playerData:
+    currExp: 0
 --- !u!65 &5582089081444316140
 BoxCollider:
   m_ObjectHideFlags: 0

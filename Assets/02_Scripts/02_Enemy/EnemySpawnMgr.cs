@@ -58,8 +58,10 @@ public class EnemySpawnMgr : MonoBehaviour
                 case 3: monsterIndex = monsterIndex4; break;
             }
 
-            Instantiate(spawnMonsters[monsterIndex], spawnLocate[spawnIdx].position, Quaternion.identity);
-        }
+            GameObject createObject= Instantiate(spawnMonsters[monsterIndex], spawnLocate[spawnIdx].position, Quaternion.identity);
+            createObject.GetComponentInChildren<EnemyCollider>().Init(monsterIndex);
+
+		}
     }
 
 

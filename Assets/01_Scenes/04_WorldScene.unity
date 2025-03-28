@@ -95293,7 +95293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FirstPersonBone: {fileID: 518892663527685405}
-  FirstPersonOffset: {x: 5.4233923, y: -1.3458909, z: -27.718702}
+  FirstPersonOffset: {x: 5.4233923, y: -1.3461214, z: -27.71853}
   Renderers:
   - Renderer: {fileID: 4115506028446238978}
     FirstPersonFlag: 0
@@ -95423,7 +95423,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3959850615203455319}
   m_Enabled: 1
-  m_Avatar: {fileID: 2800542716913040397, guid: 7c63db594e9b1b44e962f8b55567867a, type: 3}
+  m_Avatar: {fileID: 2575994301583314750, guid: 7c63db594e9b1b44e962f8b55567867a, type: 3}
   m_Controller: {fileID: 9100000, guid: a4d0f727411e34146a0eb2ed3a9fe917, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0

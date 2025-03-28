@@ -16,7 +16,7 @@ public class PlayerControllInBattleField : MonoBehaviour
 
 
     // 중력 및 점프 처리를 위한 벡터
-    private Vector3 velocity; 
+    private Vector3 velocity;
     [SerializeField] private float gravity = -20f;
     [SerializeField] private float jumpHeight = 2.7f;
 
@@ -51,9 +51,9 @@ public class PlayerControllInBattleField : MonoBehaviour
         setmodelPartner = Instantiate(getmodelPartner, transform);
         setmodelPartner.transform.position = getmodelPlayer.transform.position + new Vector3(-1, 0, 0);
         setmodelPartner.GetComponent<AttackController>().enabled = false;
-        
+
         playeranim = gameObject.transform.GetChild(0).GetComponent<Animator>();
-		buddyanim = gameObject.transform.GetChild(1).GetComponent<Animator>();
+        buddyanim = gameObject.transform.GetChild(1).GetComponent<Animator>();
     }
 
 
@@ -61,7 +61,7 @@ public class PlayerControllInBattleField : MonoBehaviour
 
 
 
-   void Update()
+    void Update()
     {
         float h = Input.GetAxisRaw("Horizontal");
 
@@ -86,7 +86,7 @@ public class PlayerControllInBattleField : MonoBehaviour
             if (velocity.y < 0)
                 velocity.y = -2f;
 
-            if (Input.GetButtonDown("Jump")&& !isJump)
+            if (Input.GetButtonDown("Jump") && !isJump)
             {
                 velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
                 playeranim.SetBool("Jump", true);
@@ -110,7 +110,7 @@ public class PlayerControllInBattleField : MonoBehaviour
 
 
         BuddySwap();
-}
+    }
 
 
 
@@ -143,10 +143,29 @@ public class PlayerControllInBattleField : MonoBehaviour
         }
     }
 
+	private void OnTriggerEnter(Collider other)
+	{
+        switch (other.gameObject.tag)
+        {
+            case "ItemCube":
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
+				// 아이템에 충돌됐으면 이 오브젝트를 따로 기억해야함
+				// 충돌에서 벗어나면 rememberItemCube = null; 필요함
+				//
+				// 그리고 플레이어가 X키든  C키든 드랍키를 눌렀을 때
+				// 업데이트에 작업 필요
+				other.gameObject.GetComponent<ItemCube>().ItemDrop();
+				//}
+				break;
+            default:
+                break;
+        }
+    }
+
+
+	private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (hit.collider.CompareTag("Plane")&& isJump)
+        if (hit.collider.CompareTag("Plane") && isJump)
         {
             playeranim.SetBool("Jump", false);
             isJump = false;

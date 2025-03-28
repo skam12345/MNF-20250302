@@ -38,7 +38,10 @@ public class WorldUIManager : MonoBehaviour
 
     private void Awake()
     {
-        dungeonPopup = GameObject.Find("DungeonPopup");
+        // singleton √ ±‚»≠
+		EnemyDataManager.Instance.OnInit();
+
+		dungeonPopup = GameObject.Find("DungeonPopup");
         dungeonIntroduce = GameObject.Find("DungeonIntroduce");
         stageBtnBundle = GameObject.Find("StageBtnBundle");
         dungeonIntroduce.SetActive(false);

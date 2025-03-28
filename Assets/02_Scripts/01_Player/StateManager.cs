@@ -14,6 +14,7 @@ public class StateManager : MonoBehaviour
 
 
     // 플레이어의 스텟!!!!
+
     public int lv;
     public int curExp;
 
@@ -27,7 +28,6 @@ public class StateManager : MonoBehaviour
 
 
 
-    PlayerDataClass playerdata;
 
     // 플레이어 BaseData갱신
     public void PlayerDataRefresh()
@@ -43,6 +43,8 @@ public class StateManager : MonoBehaviour
 
     // 플레이어의 정보를 담을 클래스
     public PlayerDataClass playerData;
+
+
 	#region 플레이어 정보 갱신 (25.03.24)
 
 	// 버디 번호를 받으면 플레이어 데이터가 엑셀 차트의 번호대로 정보가 갱신됩니다.
@@ -94,6 +96,7 @@ public class StateManager : MonoBehaviour
     public void TakeDamage(int hit,Color popupColor) // 딜 팝업
     {
         hp -= hit;
+
         Vector3 randomness = new Vector3(Random.Range(-0.45f, 0.45f), Random.Range(-0.45f, 0.45f), Random.Range(0f, 0.25f));
         // hit - (hit*def/100)
 
@@ -102,13 +105,13 @@ public class StateManager : MonoBehaviour
 
     }
 
-
-    //public void EnemyDeath()
-    //{
-    //    if(gameObject.tag == "Enemy")
-    //    if(hp <= maxhp)
-    //    {
-
-    //    }
-    //}
+    public bool IsDead()
+    {
+        if( hp <= 0)
+        {
+            return true;
+        }
+        return false;
+    }
+    
 }

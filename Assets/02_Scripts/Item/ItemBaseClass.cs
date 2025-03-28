@@ -359,22 +359,21 @@ public class ItemBaseClass
 
 
 	/// <summary>
-	/// 사용법
-	/// 
 	/// 
 	/// </summary>
-	/// <param name="_dataTable"></param>
+	/// <param name="_dataTable">ref 이 변수는 몬스터가 갖고있는 스크립터블 오브젝트 변수를 받습니다.</param>
+	/// <param name="_itemData"></param>
 	public static void CreateItem(ref EnemyDropTableToScriptableObject _dataTable, out ItemData _itemData )
 	{
 		_itemData = new ItemData();
 		int random = 0;
-		bool isCreateItem = false;
-
 
 		random = UnityEngine.Random.Range(0, 100);
-		if (random <= _dataTable.equiptPercent)
+		UnityEngine.Debug.Log((random < _dataTable.equiptPercent) + "\n random" + random + "\t equiptPercent" + _dataTable.equiptPercent);
+		if (random < _dataTable.equiptPercent)
 		{
-			if(_dataTable.equipt == null)
+			UnityEngine.Debug.Log("장비 인");
+			if (_dataTable.equipt == null)
 			{
 #if UNITY_EDITOR
 				UnityEngine.Debug.LogError("Enemy ScriptableObject에서 장비 리스트가 없습니다.");
@@ -384,34 +383,33 @@ public class ItemBaseClass
 			}
 			else
 			{
-				isCreateItem = false;
-				do
+				foreach (var item in _dataTable.equipt)
 				{
-					foreach (var item in _dataTable.equipt)
+					random = UnityEngine.Random.Range(0, 100);   // 개별 아이템 드롭 확률
+					if (random < item.itemPercent)
 					{
-						random = 0; UnityEngine.Random.Range(0, 100);   // 개별 아이템 드롭 확률
-						if (random < item.itemPercent)
+						if (item.itemPercent <= 0)
 						{
-							if (item.itemPercent <= 0)
-							{
 #if UNITY_EDITOR
-								UnityEngine.Debug.LogError("아이템 생성 실패\n스크립터블 장비에서 갖고있는 개별 아이템 퍼센티지 값이 0입니다. \n name :" + item.itemIndex);
+							UnityEngine.Debug.LogError("아이템 생성 실패\n스크립터블 장비에서 갖고있는 개별 아이템 퍼센티지 값이 0입니다. \n name :" + item.itemIndex);
 #endif
-								return;
-							}
-							_itemData.Index = item.itemIndex;
-							_itemData.Type = "장비";
-							_itemData.Count = 1;
-							isCreateItem = true;
-							break;
+							return;
 						}
+						_itemData.Index = item.itemIndex;
+						_itemData.Type = "장비";
+						_itemData.Count = 1;
+						UnityEngine.Debug.Log(_itemData.ToString());
+						return;
 					}
 				}
-				while (isCreateItem == false);
 			}
 		}
-		else if(random >= _dataTable.equiptPercent && random < _dataTable.equiptPercent + _dataTable.useablePercent)
+		
+		random = UnityEngine.Random.Range(0, 100);
+		UnityEngine.Debug.Log((random < _dataTable.useablePercent) + "\n random" + random + "\t useablePercent" + _dataTable.useablePercent);
+		if (random < _dataTable.useablePercent)
 		{
+			UnityEngine.Debug.Log("소모품 인");
 			if (_dataTable.useable == null)
 			{
 #if UNITY_EDITOR
@@ -420,34 +418,32 @@ public class ItemBaseClass
 			}
 			else
 			{
-				isCreateItem = false;
-				do
+				foreach (var item in _dataTable.useable)
 				{
-					foreach (var item in _dataTable.useable)
+					random = UnityEngine.Random.Range(0, 100);
+					if (random <= item.itemPercent)
 					{
-						random = 0; UnityEngine.Random.Range(0, 100);
-						if (random <= item.itemPercent)
+						if (item.itemPercent <= 0)
 						{
-							if (item.itemPercent <= 0)
-							{
 #if UNITY_EDITOR
-								UnityEngine.Debug.LogError("아이템 생성 실패\n스크립터블 소모품에서 갖고있는 개별 아이템 퍼센티지 값이 0입니다. \n name :" + item.itemIndex);
+							UnityEngine.Debug.LogError("아이템 생성 실패\n스크립터블 소모품에서 갖고있는 개별 아이템 퍼센티지 값이 0입니다. \n name :" + item.itemIndex);
 #endif
-								return;
-							}
-							_itemData.Index = item.itemIndex;
-							_itemData.Type = "소모품";
-							_itemData.Count = UnityEngine.Random.Range(item.itemMinCount, item.itemMaxCount);
-							isCreateItem = true;
-							break;
+							return;
 						}
+						_itemData.Index = item.itemIndex;
+						_itemData.Type = "소모품";
+						_itemData.Count = UnityEngine.Random.Range(item.itemMinCount, item.itemMaxCount);
+						UnityEngine.Debug.Log(_itemData.ToString());
+						return;
 					}
 				}
-				while (isCreateItem == false);
 			}
 		}
-		else if(random >= _dataTable.equiptPercent + _dataTable.useablePercent && random < _dataTable.equiptPercent + _dataTable.useablePercent + _dataTable.resourcePercent)
+		random = UnityEngine.Random.Range(0, 100);
+		UnityEngine.Debug.Log((random < _dataTable.resourcePercent) + "\n random" + random + "\t resourcePer" + _dataTable.resourcePercent);
+		if (random < _dataTable.resourcePercent)
 		{
+			UnityEngine.Debug.Log("재료 인");
 			if (_dataTable.resource == null)
 			{
 #if UNITY_EDITOR
@@ -456,33 +452,27 @@ public class ItemBaseClass
 			}
 			else
 			{
-				isCreateItem = false;
-				do
+				foreach (var item in _dataTable.resource)
 				{
-					foreach (var item in _dataTable.resource)
+					random = 0; UnityEngine.Random.Range(0, 100);
+					if (random <= item.itemPercent)
 					{
-						random = 0; UnityEngine.Random.Range(0, 100);
-						if (random <= item.itemPercent)
+						if (item.itemPercent <= 0)
 						{
-							if (item.itemPercent <= 0)
-							{
 #if UNITY_EDITOR
-								UnityEngine.Debug.LogError("아이템 생성 실패\n스크립터블 제료에서 갖고있는 개별 아이템 퍼센티지 값이 0입니다. \n name :"+item.itemIndex);
-#endif 
-								return;
-							}
-							_itemData.Index = item.itemIndex;
-							_itemData.Type = "재료";
-							_itemData.Count = UnityEngine.Random.Range(item.itemMinCount, item.itemMaxCount);
-							isCreateItem = true;
-							break;
+							UnityEngine.Debug.LogError("아이템 생성 실패\n스크립터블 제료에서 갖고있는 개별 아이템 퍼센티지 값이 0입니다. \n name :" + item.itemIndex);
+#endif
+							return;
 						}
+						_itemData.Index = item.itemIndex;
+						_itemData.Type = "재료";
+						_itemData.Count = UnityEngine.Random.Range(item.itemMinCount, item.itemMaxCount);
+						UnityEngine.Debug.Log(_itemData.ToString());
+						return;
 					}
 				}
-				while (isCreateItem == false);
 			}
 		}
-		if (isCreateItem == true) return;
 
 		_itemData.Type = "골드";
 		_itemData.Index = 0;

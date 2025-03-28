@@ -43,7 +43,11 @@ public class InventoryData : SingleTonBase<InventoryData>
 		{
 			case "장비":		return ItemInInventoryToEquipt(ref _data);
 			case "소모품":	return ItemInInventoryToUseable(ref _data);
-			case "재료":		return ItemInInventoryToResource(ref _data); 
+			case "재료":		return ItemInInventoryToResource(ref _data);
+			case "골드":
+				inGameGold += _data.Count;
+				break;
+
 		}
 		return false;
 	}
@@ -57,6 +61,12 @@ public class InventoryData : SingleTonBase<InventoryData>
 			case "장비": return SearchToRemoveByEquipt(ref _data);
 			case "소모품": return SearchToRemoveByConsume(ref _data);
 			case "재료": return SearchToRemoveByResource(ref _data);
+			case "골드":
+				if(inGameGold >= inGameGold- _data.Count)
+				{
+					inGameGold -= _data.Count;
+				}
+				break;
 		}
 		Debug.Log(EquiptSize);
 		return false;
