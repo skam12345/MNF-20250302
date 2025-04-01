@@ -118,6 +118,7 @@ public class ItemDataManager : SingleTonBase<ItemDataManager>
 		}
 	}
 
+	
 
 	public bool GetItemDataToEquipt(in int _itemNumber, out ItemBaseEquipment _itemData)
 	{

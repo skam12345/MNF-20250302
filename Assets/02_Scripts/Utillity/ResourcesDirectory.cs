@@ -51,9 +51,13 @@ public static class ResourcesDirectory
 	public static string UIEnchant { get { string str = "Prefebs/UI/Enchant"; return str; } }
 
 	#endregion
-	public static string ItemCube { get { string str = "Prefebs/Inventory/ItemCube"; return str; } }
 
 	#region ItemCube
+	public static string ItemCube { get { string str = "Prefebs/Inventory/ItemCube"; return str; } }
+	#endregion
 
+
+	#region ShopScriptable
+	public static string ShopScriptable { get { string str = "ShopScriptable/"; return str; } }
 	#endregion
 }
