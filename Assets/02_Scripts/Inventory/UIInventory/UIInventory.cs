@@ -6,6 +6,8 @@ public class UIInventory : MonoBehaviour
     private UIInventoryTop top;
 	private UIInventoryBottom bottom;
 
+	public int gold;
+
 
 	private void Awake()
 	{
