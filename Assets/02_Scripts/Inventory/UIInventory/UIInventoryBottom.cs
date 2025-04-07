@@ -19,15 +19,15 @@ public class UIInventoryBottom : MonoBehaviour
 
 	private void Awake()
 	{
-		Transform findObject = transform.Find("Scroll View").Find("Viewport");
-		contentEquipt = findObject.GetComponentInChildren<ContentsEquipt>();
-		contentUseable = findObject.GetComponentInChildren<ContentsUseable>();
-		contentResource = findObject.GetComponentInChildren<ContentsResource>();
-		
-		findObject = transform.Find("TapMenu");
+		Transform findObject = transform.Find("TapMenu_Button");
 		tabIamgeEquipt = findObject.Find("Tab Equipt").Find("IconNormal").GetComponent<Image>();
 		tabIamgeUseable = findObject.Find("Tab Useable").Find("IconNormal").GetComponent<Image>();
 		tabIamgeResource = findObject.Find("Tab Resource").Find("IconNormal").GetComponent<Image>();
+
+		findObject = transform.Find("Scroll View").Find("Viewport");
+		contentEquipt = findObject.GetComponentInChildren<ContentsEquipt>();
+		contentUseable = findObject.GetComponentInChildren<ContentsUseable>();
+		contentResource = findObject.GetComponentInChildren<ContentsResource>();
 
 		// 기본 상태는 장비탭 오픈으로 초기화
 		OnTabClick(0);

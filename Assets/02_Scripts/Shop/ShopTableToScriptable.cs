@@ -5,10 +5,11 @@ using UnityEngine;
 public class ShopToScriptable : ScriptableObject
 {
 	[Header("Project Create File- Inspector 수정")]
-	[Tooltip("구매 아이템 리스트")][SerializeField] private List<ItemBaseClass.ItemData> itemList;
+	[Tooltip("구매 아이템 리스트")][SerializeField] private List<ItemBaseClass.ItemData> buyItemList;
 
-	System.Text.StringBuilder logText;
+	private System.Text.StringBuilder logText;
 
+	public int BuyItemListSize { get { if (buyItemList == null) return 0; return buyItemList.Count; } }
 	
 	public override string ToString()
 	{
@@ -16,9 +17,9 @@ public class ShopToScriptable : ScriptableObject
 
 		logText.Clear();
 
-		for (int i = 0; i < itemList.Count; i++)
+		for (int i = 0; i < buyItemList.Count; i++)
 		{
-			logText.Append("\n "+ i + "번째 아이템 : " + itemList[i].Type + " " + itemList[i].Index);
+			logText.Append("\n "+ i + "번째 아이템 : " + buyItemList[i].Type + " " + buyItemList[i].Index);
 		}
 
 		return base.ToString();

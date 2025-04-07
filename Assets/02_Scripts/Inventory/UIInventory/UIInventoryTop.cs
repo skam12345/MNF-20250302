@@ -8,7 +8,7 @@ public class UIInventoryTop : MonoBehaviour
 {
 	private List<IconEquipt> usingEquiptItem;
 
-	private List<IconQuickSlot> quickSlot;
+	private List<IconUseable> quickSlot;
 	
 	
 
@@ -20,6 +20,4 @@ public class UIInventoryTop : MonoBehaviour
 		findObject.Find("Slot3").Find("IconQuickSlot").Find("Numbering_TextTMP").GetComponent<TMPro.TextMeshProUGUI>().text = 3.ToString();
 		findObject.Find("Slot4").Find("IconQuickSlot").Find("Numbering_TextTMP").GetComponent<TMPro.TextMeshProUGUI>().text = 4.ToString();
 	}
-
-
 }
