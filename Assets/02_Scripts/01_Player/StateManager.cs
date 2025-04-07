@@ -96,6 +96,7 @@ public class StateManager : MonoBehaviour
     public void TakeDamage(int hit,Color popupColor) // µô ÆË¾÷
     {
         hp -= hit;
+        if(hp < 0) hp = 0;
 
         Vector3 randomness = new Vector3(Random.Range(-0.45f, 0.45f), Random.Range(-0.45f, 0.45f), Random.Range(0f, 0.25f));
         // hit - (hit*def/100)

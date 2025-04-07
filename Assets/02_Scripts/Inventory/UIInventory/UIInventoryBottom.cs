@@ -11,10 +11,10 @@ public class UIInventoryBottom : MonoBehaviour
 	[SerializeField] private UnityEngine.Color TabColorToSelect;
 	[SerializeField] private UnityEngine.Color TabColorToUnSelect;
 
-	//[Header("Tab")]
-	private Image tabIamgeEquipt;
-	private Image tabIamgeUseable;
-	private Image tabIamgeResource;
+    //[Header("Tab")]
+    [SerializeField] private Image tabIamgeEquipt;
+    [SerializeField] private Image tabIamgeUseable;
+    [SerializeField] private Image tabIamgeResource;
 
 
 	private void Awake()
@@ -24,7 +24,7 @@ public class UIInventoryBottom : MonoBehaviour
 		contentUseable = findObject.GetComponentInChildren<ContentsUseable>();
 		contentResource = findObject.GetComponentInChildren<ContentsResource>();
 		
-		findObject = transform.Find("TapMenu");
+		findObject = transform.Find("TapMenu_Button");
 		tabIamgeEquipt = findObject.Find("Tab Equipt").Find("IconNormal").GetComponent<Image>();
 		tabIamgeUseable = findObject.Find("Tab Useable").Find("IconNormal").GetComponent<Image>();
 		tabIamgeResource = findObject.Find("Tab Resource").Find("IconNormal").GetComponent<Image>();
