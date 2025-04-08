@@ -29,7 +29,7 @@ public class EnemyCollider : MonoBehaviour
     private int rotateIdx = 0;
     // 적이 이동할 거리를 난수로 지정함.
     private int moveDistance = 5;
-
+    private bool isItemCreated = false;
 
     private float initialEnemyPositionX = 0;
 
@@ -69,14 +69,14 @@ public class EnemyCollider : MonoBehaviour
     {
         // TODO:  1. 작업필요 <애니메이션 죽음 처리
         // 2. 적이 갖고있는 드롭 테이블을 활용해서 ItemData 변환
-        if ( stateManager.IsDead() == true)
+        if ( stateManager.IsDead() == true && !isItemCreated)
         {
             // 1. 애니메이션 처리
 
             // 2. 해당 작업은 아이템 큐브가 처리함
             //ItemBaseClass.ItemData itemData = null;
             //ItemBaseClass.CreateItem(ref enemyDropTable, out itemData);
-
+            isItemCreated = true;
             // Debug.Log
             // 3.createFieldItemObject.GetComponenet<ItemCube>().SetItemData(ref itemData);
             // 아이템 큐브에서 이 아이템 정보를 기억하게 만듦 

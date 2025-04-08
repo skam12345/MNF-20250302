@@ -169,7 +169,6 @@ public class PlayerControllInBattleField : MonoBehaviour
         {
             playeranim.SetBool("Jump", false);
             isJump = false;
-            Debug.Log("¶¥ÂïÈû");
         }
     }
 }

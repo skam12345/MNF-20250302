@@ -5,7 +5,7 @@ using static ItemBaseClass;
 public class ItemCube : MonoBehaviour
 {
 	//[SerializeField] private Material meshRenderer;
-	[SerializeField] private SpriteRenderer minimapRenderer;
+
 
 	Rigidbody rigidbody;
 	Collider boxCollider;
@@ -27,7 +27,6 @@ public class ItemCube : MonoBehaviour
 		rigidbody = this.GetComponent<Rigidbody>();
 		
 		//meshRenderer = cube.GetComponent<Material>();
-		minimapRenderer = transform.GetComponent<SpriteRenderer>();
 		jumpVector = Vector3.up * jumpPower;
 
 		rigidbody.useGravity = true;
@@ -67,15 +66,15 @@ public class ItemCube : MonoBehaviour
 		{
 			case "장비":
 				if (SpriteManager.Instance == null) return;
-				minimapRenderer.sprite = SpriteManager.Instance.GetSpriteEquipt(itemFieldData.Index);
+				//minimapRenderer.sprite = SpriteManager.Instance.GetSpriteEquipt(itemFieldData.Index);
 				break;
 			case "소모품":
 				if (SpriteManager.Instance == null) return;
-				minimapRenderer.sprite = SpriteManager.Instance.GetSpriteUseable(itemFieldData.Index);
+				//minimapRenderer.sprite = SpriteManager.Instance.GetSpriteUseable(itemFieldData.Index);
 				break;
 			case "재료":
 				if (SpriteManager.Instance == null) return;
-				minimapRenderer.sprite = SpriteManager.Instance.GetSpriteResource(itemFieldData.Index);
+				//minimapRenderer.sprite = SpriteManager.Instance.GetSpriteResource(itemFieldData.Index);
 				break;
 
 			default:
@@ -122,6 +121,6 @@ public class ItemCube : MonoBehaviour
 		InventoryData.Instance.ItemInInventoryToItemData(ref itemFieldData);
 
 		Debug.Log("ItemCube - ItemDrop() : \n" + itemFieldData.ToString());
-		Destroy(this.gameObject);
+		Destroy(this.gameObject);	
 	}
 }

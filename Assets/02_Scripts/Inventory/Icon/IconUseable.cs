@@ -13,7 +13,7 @@ public class IconUseable : MonoBehaviour
 
 	private void Awake()
 	{
-		count = transform.Find("countText_TMP").GetComponent<TextMeshProUGUI>();
+		count = transform.Find("Count_TextTMP").GetComponent<TextMeshProUGUI>();
 		iconImage = transform.Find("Image").GetComponent<Image>();
 		count.text = "";
 
