@@ -480,4 +480,27 @@ public class ItemBaseClass
 		return;
 
 	}
+
+
+	public static void GetItemDataToItem(ref ItemData _itemData,out ItemBaseEquipment _equipt, out ItemBaseUseable _useable, out ItemBaseResource _resource)
+	{
+		_equipt = null;
+		_useable = null;
+		_resource = null;
+
+		switch (_itemData.Type)
+		{
+			case "장비":
+				ItemDataManager.Instance.GetItemDataToEquipt(_itemData.Index,out _equipt);
+				return;
+			case "소모품":
+				ItemDataManager.Instance.GetItemDataToUseable(_itemData.Index,out _useable);
+				break;
+			case "재료":
+				ItemDataManager.Instance.GetItemDataToResource(_itemData.Index,out _resource);
+				return;
+			default:
+				return;
+		}
+	}
 }

@@ -14,7 +14,7 @@ public static class ResourcesDirectory
 	#endregion
 
 	#region Enemy
-	public static string EnemyDropTable { get { string str = "EnemyDropTable/"; return str; } }
+	public static string EnemyDropTable { get { string str = "ScriptableObject/EnemyDropTable/"; return str; } }
 	public static string EnemyPrefab{ get { string str = "Prefabs/Enemy"; return str; } }
 	#endregion 
 
@@ -51,9 +51,14 @@ public static class ResourcesDirectory
 	public static string UIEnchant { get { string str = "Prefebs/UI/Enchant"; return str; } }
 
 	#endregion
-	public static string ItemCube { get { string str = "Prefebs/Inventory/ItemCube"; return str; } }
 
 	#region ItemCube
+	public static string ItemCube { get { string str = "Prefebs/Inventory/ItemCube"; return str; } }
+	#endregion
 
+
+	#region ShopScriptable
+	public static string ShopScriptable { get { string str = "ScriptableObject/ShopList/"; return str; } }
+	public static string ShopSlotObject { get { string str = "Prefabs/ItemSlot"; return str; } }
 	#endregion
 }

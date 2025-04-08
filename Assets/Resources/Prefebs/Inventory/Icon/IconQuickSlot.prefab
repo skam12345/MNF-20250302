@@ -368,7 +368,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4082554797879647893}
-  - component: {fileID: 7481342655347730662}
+  - component: {fileID: 3052992966226947764}
   m_Layer: 0
   m_Name: IconQuickSlot
   m_TagString: Untagged
@@ -401,7 +401,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7481342655347730662
+--- !u!114 &3052992966226947764
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 7279304516806170837}
   - component: {fileID: 1501599053705314649}
   m_Layer: 0
-  m_Name: Count_TextTMP
+  m_Name: countText_TMP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

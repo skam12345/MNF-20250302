@@ -66,4 +66,17 @@ public class SpriteManager : SingleTonToUnityObject<SpriteManager>
 	{
 		return resoureList[_itemNumber];
 	}
+
+	public Sprite GetSpriteItem(ref ItemBaseClass.ItemData _data)
+	{
+		switch (_data.Type)
+		{
+			case "장비": return GetSpriteEquipt(_data.Index);
+			case "소모품": return GetSpriteUseable(_data.Index);
+			case "재료": return GetSpriteResource(_data.Index);
+			default:
+				break;
+		}
+		return null;
+	}
 }
