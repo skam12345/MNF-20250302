@@ -11,6 +11,7 @@ public class ShopToScriptable : ScriptableObject
 
 	public int BuyItemListSize { get { if (buyItemList == null) return 0; return buyItemList.Count; } }
 	
+
 	public override string ToString()
 	{
 		if (logText == null) logText = new System.Text.StringBuilder();

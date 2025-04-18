@@ -25,7 +25,7 @@ public class UIShopMain : MonoBehaviour
 	private ContentShop buyScrollView;
 	private ContentShop sellScrollView;
 
-	private ShopToScriptable shopTable;
+	private ShopDataManager shopDataManager;
 
 	private void Awake()
 	{
@@ -61,30 +61,21 @@ public class UIShopMain : MonoBehaviour
 	public void OnOff(bool _active, string _storeScriptableName)
 	{
 		backGroundObject.SetActive(_active);
-		if (_active == true)
+
+		if (_storeScriptableName == "") return;
+
+		if( shopDataManager == null) 
 		{
-			if (shopTable == null)
-			{
-				shopTable = Resources.Load<ShopToScriptable>(ResourcesDirectory.ShopScriptable + _storeScriptableName);
-				if (shopTable == null)
-				{
-#if UNITY_EDITOR
-					Debug.LogError("상점 이름이 이상합니다. 경로와 이름을 확인 해주세요\n" + "name : " + _storeScriptableName + "\t dir : " + ResourcesDirectory.ShopScriptable);
-#endif
-				}
-			}
-			else if (shopTable.name != _storeScriptableName)
-			{
-				shopTable = Resources.Load<ShopToScriptable>(ResourcesDirectory.ShopScriptable + _storeScriptableName);
-				if (shopTable == null)
-				{
-#if UNITY_EDITOR
-					Debug.LogError("상점 이름이 이상합니다. 경로와 이름을 확인 해주세요\n" + "name : " + _storeScriptableName + "\t dir : " + ResourcesDirectory.ShopScriptable);
-#endif
-				}
-			}
+			shopDataManager = new ShopDataManager();
+			shopDataManager.OnInit(_storeScriptableName);
+		}
+		else
+		{
+			shopDataManager.OnInit(_storeScriptableName);
+
 		}
 	}
+
 
 	private void RefreshBuyList()
 	{

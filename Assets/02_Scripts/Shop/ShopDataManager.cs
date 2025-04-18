@@ -3,16 +3,49 @@ using UnityEngine;
 
 public class ShopDataManager
 {
-	private List<ItemBaseClass.ItemData> buyShop;
-	private List<ItemBaseClass.ItemData> buyList;
-	private List<ItemBaseClass.ItemData> sellShop;
-	private List<ItemBaseClass.ItemData> sellList;
+	[Header("Debugging Test")]
+	[SerializeField]private ShopToScriptable shopData;
+	[SerializeField]private List<ItemBaseClass.ItemData> buyShop;
+	[SerializeField]private List<ItemBaseClass.ItemData> buyList;
+	[SerializeField]private List<ItemBaseClass.ItemData> sellShop;
+	[SerializeField]private List<ItemBaseClass.ItemData> sellList;
 
+	// 
+	//public ShopDataManager(string _shopScriptableName) {
 	public ShopDataManager() {
+
 		buyShop = new List<ItemBaseClass.ItemData>();
 		buyList = new List<ItemBaseClass.ItemData>();
 		sellShop = new List<ItemBaseClass.ItemData>();
 		sellList = new List<ItemBaseClass.ItemData>();
+	}
+
+	public void OnInit(string _shopScriptableName)
+	{
+		Init(_shopScriptableName);
+	}
+	private void Init(string _shopScriptableName)
+	{
+		if (shopData == null)
+		{
+			shopData = Resources.Load<ShopToScriptable>(ResourcesDirectory.ShopScriptable + _shopScriptableName);
+			if (shopData == null)
+			{
+#if UNITY_EDITOR
+				Debug.LogError("상점 이름이 이상합니다. 경로와 이름을 확인 해주세요\n" + "name : " + _shopScriptableName + "\t dir : " + ResourcesDirectory.ShopScriptable);
+#endif
+			}
+		}
+		else if (shopData.name != _shopScriptableName)
+		{
+			shopData = Resources.Load<ShopToScriptable>(ResourcesDirectory.ShopScriptable + _shopScriptableName);
+			if (shopData == null)
+			{
+#if UNITY_EDITOR
+				Debug.LogError("상점 이름이 이상합니다. 경로와 이름을 확인 해주세요\n" + "name : " + _shopScriptableName + "\t dir : " + ResourcesDirectory.ShopScriptable);
+#endif
+			}
+		}
 	}
 
 
