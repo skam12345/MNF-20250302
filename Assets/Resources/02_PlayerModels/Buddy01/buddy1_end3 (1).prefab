@@ -2115,9 +2115,9 @@ Animation:
   m_GameObject: {fileID: 5843085483299372760}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 5776064023818746221}
+  m_Animation: {fileID: 7142763815664509175}
   m_Animations:
-  - {fileID: 5776064023818746221}
+  - {fileID: 7142763815664509175}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -2134,7 +2134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690ea0146224b8b4694a1925dddeb352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Meta: {fileID: 4339870677516318332}
+  Meta: {fileID: 7899600189346729755}
 --- !u!114 &8653807840240863475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2147,8 +2147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3869812175467a143ab9cd865752b4a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Avatar: {fileID: 2264514074798960744}
-  Description: {fileID: 1450022945832123106}
+  Avatar: {fileID: 5903781220345140494}
+  Description: {fileID: 1138184700060301148}
 --- !u!95 &4857594775499871845
 Animator:
   serializedVersion: 5
@@ -2158,7 +2158,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5843085483299372760}
   m_Enabled: 1
-  m_Avatar: {fileID: 2264514074798960744}
+  m_Avatar: {fileID: 5903781220345140494}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -3056,7 +3056,7 @@ Transform:
   - {fileID: 8624154692373770014}
   m_Father: {fileID: 6313051654041499721}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1450022945832123106
+--- !u!114 &1138184700060301148
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3448,7 +3448,7 @@ MonoBehaviour:
     max: {x: 0, y: 0, z: 0}
     center: {x: 0, y: 0, z: 0}
     axisLength: 0
---- !u!90 &2264514074798960744
+--- !u!90 &5903781220345140494
 Avatar:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5604,33 +5604,7 @@ Avatar:
     m_HasTranslationDoF: 0
     m_HasExtraRoot: 0
     m_SkeletonHasParents: 0
---- !u!114 &4339870677516318332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63b589176a34b344b9ccbee2b7e7114a, type: 3}
-  m_Name: Meta
-  m_EditorClassIdentifier: 
-  ExporterVersion: UniVRM-0.51.0
-  Title: Buddy_01
-  Version: 1.0
-  Author: Achi_DeLo
-  ContactInformation: Buddy_01
-  Reference: Achi_DeLo
-  Thumbnail: {fileID: 0}
-  AllowedUser: 0
-  ViolentUssage: 0
-  SexualUssage: 0
-  CommercialUssage: 0
-  OtherPermissionUrl: 
-  LicenseType: 7
-  OtherLicenseUrl: 
---- !u!74 &5776064023818746221
+--- !u!74 &7142763815664509175
 AnimationClip:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5681,3 +5655,29 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events: []
+--- !u!114 &7899600189346729755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b589176a34b344b9ccbee2b7e7114a, type: 3}
+  m_Name: Meta
+  m_EditorClassIdentifier: 
+  ExporterVersion: UniVRM-0.51.0
+  Title: Buddy_01
+  Version: 1.0
+  Author: Achi_DeLo
+  ContactInformation: Buddy_01
+  Reference: Achi_DeLo
+  Thumbnail: {fileID: 0}
+  AllowedUser: 0
+  ViolentUssage: 0
+  SexualUssage: 0
+  CommercialUssage: 0
+  OtherPermissionUrl: 
+  LicenseType: 7
+  OtherLicenseUrl: 

@@ -842,7 +842,7 @@ PrefabInstance:
     - target: {fileID: 1582946453116031142, guid: 79814b92354400f419bf942c8b2004bf, type: 3}
       propertyPath: m_Avatar
       value: 
-      objectReference: {fileID: 2264514074798960744, guid: 7c63db594e9b1b44e962f8b55567867a, type: 3}
+      objectReference: {fileID: 3824298911706936882, guid: 41684f0eaee826143938b8a344746b79, type: 3}
     - target: {fileID: 6123501053589131925, guid: 79814b92354400f419bf942c8b2004bf, type: 3}
       propertyPath: Avatar
       value: 

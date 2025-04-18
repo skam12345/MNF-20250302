@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690ea0146224b8b4694a1925dddeb352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Meta: {fileID: 2106774546548816390}
+  Meta: {fileID: 1120768445534217939}
 --- !u!114 &2746821352636070835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,8 +197,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3869812175467a143ab9cd865752b4a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Avatar: {fileID: 8391015999439423520}
-  Description: {fileID: 9143153568984440116}
+  Avatar: {fileID: 3824298911706936882}
+  Description: {fileID: 5233010857442780400}
 --- !u!95 &2402200236492580679
 Animator:
   serializedVersion: 5
@@ -208,7 +208,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177554785305967283}
   m_Enabled: 1
-  m_Avatar: {fileID: 8391015999439423520}
+  m_Avatar: {fileID: 3824298911706936882}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -2364,7 +2364,7 @@ Transform:
   - {fileID: 4802726745551276350}
   m_Father: {fileID: 5833050918942559470}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2106774546548816390
+--- !u!114 &1120768445534217939
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2390,7 +2390,7 @@ MonoBehaviour:
   OtherPermissionUrl: 
   LicenseType: 7
   OtherLicenseUrl: 
---- !u!90 &8391015999439423520
+--- !u!90 &3824298911706936882
 Avatar:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4434,7 +4434,7 @@ Avatar:
     m_HasTranslationDoF: 0
     m_HasExtraRoot: 0
     m_SkeletonHasParents: 0
---- !u!114 &9143153568984440116
+--- !u!114 &5233010857442780400
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
