@@ -3662,7 +3662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clearConversation: {fileID: 9389092}
-  textBox: {fileID: 0}
+  textBox: {fileID: 1558836047}
   clearImg: {fileID: 1686684904}
   uiMain: {fileID: 0}
   startPoint: {fileID: 0}
@@ -4080,6 +4080,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6880809952504259791, guid: 11b4de002fcd1e149a209ac93cfc219b, type: 3}
   m_PrefabInstance: {fileID: 1558836045}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1558836047 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6729266287386045797, guid: 11b4de002fcd1e149a209ac93cfc219b, type: 3}
+  m_PrefabInstance: {fileID: 1558836045}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f5fb6059dc7bea4a9eacde6f444e2c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1576200138 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3588126958595307956, guid: be97cbc9d05509640aa3eaca56ce50f6, type: 3}

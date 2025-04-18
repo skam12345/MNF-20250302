@@ -81,8 +81,8 @@ public class UIItemInfo : MonoBehaviour
 
 		if (_item == null) return;
 
-		//itemImage.sprite = _item.ItemSprite;
-		//starNumber.text = _item.Star.ToString();
+		itemImage.sprite = SpriteManager.Instance.GetSpriteEquipt(_item.index);
+		starNumber.text = _item.grade.ToString();
 		itemName.text = _item.name;
 		mainExplanDetail.text = _item.description;
 		subExplanDetail.text = "";
@@ -95,8 +95,8 @@ public class UIItemInfo : MonoBehaviour
 
 		if (_item == null) return;
 
-		//itemImage.sprite = _item.ItemSprite;
-		//starNumber.text = _item.Star.ToString();
+		itemImage.sprite = SpriteManager.Instance.GetSpriteUseable(_item.index);
+		//starNumber.text = _item..ToString();
 		itemName.text = _item.mainName;
 		mainExplanDetail.text = _item.mainDescription;
 		subExplanDetail.text = _item.subDescriton;
@@ -108,7 +108,7 @@ public class UIItemInfo : MonoBehaviour
 			Active(true);
 
 		if (_item == null) return;
-		//itemImage.sprite = _item.ItemSprite;
+		itemImage.sprite = SpriteManager.Instance.GetSpriteResource(_item.index);
 		//starNumber.text = _item.Star.ToString();
 		itemName.text = _item.mainName;
 		mainExplanDetail.text = _item.description;
