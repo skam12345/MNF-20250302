@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc51d46b58edfee41942d887136a42ee, type: 3}
   m_Name: TestShop
   m_EditorClassIdentifier: 
-  itemList:
+  buyItemList:
   - Type: "\uC7A5\uBE44"
-    Index: 5
+    Index: 0
+    Count: 0
+  - Type: "\uC7A5\uBE44"
+    Index: 1
     Count: 0
   - Type: "\uC18C\uBAA8\uD488"
     Index: 0
@@ -23,8 +26,8 @@ MonoBehaviour:
     Index: 2
     Count: 0
   - Type: "\uC7AC\uB8CC"
-    Index: 1
+    Index: 0
     Count: 0
   - Type: "\uC7AC\uB8CC"
-    Index: 2
+    Index: 1
     Count: 0

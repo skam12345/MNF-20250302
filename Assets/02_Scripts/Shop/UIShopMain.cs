@@ -22,8 +22,10 @@ public class UIShopMain : MonoBehaviour
 	[SerializeField] private Color selectTabColor;
 	[SerializeField] private Color unSelectTabColor;
 
-	private ContentShop buyScrollView;
-	private ContentShop sellScrollView;
+	private ContentShop buyShop;
+	private ContentShop buyList;
+	private ContentShop sellShop;
+	private ContentShop sellList;
 
 	private ShopDataManager shopDataManager;
 
@@ -43,8 +45,10 @@ public class UIShopMain : MonoBehaviour
 			InventoryData.Instance.OnInit();
 		}
 
-		buyScrollView = transform.Find("BackGroundImage").Find("Left Scroll View").GetComponent<ContentShop>();
-		sellScrollView = transform.Find("BackGroundImage").Find("Right Scroll View").GetComponent<ContentShop>();
+		buyShop = transform.Find("BackGroundImage").Find("Left Scroll View").GetComponent<ContentShop>();
+		buyList = transform.Find("BackGroundImage").Find("Left Scroll View").GetComponent<ContentShop>();
+		sellShop = transform.Find("BackGroundImage").Find("Right Scroll View").GetComponent<ContentShop>();
+		sellList = transform.Find("BackGroundImage").Find("Right Scroll View").GetComponent<ContentShop>();
 	}
 
 	private void Start()
@@ -58,7 +62,7 @@ public class UIShopMain : MonoBehaviour
 		}
 	}
 
-	public void OnOff(bool _active, string _storeScriptableName)
+	public void OnOff(bool _active, string _storeScriptableName = "")
 	{
 		backGroundObject.SetActive(_active);
 
@@ -68,12 +72,13 @@ public class UIShopMain : MonoBehaviour
 		{
 			shopDataManager = new ShopDataManager();
 			shopDataManager.OnInit(_storeScriptableName);
+			Debug.Log(shopDataManager.ToString());
 		}
 		else
 		{
 			shopDataManager.OnInit(_storeScriptableName);
-
 		}
+		RefreshBuyList();
 	}
 
 

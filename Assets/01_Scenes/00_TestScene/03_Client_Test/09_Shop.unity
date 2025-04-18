@@ -3504,7 +3504,7 @@ GameObject:
   - component: {fileID: 2125805763}
   - component: {fileID: 2125805762}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: SpriteManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

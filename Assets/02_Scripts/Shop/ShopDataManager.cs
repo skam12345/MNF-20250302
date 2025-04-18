@@ -46,8 +46,21 @@ public class ShopDataManager
 #endif
 			}
 		}
+		ReadData(); return;
 	}
 
+
+	private void ReadData()
+	{
+		int readMax = shopData.BuyItemListSize;
+		ItemBaseClass.ItemData itemGetData = null;
+		buyShop.Clear();
+		for (int i = 0; i < readMax; i++)
+		{
+			shopData.GetItemData(in i, out itemGetData);
+			buyShop.Add(itemGetData);
+		}
+	}
 
 	public void AddBuyShop(ref ItemBaseClass.ItemData _data)
 	{
@@ -66,5 +79,32 @@ public class ShopDataManager
 	public void AddSellList(ref ItemBaseClass.ItemData _data)
 	{
 		sellList.Add(_data);
+	}
+
+	private System.Text.StringBuilder logText;
+	public override string ToString()
+	{
+		if (logText == null) logText = new System.Text.StringBuilder();
+
+		logText.Clear();
+
+		logText.Append("=== buyList ===");
+
+		foreach (var item in buyShop)
+		{
+			logText.Append("\n" + item.ToString());
+		}
+
+		logText.Append("\n === ======= ===");
+		logText.Append("\n\n=== sellList ===");
+
+		foreach (var item in sellShop)
+		{
+			logText.Append("\n" + item.ToString());
+		}
+
+		logText.Append("\n=== ======== ===");
+
+		return logText.ToString();
 	}
 }

@@ -10,7 +10,16 @@ public class ShopToScriptable : ScriptableObject
 	private System.Text.StringBuilder logText;
 
 	public int BuyItemListSize { get { if (buyItemList == null) return 0; return buyItemList.Count; } }
-	
+
+	public void GetItemData(in int _n, out ItemBaseClass.ItemData _data)
+	{
+		_data = null;
+		if (_n < 0) return;
+		else if (_n >= buyItemList.Count) return;
+
+		_data = buyItemList[_n];
+
+	}
 
 	public override string ToString()
 	{
