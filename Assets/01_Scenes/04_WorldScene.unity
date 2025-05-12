@@ -93057,7 +93057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FirstPersonBone: {fileID: 4740192409707858592}
-  FirstPersonOffset: {x: -2.5307627, y: -1.3521675, z: 2.6364372}
+  FirstPersonOffset: {x: -2.5307353, y: -1.3521675, z: 2.6362731}
   Renderers:
   - Renderer: {fileID: 729149474160788817}
     FirstPersonFlag: 0
@@ -93958,7 +93958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3869812175467a143ab9cd865752b4a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Avatar: {fileID: 5217300555356747874, guid: 7c63db594e9b1b44e962f8b55567867a, type: 3}
+  Avatar: {fileID: 2264514074798960744, guid: 7c63db594e9b1b44e962f8b55567867a, type: 3}
   Description: {fileID: 8149601705152684048, guid: 7c63db594e9b1b44e962f8b55567867a, type: 3}
 --- !u!1 &1128878410656313556
 GameObject:
@@ -93988,7 +93988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3869812175467a143ab9cd865752b4a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Avatar: {fileID: 717643771685427201, guid: 41684f0eaee826143938b8a344746b79, type: 3}
+  Avatar: {fileID: 8391015999439423520, guid: 41684f0eaee826143938b8a344746b79, type: 3}
   Description: {fileID: 3278279753924897381, guid: 41684f0eaee826143938b8a344746b79, type: 3}
 --- !u!1 &1156991398429493793
 GameObject:
@@ -95293,7 +95293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FirstPersonBone: {fileID: 518892663527685405}
-  FirstPersonOffset: {x: 5.4233923, y: -1.3461214, z: -27.71853}
+  FirstPersonOffset: {x: 5.4233923, y: -1.3467952, z: -27.71801}
   Renderers:
   - Renderer: {fileID: 4115506028446238978}
     FirstPersonFlag: 0
@@ -95423,7 +95423,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3959850615203455319}
   m_Enabled: 1
-  m_Avatar: {fileID: 2575994301583314750, guid: 7c63db594e9b1b44e962f8b55567867a, type: 3}
+  m_Avatar: {fileID: 5903781220345140494, guid: 7c63db594e9b1b44e962f8b55567867a, type: 3}
   m_Controller: {fileID: 9100000, guid: a4d0f727411e34146a0eb2ed3a9fe917, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -96836,7 +96836,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2027416048101721674}
   m_Enabled: 1
-  m_Avatar: {fileID: 717643771685427201, guid: 41684f0eaee826143938b8a344746b79, type: 3}
+  m_Avatar: {fileID: 5903781220345140494, guid: 7c63db594e9b1b44e962f8b55567867a, type: 3}
   m_Controller: {fileID: 9100000, guid: fcc907b775dea4b40a42f71ba2a136b8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -96934,7 +96934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FirstPersonBone: {fileID: 3307217865094486528}
-  FirstPersonOffset: {x: -2.393994, y: -1.3521675, z: 2.6118195}
+  FirstPersonOffset: {x: -2.4140153, y: -1.3521675, z: 2.6167653}
   Renderers:
   - Renderer: {fileID: 1426468922979495455}
     FirstPersonFlag: 0
@@ -98789,7 +98789,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5205728272496883870}
   m_Enabled: 1
-  m_Avatar: {fileID: 717643771685427201, guid: 41684f0eaee826143938b8a344746b79, type: 3}
+  m_Avatar: {fileID: 3824298911706936882, guid: 41684f0eaee826143938b8a344746b79, type: 3}
   m_Controller: {fileID: 9100000, guid: 229570fcba6eb1041a4a439b4e369050, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
