@@ -9,14 +9,14 @@ public class OpeningScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        conversation.SetActive(true);
+        textBox.OnInit("Opening");
+        textBox.PlayText();
     }
 
     // Update is called once per frame
     void Update()
     {
-        conversation.SetActive(true);
-        textBox.OnInit("Opening");
-        textBox.PlayText();
+
     }
 }
