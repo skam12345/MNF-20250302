@@ -283,6 +283,57 @@ public class UITextBox : MonoBehaviour
         }
     }
 
+    public void OpeningNextBtn()
+    {
+        if (index >= shopList.Count - 1)
+		{
+			index = shopList.Count - 1;
+			return;
+		}
+        foreach (TalkData data in shopList)
+        {
+            if (data.getDefaultScene() != 0)
+            {
+                defaultScene = data.getDefaultScene();
+                break;
+            }
+        }
+        if (index == 0)
+        {
+            index++;
+        }
+        if (index >= defaultScene)
+        {
+            if (isTyping)
+            {
+                isTyping = false;
+                StopAllCoroutines();
+                TypingCompleteSentence(shopList[index].getDialogue());
+                return;
+            }
+            if (shopList[index].getDefaultScene() != 0)
+            {
+                if (textContent.text == shopList[index].getDialogue())
+                {
+                    talkService.SetActive(false);
+                    return;
+                }
+            }
+            if (index <= shopList.Count - 1)
+            {
+                StartCoroutine(CallSpriteImage(shopList[index].getFaceImage()));
+                StartCoroutine(TypeName(shopList[index].getCharacter()));
+                StartCoroutine(TypingSentence(shopList[index].getDialogue()));
+            }
+            if (shopList[index].getDefaultScene() == 0)
+            {
+                index++;
+            }
+			index++;
+        }
+    }
+
+
     #region 선택지 생성
     public void isConditionPerform()
 	{
