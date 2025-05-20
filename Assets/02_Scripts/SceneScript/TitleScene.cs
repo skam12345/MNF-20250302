@@ -147,8 +147,8 @@ public class TitleScene : MonoBehaviour
 	// 
 	public void OnTitleGoLobby()
 	{
-		BgmManager.Instance.PlayBGM(1);
-        SceneManager.LoadScene("02_LobbyScene");
+		BgmManager.Instance.PlayBGM(3);
+        SceneManager.LoadScene("00_Opening");
 	}
 
 

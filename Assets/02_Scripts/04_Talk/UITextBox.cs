@@ -418,7 +418,7 @@ public class UITextBox : MonoBehaviour
 		StartCoroutine(CallSpriteImage(shopList[index].getFaceImage()));
 		StartCoroutine(TypeName(shopList[index].getCharacter()));
 		StartCoroutine(TypingSentence(shopList[index].getDialogue()));
-		StartCoroutine(OpeningAutoNext());
+		//StartCoroutine(OpeningAutoNext());
 	}
 
 	IEnumerator OpeningAutoNext()
@@ -433,12 +433,10 @@ public class UITextBox : MonoBehaviour
 			{
 				if(!isTyping)
 				{
-					yield return new WaitForSeconds(4f);	
-					index++;
-					StartCoroutine(CallSpriteImage(shopList[index].getFaceImage()));
-					StartCoroutine(TypeName(shopList[index].getCharacter()));
-					StartCoroutine(TypingSentence(shopList[index].getDialogue()));
-				}
+					yield return new WaitForSeconds(4f);
+					Next_CoroutineSet();
+
+                }
 			}
 
             if (index == shopList.Count - 1)
@@ -448,7 +446,13 @@ public class UITextBox : MonoBehaviour
 		}
 	}
 
-
+	public void Next_CoroutineSet()
+	{
+        index++;
+        StartCoroutine(CallSpriteImage(shopList[index].getFaceImage()));
+        StartCoroutine(TypeName(shopList[index].getCharacter()));
+        StartCoroutine(TypingSentence(shopList[index].getDialogue()));
+    }
 	IEnumerator CallSpriteImage(string imageName)
 	{
 		Sprite sprite = null;
