@@ -1,7 +1,7 @@
 {
   "S0001": {
     "FaceImage": "none",
-    "Character": "",
+    "Character": null,
     "Dialogue": "깊은 어둠이 드리운 마왕성..",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
@@ -15,7 +15,7 @@
   },
   "S0002": {
     "FaceImage": "none",
-    "Character": "",
+    "Character": null,
     "Dialogue": "높은 옥좌에서 지고한 존재가 보였다.",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
@@ -29,7 +29,7 @@
   },
   "S0003": {
     "FaceImage": "none",
-    "Character": "",
+    "Character": null,
     "Dialogue": "그녀는 바로 마왕!!",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
@@ -57,7 +57,7 @@
   },
   "S0005": {
     "FaceImage": "loan",
-    "Character": "사천왕1",
+    "Character": "사천왕",
     "Dialogue": "마왕님 또 그 소리십니까? 벌써 253번째입니다..!!",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
@@ -99,8 +99,8 @@
   },
   "S0008": {
     "FaceImage": "none",
-    "Character": "",
-    "Dialogue": "푸른 숲속, 노을이 물든 호숫가. 그곳에는 검을 들고 전장에\r\n나서던 용사들이 있었다.",
+    "Character": null,
+    "Dialogue": "푸른 숲속, 노을이 물든 호숫가. 그곳에는 검을 들고 전장에 나서는 용사들이 있었다.",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
     "Choice_2": null,
@@ -112,7 +112,7 @@
     "Sfx": null
   },
   "S0009": {
-    "FaceImage": "mawang",
+    "FaceImage": "npc01",
     "Character": "용사1",
     "Dialogue": "마왕은 나의 원수.. 반드시 부모님의 원수를 갚겠어..!!",
     "Choice_1": null,
@@ -126,7 +126,7 @@
     "Sfx": null
   },
   "S0010": {
-    "FaceImage": "npc01",
+    "FaceImage": "npc02",
     "Character": "용사2",
     "Dialogue": "용사님..부디 저희 마왕을 무찌르고 평화를 찾아요..!",
     "Choice_1": null,
@@ -140,7 +140,7 @@
     "Sfx": null
   },
   "S0011": {
-    "FaceImage": "mawang",
+    "FaceImage": "npc01",
     "Character": "용사1",
     "Dialogue": "반드시..복수하겠어... 기다려라 마왕!!",
     "Choice_1": null,
@@ -168,7 +168,7 @@
     "Sfx": null
   },
   "S0013": {
-    "FaceImage": "mawang",
+    "FaceImage": "origin_mawang01",
     "Character": "마왕",
     "Dialogue": "너무 약하면 내 쪽도 재미가 없지 않은가!!",
     "Choice_1": null,
@@ -182,8 +182,8 @@
     "Sfx": null
   },
   "S0014": {
-    "FaceImage": "origin_mawang01",
-    "Character": "마왕",
+    "FaceImage": "none",
+    "Character": null,
     "Dialogue": "그러나 그 기쁨도 잠시..",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
@@ -196,8 +196,8 @@
     "Sfx": null
   },
   "S0015": {
-    "FaceImage": "origin_mawang01",
-    "Character": "마왕",
+    "FaceImage": "none",
+    "Character": null,
     "Dialogue": "은은한 불빛이 새어나는 여관 로비..",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
@@ -210,7 +210,7 @@
     "Sfx": null
   },
   "S0016": {
-    "FaceImage": "mawang",
+    "FaceImage": "npc01",
     "Character": "용사1",
     "Dialogue": "이 긴 여정 속에서 늘 곁에 있어줘서 고마워.. 네가 아니었다면 난 벌써 무너졌을지도 몰라",
     "Choice_1": null,
@@ -224,7 +224,7 @@
     "Sfx": null
   },
   "S0017": {
-    "FaceImage": "npc01",
+    "FaceImage": "npc02",
     "Character": "용사2",
     "Dialogue": "저도 마찬가지에요. 당신이 웃을 때마다, 세상이 조금은 덜 어두워 보였어요. 그걸 위해 싸우고 싶었어요..",
     "Choice_1": null,
@@ -238,7 +238,7 @@
     "Sfx": null
   },
   "S0018": {
-    "FaceImage": "mawang",
+    "FaceImage": "npc01",
     "Character": "용사1",
     "Dialogue": "전쟁이 끝나면.. 우리, 평범한 삶을 살아볼 수 있을까?",
     "Choice_1": null,
@@ -252,7 +252,7 @@
     "Sfx": null
   },
   "S0019": {
-    "FaceImage": "npc01",
+    "FaceImage": "npc02",
     "Character": "용사2",
     "Dialogue": "어떤 삶이든, 당신이 제 곁에 있다면 그게 평화에요..",
     "Choice_1": null,
@@ -266,7 +266,7 @@
     "Sfx": null
   },
   "S0020": {
-    "FaceImage": "mawang",
+    "FaceImage": "npc01",
     "Character": "용사1",
     "Dialogue": "이 밤.. 잊지 않을게. 널 사랑해.",
     "Choice_1": null,
@@ -280,7 +280,7 @@
     "Sfx": null
   },
   "S0021": {
-    "FaceImage": "npc01",
+    "FaceImage": "npc02",
     "Character": "용사2",
     "Dialogue": "저도 제 모든 맹세보다도 당신을 사랑해요..",
     "Choice_1": null,
@@ -294,9 +294,9 @@
     "Sfx": null
   },
   "S0022": {
-    "FaceImage": "npc01",
-    "Character": "용사2",
-    "Dialogue": "-",
+    "FaceImage": "none",
+    "Character": null,
+    "Dialogue": ".......",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
     "Choice_2": null,
@@ -351,8 +351,8 @@
   },
   "S0026": {
     "FaceImage": "none",
-    "Character": "",
-    "Dialogue": "마왕이 눈살을 찌푸리자, 옆에서 지켜보던 사천왕 중 하나, \r\n전략가 마도사 네르비스가 헛기침했다.",
+    "Character": null,
+    "Dialogue": "마왕이 눈살을 찌푸리자, 옆에서 지켜보던 사천왕 중 하나, 전략가 마도사 네르비스가 헛기침했다.",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
     "Choice_2": null,
@@ -364,8 +364,8 @@
     "Sfx": null
   },
   "S0027": {
-    "FaceImage": "none",
-    "Character": "hood1",
+    "FaceImage": "nervis",
+    "Character": "마도사 네르비스",
     "Dialogue": "“예, 본래는 그렇습니다만… 인간들은 여행을 하면 정이 싹튼다고 하더군요.”",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
@@ -379,7 +379,7 @@
   },
   "S0028": {
     "FaceImage": "none",
-    "Character": "",
+    "Character": null,
     "Dialogue": "그 순간, 용사 한 명이 갑자기 다른 용사의 손을 꼭 잡으며 말했다.",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
@@ -392,7 +392,7 @@
     "Sfx": null
   },
   "S0029": {
-    "FaceImage": "mawang",
+    "FaceImage": "npc01",
     "Character": "용사1",
     "Dialogue": "우리가 처음 만났을 땐 원수 같았는데, 지금은 네가 없으면 안 될 것 같아",
     "Choice_1": null,
@@ -421,7 +421,7 @@
   },
   "S0031": {
     "FaceImage": "none",
-    "Character": "",
+    "Character": null,
     "Dialogue": "마왕은 자리에서 벌떡 일어났다. 불타는 분노와 충격에 머리카락이 날렸다. 마왕의 손이 떨렸다.",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
@@ -448,8 +448,8 @@
     "Sfx": null
   },
   "S0033": {
-    "FaceImage": "none",
-    "Character": "none1",
+    "FaceImage": "nervis",
+    "Character": "마도사 네르비스",
     "Dialogue": "지당하신 말씀이십니다만... 결국 커플이 되어가죠..",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
@@ -477,7 +477,7 @@
   },
   "S0035": {
     "FaceImage": "none",
-    "Character": "",
+    "Character": null,
     "Dialogue": "철컹, 철컹'",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
@@ -491,8 +491,8 @@
   },
   "S0036": {
     "FaceImage": "none",
-    "Character": "",
-    "Dialogue": "마왕이 한탄하자, 옆에서 무시무시한 갑옷을 두른 사천왕 ‘강철의 바스테 온’이 진지한 목소리로 말했다",
+    "Character": null,
+    "Dialogue": "마왕이 한탄하자, 옆에서 무시무시한 갑옷을 두른 사천왕 ‘강철의 바스테온’이 진지한 목소리로 말했다",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
     "Choice_2": null,
@@ -504,7 +504,7 @@
     "Sfx": null
   },
   "S0037": {
-    "FaceImage": "none2",
+    "FaceImage": "vasteon",
     "Character": "바스테온",
     "Dialogue": "…역시 인간들은 서로 엮이게 마련인가 보 군요.",
     "Choice_1": null,
@@ -546,9 +546,9 @@
     "Sfx": null
   },
   "S0040": {
-    "FaceImage": "origin_mawang01",
+    "FaceImage": "none",
     "Character": "마왕",
-    "Dialogue": "마왕이 황당하다는 듯 눈을 부릅 뜨자, 사천왕 '매혹의 none'가 나긋한 목소리로 거들었다.",
+    "Dialogue": "마왕이 황당하다는 듯 눈을 부릅 뜨자, 사천왕 '매혹의 릴리아'가 나긋한 목소리로 거들었다.",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
     "Choice_2": null,
@@ -560,7 +560,7 @@
     "Sfx": null
   },
   "S0041": {
-    "FaceImage": "none",
+    "FaceImage": "lilia",
     "Character": "매혹의 릴리아",
     "Dialogue": "그러고 보니, 전하는 한 번도 연애를 해본 적이 없지요?",
     "Choice_1": null,
@@ -575,7 +575,7 @@
   },
   "S0042": {
     "FaceImage": "none",
-    "Character": "",
+    "Character": null,
     "Dialogue": "마왕이 발끈했다.",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
@@ -603,8 +603,8 @@
   },
   "S0044": {
     "FaceImage": "none",
-    "Character": "",
-    "Dialogue": "none가 싱긋 웃었다.",
+    "Character": null,
+    "Dialogue": "릴리아가 싱긋 웃었다.",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
     "Choice_2": null,
@@ -616,7 +616,7 @@
     "Sfx": null
   },
   "S0045": {
-    "FaceImage": "none",
+    "FaceImage": "lilia",
     "Character": "매혹의 릴리아",
     "Dialogue": "하지만, 지금.. 질투하고 계시잖아요?",
     "Choice_1": null,
@@ -631,8 +631,8 @@
   },
   "S0046": {
     "FaceImage": "none",
-    "Character": "",
-    "Dialogue": "none의 말에 마왕은 움찔했다.",
+    "Character": null,
+    "Dialogue": "릴리아의 말에 마왕은 움찔했다.",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
     "Choice_2": null,
@@ -644,7 +644,7 @@
     "Sfx": null
   },
   "S0047": {
-    "FaceImage": "none",
+    "FaceImage": "lilia",
     "Character": "매혹의 릴리아",
     "Dialogue": "하지만 전하, 그 ‘질투’라는 감정이 지금 전하 를 괴롭히고 있지 않습니까?”",
     "Choice_1": null,
@@ -659,7 +659,7 @@
   },
   "S0048": {
     "FaceImage": "none",
-    "Character": "",
+    "Character": null,
     "Dialogue": "마왕은 반박하려다 입을 다물었다. 속이 갑자기 이상하게 간질거렸다",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
@@ -687,7 +687,7 @@
   },
   "S0050": {
     "FaceImage": "none",
-    "Character": "",
+    "Character": null,
     "Dialogue": "그렇다. 이 감정은 틀림없이— 질투.",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
@@ -700,9 +700,9 @@
     "Sfx": null
   },
   "S0051": {
-    "FaceImage": "none",
-    "Character": "",
-    "Dialogue": null,
+    "FaceImage": "origin_mawang01",
+    "Character": null,
+    "Dialogue": "........",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
     "Choice_2": null,
@@ -728,7 +728,7 @@
     "Sfx": null
   },
   "S0053": {
-    "FaceImage": "none",
+    "FaceImage": "lilia",
     "Character": "매혹의 릴리아",
     "Dialogue": "네?",
     "Choice_1": null,
@@ -757,7 +757,7 @@
   },
   "S0055": {
     "FaceImage": "none",
-    "Character": "",
+    "Character": null,
     "Dialogue": "마왕의 외침이 마왕성에 울려 퍼졌다",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
@@ -771,7 +771,7 @@
   },
   "S0056": {
     "FaceImage": "none",
-    "Character": "",
+    "Character": null,
     "Dialogue": "사천왕들이 놀란 눈으로 마왕을 바라보았다.",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
@@ -784,8 +784,8 @@
     "Sfx": null
   },
   "S0057": {
-    "FaceImage": "none",
-    "Character": "네르비스",
+    "FaceImage": "nervis",
+    "Character": "마도사 네르비스",
     "Dialogue": "그러면 전하도 인간 세상으로 나가서 연애를 하시겠다는…?",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
@@ -798,8 +798,8 @@
     "Sfx": null
   },
   "S0058": {
-    "FaceImage": "none",
-    "Character": "바스테온",
+    "FaceImage": "vasteon",
+    "Character": "강철의 바스테온",
     "Dialogue": "“하지만 전하는 마왕입니다! 인간들이 두려워할 텐데… 체통을 지키셔야합니다!",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
@@ -812,7 +812,7 @@
     "Sfx": null
   },
   "S0059": {
-    "FaceImage": "none",
+    "FaceImage": "lilia",
     "Character": "매혹의 릴리아",
     "Dialogue": "흥미롭군요. 연애라…",
     "Choice_1": null,
@@ -827,7 +827,7 @@
   },
   "S0060": {
     "FaceImage": "none",
-    "Character": "",
+    "Character": null,
     "Dialogue": "하지만 그녀의 속마음은 이미 흐트러지 고 진 뒤였다.",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
@@ -841,7 +841,7 @@
   },
   "S0061": {
     "FaceImage": "none",
-    "Character": "",
+    "Character": null,
     "Dialogue": "머릿속에 떠오른 생각이 기묘한 충격을 가져왔다.",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
@@ -855,7 +855,7 @@
   },
   "S0062": {
     "FaceImage": "none",
-    "Character": "",
+    "Character": null,
     "Dialogue": "그 순 간, 마왕의 입에서 나온 한마디가 마왕성을 울렸다",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
@@ -883,7 +883,7 @@
   },
   "S0064": {
     "FaceImage": "none",
-    "Character": "",
+    "Character": null,
     "Dialogue": "마왕은 옥좌에 서 일어나 치마를 휘날리며 마법진을 향해 걸어갔다.",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
@@ -897,7 +897,7 @@
   },
   "S0065": {
     "FaceImage": "none",
-    "Character": "",
+    "Character": null,
     "Dialogue": "펑-",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
@@ -910,7 +910,7 @@
     "Sfx": null
   },
   "S0066": {
-    "FaceImage": "origin_mawang01",
+    "FaceImage": "mawang01",
     "Character": "마왕",
     "Dialogue": "“나도 직접 나가서 인간들의 연애라는 걸 경험해 보겠어!",
     "Choice_1": null,
@@ -939,7 +939,7 @@
   },
   "S0068": {
     "FaceImage": "none",
-    "Character": "",
+    "Character": null,
     "Dialogue": "그리하여——",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
@@ -953,8 +953,8 @@
   },
   "S0069": {
     "FaceImage": "none",
-    "Character": "",
-    "Dialogue": "연애의 ‘연’ 자도 모르는 마왕의 빙구미 가득한 인간 세상 연애 모험이 시작되었다!",
+    "Character": null,
+    "Dialogue": "연애의 ‘연’ 자도 모르는 마왕의 빙구미 가득한 인간 세상 연애 모험이 시작되었다!!!!!",
     "Choice_1": null,
     "Choice_1_Next_Scene": null,
     "Choice_2": null,
