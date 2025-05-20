@@ -21,10 +21,12 @@ public class UITextBox : MonoBehaviour
 	public GameObject choiceScroll;
 	public GameObject talkService;
 	public GameObject singleService;
+	public Sample_Discription timeline;
 
 	[SerializeField]
 	private Dictionary<string, ShopConversationData> shopDataDict = new Dictionary<string, ShopConversationData>();
 	private int index = 0;
+	private bool opening = false;
 
 	private List<TalkData> shopList = new List<TalkData>();
 	private bool isTyping = false;
@@ -285,6 +287,10 @@ public class UITextBox : MonoBehaviour
 
     public void OpeningNextBtn()
     {
+		if(timeline.flag_timeline)
+		{
+			return;
+		}
         if (index >= shopList.Count - 1)
 		{
 			index = shopList.Count - 1;
@@ -403,11 +409,43 @@ public class UITextBox : MonoBehaviour
 	#region 대화 플레이
 	public void PlayText()
 	{
+		if (SceneManager.GetActiveScene().name == "00_Opening")
+		{
+			opening = true;
+		}
 		// 첫번 째 시나리오 실행.
 		StopAllCoroutines();
 		StartCoroutine(CallSpriteImage(shopList[index].getFaceImage()));
 		StartCoroutine(TypeName(shopList[index].getCharacter()));
 		StartCoroutine(TypingSentence(shopList[index].getDialogue()));
+		StartCoroutine(OpeningAutoNext());
+	}
+
+	IEnumerator OpeningAutoNext()
+	{
+		while(true)
+		{
+            yield return new WaitForSeconds(0.05f);
+            if (timeline.flag_timeline)
+			{
+				continue;
+			}else
+			{
+				if(!isTyping)
+				{
+					yield return new WaitForSeconds(4f);	
+					index++;
+					StartCoroutine(CallSpriteImage(shopList[index].getFaceImage()));
+					StartCoroutine(TypeName(shopList[index].getCharacter()));
+					StartCoroutine(TypingSentence(shopList[index].getDialogue()));
+				}
+			}
+
+            if (index == shopList.Count - 1)
+			{
+				break;
+			}
+		}
 	}
 
 

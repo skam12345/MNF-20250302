@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.UIElements;
 
 public class Sample_Discription : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Sample_Discription : MonoBehaviour
     public GameObject onOff;
     public GameObject auraEffect;
     public PlayableDirector director;
+
+    public bool flag_timeline = true;
 
     private void Start()
     {
@@ -22,6 +25,7 @@ public class Sample_Discription : MonoBehaviour
     {
         if (director != null)
         {
+            flag_timeline = true;
             director.Pause(); // 현재 위치에서 정지
         }
     }
@@ -31,6 +35,7 @@ public class Sample_Discription : MonoBehaviour
     {
         if (director != null)
         {
+            flag_timeline = false;
             director.Play(); // 현재 위치에서 시작
         }
         Debug.Log("재생함");
